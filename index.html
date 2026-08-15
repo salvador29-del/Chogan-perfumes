@@ -337,6 +337,49 @@
             color: #000; 
             border-color: #d4af37; 
         }
+
+        /* NUEVA SECCIÓN: LISTA COMPLETA DE PERFUMES */
+        .full-list-section {
+            padding: 80px 0;
+            background: #0f0f0f;
+            border-top: 1px solid #222;
+        }
+
+        .full-list-section h2 {
+            text-align: center;
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .full-list-section .section-subtitle {
+            margin-bottom: 40px;
+        }
+
+        .list-image-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .list-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid #333;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .list-image-container img:hover {
+            border-color: #d4af37;
+            transform: scale(1.01);
+        }
+
+        .list-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
         
         /* SECCIÓN DE CONTACTO */
         .contact { 
@@ -444,6 +487,10 @@
                 display: block; 
                 margin: 15px auto; 
                 max-width: 300px; 
+            }
+
+            .full-list-section h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -578,6 +625,27 @@
                         <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn-card" target="_blank">Comprar Ahora</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: LISTA COMPLETA DE PERFUMES -->
+    <section class="full-list-section">
+        <div class="container">
+            <h2>Lista Completa de Perfumes</h2>
+            <p class="section-subtitle">
+                Consulta todos los códigos, inspiraciones y precios. Fragancias para mujer, hombre, mixtas, luxury y más.
+            </p>
+
+            <div class="list-image-container">
+                <img src="https://d.uguu.se/xgQBQpQX.jpg" 
+                     alt="Lista completa de perfumes Chogan - Catálogo oficial con códigos e inspiraciones">
+            </div>
+
+            <div class="list-cta">
+                <a href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" class="btn" target="_blank">
+                    Ver y Comprar en la Tienda Oficial
+                </a>
             </div>
         </div>
     </section>
