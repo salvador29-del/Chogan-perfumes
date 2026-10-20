@@ -24,7 +24,7 @@ html{scroll-behavior:smooth}
 
 body{margin:0;background:var(--black);color:#fff;font-family:Arial,sans-serif;line-height:1.6}
 
-header{padding:24px 4%;background:#000;border-bottom:2px solid var(--gold)}
+header{padding:22px 4%;background:#000;border-bottom:2px solid var(--gold)}
 
 .head{max-width:1150px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
 
@@ -32,13 +32,13 @@ h1,h2,h3{font-family:Georgia,serif}
 
 h1{color:var(--gold);margin:0;font-size:clamp(26px,4vw,38px)}
 
-header p{margin:4px 0;color:#ddd}
+header p{margin:5px 0;color:#ddd}
 
-select{background:#111;color:white;border:1px solid var(--gold);padding:10px;border-radius:8px}
+select{background:#111;color:#fff;border:1px solid var(--gold);padding:10px;border-radius:8px}
 
 .container{width:92%;max-width:1150px;margin:auto}
 
-.notice{text-align:center;background:#211b0b;padding:26px 14px;border-bottom:1px solid var(--gold)}
+.notice{text-align:center;background:#211b0b;padding:25px 14px;border-bottom:1px solid var(--gold)}
 
 h2{color:var(--gold)}
 
@@ -46,17 +46,19 @@ h2{color:var(--gold)}
 
 .btn{display:inline-block;background:var(--gold);color:#111;text-decoration:none;font-weight:bold;padding:12px 21px;border-radius:24px;margin:12px 4px}
 
-.btn:hover{background:#f4dc86}
+.btn:hover{background:#f1d976}
 
 section{padding:45px 0;border-bottom:1px solid #292929}
 
 .title{text-align:center;font-size:clamp(26px,4vw,36px);margin:0 0 12px}
 
-.subtitle{text-align:center;color:#ccc;margin:0 auto 28px;max-width:800px}
+.subtitle{text-align:center;color:#ccc;margin:0 auto 28px;max-width:850px}
 
-.videos,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.videos,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
 
-.video-card,.product{background:var(--panel);border:1px solid #5b4a1d;border-radius:12px;overflow:hidden;text-align:center;padding-bottom:20px}
+.video-card,.product{background:var(--panel);border:1px solid #5b4a1d;border-radius:12px;overflow:hidden;text-align:center}
+
+.video-card{padding-bottom:20px}
 
 .video-card h3,.product h3{color:var(--gold);padding:0 12px}
 
@@ -66,13 +68,15 @@ video{display:block;width:100%;height:auto;max-height:650px;background:#000}
 
 .product{padding:15px}
 
-.product img{display:block;width:100%;height:230px;object-fit:contain;background:#fff;border-radius:8px}
+.product img{display:block;width:100%;height:240px;object-fit:contain;background:#fff;border-radius:8px}
 
 .price{color:var(--gold);font-weight:bold}
 
 .small{color:#bbb;font-size:.92rem}
 
 .cosmetics{text-align:center;background:#151208;padding:40px 15px}
+
+.cosmetics img{display:block;width:100%;max-width:650px;height:auto;margin:22px auto;border:1px solid var(--gold);border-radius:10px}
 
 footer{text-align:center;padding:28px 12px;color:#bbb;background:#000}
 
@@ -102,7 +106,7 @@ footer a{color:var(--gold)}
 
       <span>🌐</span>
 
-      <select id="lang" onchange="changeLanguage(this.value)" aria-label="Sprache">
+      <select id="lang" aria-label="Sprache" onchange="changeLanguage(this.value)">
 
         <option value="de">🇩🇪 Deutsch</option>
 
@@ -140,13 +144,13 @@ footer a{color:var(--gold)}
 
 </div>
 
-<section>
+<section id="kollektionen">
 
   <div class="container">
 
     <h2 class="title" id="video-title">Unsere Parfümkollektionen</h2>
 
-    <p class="subtitle" id="video-subtitle">Sieh dir die Präsentationsvideos an und entdecke anschließend die Produkte und Preise.</p>
+    <p class="subtitle" id="video-subtitle">Entdecke unsere Kollektionen in den Präsentationsvideos und informiere dich anschließend über Produkte und Preise.</p>
 
     <div class="videos">
 
@@ -160,7 +164,7 @@ footer a{color:var(--gold)}
 
         </video>
 
-        <p id="myth-description">Die exklusive Kollektion, inspiriert von der griechischen Mythologie.</p>
+        <p id="myth-description">Die exklusive Duftkollektion der griechischen Mythologie.</p>
 
         <a class="btn" href="#mythologik" id="myth-button">Mythologik – Produkte und Preise</a>
 
@@ -173,6 +177,8 @@ footer a{color:var(--gold)}
         <video controls playsinline preload="metadata">
 
           <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov" type="video/quicktime">
+
+          Tu navegador no puede reproducir este vídeo.
 
         </video>
 
@@ -216,7 +222,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Mythologik">
+        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -224,7 +230,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Mythologik">
+        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -232,7 +238,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Mythologik">
+        <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -240,7 +246,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Mythologik">
+        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -248,7 +254,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Mythologik">
+        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -256,7 +262,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="A760207C-027E-4435-A93E-3C8C0843B498.png" alt="Mythologik">
+        <img src="A760207C-027E-4435-A93E-3C8C0843B498.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -264,7 +270,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Mythologik">
+        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Mythologik Duftkollektion">
 
         <h3>Mythologik</h3><p>100 ml</p><p class="price">299,00 €</p>
 
@@ -366,7 +372,7 @@ footer a{color:var(--gold)}
 
     <h2 class="title" id="cases-title">Etuis für 15-ml-Parfüms</h2>
 
-    <p class="subtitle" id="cases-description">Die Etuis sind nicht im Parfümpreis enthalten.</p>
+    <p class="subtitle" id="cases-description">Die Etuis sind nicht im Parfümpreis enthalten und werden separat verkauft.</p>
 
     <div class="products">
 
@@ -430,7 +436,7 @@ footer a{color:var(--gold)}
 
     <p id="cosmetics-description">Entdecke Cremes, Körperöle und Kosmetik.</p>
 
-    <img src="755f5311-6403-4ef0-a837-50070ccb570c.jpeg" alt="Parfüm und Düfte Perez" style="width:100%;max-width:600px;height:auto;border-radius:10px">
+    <img src="755f5311-6403-4ef0-a837-50070ccb570c.jpeg" alt="Parfüm und Düfte Perez Kosmetik">
 
     <br>
 
@@ -444,7 +450,7 @@ footer a{color:var(--gold)}
 
   <div class="container" style="text-align:center">
 
-    <h2 id="order-title">Bestellung</h2>
+    <h2 id="order-title">Bestellung und Kontakt</h2>
 
     <p id="order-description">Bestelle über den offiziellen Chogan-Bereich.</p>
 
@@ -470,7 +476,7 @@ footer a{color:var(--gold)}
 
 <script>
 
-const texts={
+const translations={
 
 de:{
 
@@ -482,17 +488,15 @@ tagline:"Eleganz, die einen bleibenden Eindruck hinterlässt",
 
 "notice-button":"Etuis ansehen und Preise","video-title":"Unsere Parfümkollektionen",
 
-"video-subtitle":"Sieh dir die Präsentationsvideos an und entdecke anschließend Produkte und Preise.",
+"video-subtitle":"Entdecke unsere Kollektionen in den Präsentationsvideos und informiere dich anschließend über Produkte und Preise.",
 
-"myth-description":"Die exklusive Kollektion, inspiriert von der griechischen Mythologie.",
+"myth-description":"Die exklusive Duftkollektion der griechischen Mythologie.",
 
-"myth-button":"Mythologik – Produkte und Preise",
+"myth-button":"Mythologik – Produkte und Preise","women-heading":"Damenparfüms",
 
-"women-heading":"Damenparfüms","women-description":"Entdecke unsere Damendüfte.",
+"women-description":"Entdecke unsere Damendüfte.","women-button":"Produkte und Preise",
 
-"women-button":"Produkte und Preise","men-heading":"Herrenparfüms",
-
-"men-description":"Entdecke unsere Herrendüfte.","men-button":"Produkte und Preise",
+"men-heading":"Herrenparfüms","men-description":"Entdecke unsere Herrendüfte.","men-button":"Produkte und Preise",
 
 "women-products-title":"Damenparfüms","women-price-note":"Preise nach Flakongröße",
 
@@ -506,7 +510,7 @@ tagline:"Eleganz, die einen bleibenden Eindruck hinterlässt",
 
 "men-extra":"Weitere Herrendüfte","men-extra-text":"Bitte prüfe Artikel und Duftbezeichnung vor der Bestellung.",
 
-"cases-title":"Etuis für 15-ml-Parfüms","cases-description":"Die Etuis sind nicht im Parfümpreis enthalten.",
+"cases-title":"Etuis für 15-ml-Parfüms","cases-description":"Die Etuis sind nicht im Parfümpreis enthalten und werden separat verkauft.",
 
 "cases-standard":"Etuis in verschiedenen Farben","cases-premium":"Elegante Etuis",
 
@@ -514,7 +518,7 @@ tagline:"Eleganz, die einen bleibenden Eindruck hinterlässt",
 
 "cosmetics-title":"Cremes & Kosmetik","cosmetics-description":"Entdecke Cremes, Körperöle und Kosmetik.",
 
-"cosmetics-button":"Zur Kosmetikseite","order-title":"Bestellung",
+"cosmetics-button":"Zur Kosmetikseite","order-title":"Bestellung und Kontakt",
 
 "order-description":"Bestelle über den offiziellen Chogan-Bereich.",
 
@@ -536,27 +540,25 @@ tagline:"Elegancia que deja huella",
 
 "myth-description":"Colección exclusiva inspirada en la mitología griega.",
 
-"myth-button":"Mythologik – Productos y precios",
+"myth-button":"Mythologik – Productos y precios","women-heading":"Perfumes de mujer",
 
-"women-heading":"Perfumes de mujer","women-description":"Descubre nuestros perfumes de mujer.",
+"women-description":"Descubre nuestros perfumes de mujer.","women-button":"Productos y precios",
 
-"women-button":"Productos y precios","men-heading":"Perfumes de hombre",
-
-"men-description":"Descubre nuestros perfumes de hombre.","men-button":"Productos y precios",
+"men-heading":"Perfumes de hombre","men-description":"Descubre nuestros perfumes de hombre.","men-button":"Productos y precios",
 
 "women-products-title":"Perfumes de mujer","women-price-note":"Precios según el tamaño del frasco",
 
 "women-collection":"Colección de perfumes de mujer","women-case":"El estuche de 15 ml se vende por separado.",
 
-"women-extra":"Más perfumes de mujer","women-extra-text":"Comprueba el artículo y el nombre de la fragancia antes de pedir.",
+"women-extra":"Más perfumes de mujer","women-extra-text":"Comprueba el artículo y la fragancia antes de pedir.",
 
 "men-products-title":"Perfumes de hombre","men-price-note":"Precios según el tamaño del frasco",
 
 "men-collection":"Colección de perfumes de hombre","men-case":"El estuche de 15 ml se vende por separado.",
 
-"men-extra":"Más perfumes de hombre","men-extra-text":"Comprueba el artículo y el nombre de la fragancia antes de pedir.",
+"men-extra":"Más perfumes de hombre","men-extra-text":"Comprueba el artículo y la fragancia antes de pedir.",
 
-"cases-title":"Estuches para perfumes de 15 ml","cases-description":"Los estuches no están incluidos en el precio del perfume.",
+"cases-title":"Estuches para perfumes de 15 ml","cases-description":"Los estuches no están incluidos en el precio del perfume y se venden por separado.",
 
 "cases-standard":"Estuches de varios colores","cases-premium":"Estuches elegantes",
 
@@ -564,7 +566,7 @@ tagline:"Elegancia que deja huella",
 
 "cosmetics-title":"Cremas y cosméticos","cosmetics-description":"Descubre cremas, aceites corporales y cosméticos.",
 
-"cosmetics-button":"Ir a cosméticos","order-title":"Pedidos",
+"cosmetics-button":"Ir a cosméticos","order-title":"Pedidos y contacto",
 
 "order-description":"Compra a través de la tienda oficial de Chogan.",
 
@@ -610,7 +612,7 @@ tagline:"Eleganza che lascia il segno","notice-title":"Avviso importante sui pro
 
 "cosmetics-title":"Creme e cosmetici","cosmetics-description":"Scopri creme, oli per il corpo e cosmetici.",
 
-"cosmetics-button":"Vai ai cosmetici","order-title":"Ordini",
+"cosmetics-button":"Vai ai cosmetici","order-title":"Ordini e contatti",
 
 "order-description":"Ordina tramite il negozio ufficiale Chogan.",
 
@@ -806,7 +808,7 @@ tagline:"Elegancë që lë gjurmë","notice-title":"Njoftim për parfumet 15 ml"
 
 function changeLanguage(lang){
 
-  const d=texts[lang]||texts.de;
+  const d=translations[lang]||translations.de;
 
   document.documentElement.lang=lang;
 
