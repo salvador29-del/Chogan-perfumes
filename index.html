@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -10,7 +12,7 @@
 
 <meta name="theme-color" content="#090909">
 
-<meta name="description" content="Parfüm und Düfte Perez – Chogan, Mythologik, Damen-, Herren- und Luxus-Unisex-Düfte.">
+<meta name="description" content="Parfüm und Düfte Perez – Chogan-Parfüms, Mythologik, Damen-, Herren- und Luxus-Unisex-Düfte.">
 
 <title>Parfüm und Düfte Perez | Eleganz, die bleibt</title>
 
@@ -47,6 +49,8 @@ h2,h3{font-family:Georgia,"Times New Roman",serif}
 .intro{max-width:850px;margin:12px auto 25px;text-align:center;color:#ddd}
 
 .btn{display:inline-block;margin:7px 4px;padding:12px 17px;background:var(--gold);color:#090909;border:1px solid var(--gold);border-radius:28px;text-decoration:none;font-weight:bold;text-align:center}
+
+.btn:hover{background:var(--gold-light)}
 
 .btn-outline{background:transparent;color:var(--gold-light)}
 
@@ -108,6 +112,8 @@ a{color:var(--gold-light)}
 
 .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
 
+.catalog-gallery{grid-template-columns:1fr 1fr}
+
 }
 
 @media(min-width:1000px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -131,22 +137,6 @@ a{color:var(--gold-light)}
 <option value="de">Deutsch</option>
 
 <option value="es">Español</option>
-
-<option value="it">Italiano</option>
-
-<option value="tr">Türkçe</option>
-
-<option value="ru">Русский</option>
-
-<option value="pt">Português</option>
-
-<option value="sq">Shqip</option>
-
-<option value="pl">Polski</option>
-
-<option value="fr">Français</option>
-
-<option value="en">English</option>
 
 </select>
 
@@ -320,7 +310,7 @@ Dein Browser unterstützt dieses Video nicht.
 
 <article class="product">
 
-<img src="EFBB9C18-0EF0-4E67-81AA-25615C59D244.png" alt="Apollo MYTHOLOGIK" loading="lazy">
+<img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Apollo MYTHOLOGIK" loading="lazy">
 
 <h3>Apollo</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
 
@@ -336,7 +326,7 @@ Dein Browser unterstützt dieses Video nicht.
 
 <article class="product">
 
-<img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Medusa MYTHOLOGIK" loading="lazy">
+<img src="2B08B0BF-C56D-4E67-81AA-25615C59D244.png" alt="Medusa MYTHOLOGIK" loading="lazy">
 
 <h3>Medusa</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
 
@@ -382,9 +372,9 @@ Dein Browser unterstützt dieses Video nicht.
 
 <div class="catalog-gallery">
 
-<img src="catalogo_mujer_parte_1.png" alt="Damenparfüms – Katalog, Teil 1" loading="lazy">
+<img src="catalogo_mujer_parte_1_individual.png" alt="Damenparfüms – Katalog, Teil 1" loading="lazy">
 
-<img src="catalogo_mujer_parte_2.png" alt="Damenparfüms – Katalog, Teil 2" loading="lazy">
+<img src="catalogo_mujer_parte_2_individual.png" alt="Damenparfüms – Katalog, Teil 2" loading="lazy">
 
 </div>
 
@@ -512,7 +502,7 @@ Dein Browser unterstützt dieses Video nicht.
 
 <p>Website: <a href="https://parfuemperez.com/">parfuemperez.com</a></p>
 
-<p>Bitte ergänze deine vollständige ladungsfähige Geschäftsanschrift und alle weiteren gesetzlich erforderlichen Angaben vor der Veröffentlichung.</p>
+<p><strong>Bitte ergänze vor der Veröffentlichung deine vollständige Geschäftsanschrift und alle weiteren gesetzlich erforderlichen Angaben.</strong></p>
 
 <h3>Hinweis zu Marken</h3>
 
@@ -528,11 +518,63 @@ Dein Browser unterstützt dieses Video nicht.
 
 <script>
 
-const translations = {
+const translations={
 
-de: {},
+de:{
 
-es: {
+tagline:"Dein Duft. Dein Stil. Deine Eleganz.",
+
+heroTitle:"Chogan Parfüms",
+
+heroText:"Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.",
+
+heroButton:"DUFTWELTEN ENTDECKEN",
+
+noticeTitle:"Wichtiger Hinweis zu Parfüms in 15 ml",
+
+noticeText:"Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und muss separat bestellt werden.",
+
+caseButton:"ETUIS ANSEHEN",
+
+collectionTitle:"Entdecke unsere Duftwelten",
+
+collectionIntro:"Sieh dir die Videos an und öffne darunter die Produkte und Preise.",
+
+mythText:"Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.",
+
+womenTitle:"DAMENPARFÜMS",
+
+womenText:"Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.",
+
+menTitle:"HERRENPARFÜMS",
+
+menText:"Ausdrucksstarke Düfte für Herren – elegant und modern.",
+
+luxusText:"Exklusive Düfte für sie und ihn.",
+
+mythButton:"PRODUKTE UND PREISE",
+
+womenButton:"PRODUKTE UND PREISE",
+
+menButton:"PRODUKTE UND PREISE",
+
+luxusButton:"PRODUKTE UND PREISE",
+
+caseTitle:"Etuis für Parfüms in 15 ml",
+
+caseText:"Das Etui ist nicht im Preis des 15-ml-Parfüms enthalten.",
+
+womenProductsTitle:"Damenparfüms – Katalog und Preise",
+
+womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Für 15 ml ist ein Etui erforderlich und separat zu bestellen.",
+
+menProductsTitle:"Herrenparfüms – Katalog und Preise",
+
+menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Für 15 ml ist ein Etui erforderlich und separat zu bestellen."
+
+},
+
+es:{
 
 tagline:"Tu perfume. Tu estilo. Tu elegancia.",
 
@@ -588,25 +630,17 @@ menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 �
 
 };
 
-function changeLanguage(lang) {
+function changeLanguage(lang){
 
-const dict = translations[lang];
+const dict=translations[lang]||translations.de;
 
-if (!dict) {
+document.documentElement.lang=lang==="es"?"es":"de";
 
-document.documentElement.lang = "de";
+Object.keys(dict).forEach(id=>{
 
-return;
+const el=document.getElementById(id);
 
-}
-
-document.documentElement.lang = lang;
-
-Object.keys(dict).forEach(id => {
-
-const el = document.getElementById(id);
-
-if (el) el.textContent = dict[id];
+if(el)el.textContent=dict[id];
 
 });
 
