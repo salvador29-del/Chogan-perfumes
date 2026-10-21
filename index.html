@@ -1,722 +1,1395 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Parfüm und Düfte Perez – elegante Chogan Parfüms, MYTHOLOGIK, Luxus & Unisex, persönliche Beratung und Bestellungen.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta name="theme-color" content="#090909">
+
+<meta name="description" content="Parfüm und Düfte Perez – Chogan Parfüms, MYTHOLOGIK, Damen-, Herren- und Luxus-Unisex-Düfte. Persönliche Bestellung bei Salvador Pérez.">
+
 <title>Parfüm und Düfte Perez | Eleganz, die bleibt</title>
 
 <style>
-:root{
-  --gold:#d4af37;
-  --gold-light:#f5df91;
-  --black:#090909;
-  --panel:#191919;
-  --white:#f5f5f5;
-  --muted:#c9c9c9;
+
+:root {
+
+  --gold: #d4af37;
+
+  --gold-light: #f5df91;
+
+  --black: #090909;
+
+  --panel: #191919;
+
+  --white: #f7f5ef;
+
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--black);
-  color:var(--white);
-  line-height:1.65;
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+
+body {
+
+  margin: 0; background: var(--black); color: var(--white);
+
+  font-family: Arial, Helvetica, sans-serif; line-height: 1.65;
+
 }
-a{color:var(--gold-light)}
-.container{width:92%;max-width:1120px;margin:auto}
-header{
-  text-align:center;padding:24px 12px;
-  background:#000;border-bottom:2px solid var(--gold)
+
+a { color: var(--gold-light); }
+
+header {
+
+  background: #000; text-align: center; padding: 22px 12px;
+
+  border-bottom: 2px solid var(--gold);
+
 }
-header h1{
-  color:var(--gold);font-family:Georgia,serif;
-  font-size:clamp(27px,5vw,43px)
+
+header h1 {
+
+  margin: 0; color: var(--gold); font-family: Georgia, serif;
+
+  font-size: clamp(27px, 5vw, 43px);
+
 }
-header p{color:#ddd;font-style:italic}
-.language{margin-top:14px}
-.language select{
-  max-width:100%;padding:10px 14px;
-  background:#111;color:white;border:1px solid var(--gold);
-  border-radius:8px;font-size:15px
+
+header p { margin: 4px 0 12px; color: #ddd; font-style: italic; }
+
+.language select {
+
+  max-width: 100%; padding: 10px 12px; color: white;
+
+  background: #171717; border: 1px solid var(--gold); border-radius: 8px;
+
 }
-.hero{
-  padding:65px 15px;text-align:center;
-  background:radial-gradient(ellipse at center,#35270b 0%,#100e08 48%,#050505 100%)
+
+.container { width: 92%; max-width: 1120px; margin: auto; }
+
+.hero {
+
+  padding: 55px 14px; text-align: center;
+
+  background: radial-gradient(ellipse at center, #3a2b0a, #100e08 50%, #050505);
+
 }
-.hero-box{
-  max-width:850px;margin:auto;padding:30px 18px;
-  border:1px solid var(--gold);border-radius:16px
+
+.hero-box {
+
+  max-width: 850px; margin: auto; padding: 28px 18px;
+
+  border: 1px solid var(--gold); border-radius: 16px;
+
 }
-.hero h2{
-  color:var(--gold);font-family:Georgia,serif;
-  font-size:clamp(34px,6vw,55px);line-height:1.2
+
+h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
+.hero h2 {
+
+  margin: 0; color: var(--gold);
+
+  font-size: clamp(34px, 6vw, 54px); line-height: 1.2;
+
 }
-.hero p{margin:18px auto;max-width:700px}
-.btn{
-  display:inline-block;margin:9px 5px 0;padding:12px 18px;
-  background:var(--gold);color:#080808;border:1px solid var(--gold);
-  border-radius:25px;text-decoration:none;font-weight:bold;
-  text-align:center;transition:.2s
+
+.hero p { max-width: 700px; margin: 18px auto; }
+
+.btn {
+
+  display: inline-block; margin: 7px 4px; padding: 11px 16px;
+
+  background: var(--gold); color: #090909; border: 1px solid var(--gold);
+
+  border-radius: 24px; text-decoration: none; font-weight: bold;
+
+  text-align: center;
+
 }
-.btn:hover{background:var(--gold-light)}
-.btn-outline{background:transparent;color:var(--gold)}
-.notice{
-  text-align:center;padding:30px 15px;
-  background:#211906;border-block:1px solid var(--gold)
+
+.btn:hover { background: var(--gold-light); }
+
+.btn-outline { background: transparent; color: var(--gold-light); }
+
+.notice {
+
+  padding: 28px 14px; text-align: center;
+
+  background: #211906; border-block: 1px solid var(--gold);
+
 }
-.section-title{
-  color:var(--gold);text-align:center;
-  font-family:Georgia,serif;
-  font-size:clamp(26px,4vw,37px);margin-bottom:12px
+
+.section-title {
+
+  color: var(--gold); text-align: center;
+
+  font-size: clamp(26px, 4vw, 36px); margin: 0 0 12px;
+
 }
-.intro{max-width:850px;text-align:center;margin:10px auto 25px;color:#ddd}
-.videos,.products{padding:44px 0;background:#101010}
-.video-grid,.product-grid{
-  display:grid;grid-template-columns:1fr;gap:22px
+
+.intro { max-width: 850px; margin: 10px auto 25px; text-align: center; color: #ddd; }
+
+.videos, .products { padding: 42px 0; background: #101010; }
+
+.products { border-top: 1px solid #333; }
+
+.video-grid, .product-grid {
+
+  display: grid; grid-template-columns: 1fr; gap: 20px;
+
 }
-.video-card,.product{
-  background:var(--panel);border:1px solid #665323;
-  border-radius:13px;overflow:hidden;text-align:center
+
+.video-card, .product {
+
+  overflow: hidden; background: var(--panel);
+
+  border: 1px solid #6a5623; border-radius: 13px;
+
 }
-.video-card h3{
-  padding:17px 10px;color:var(--gold);
-  font-family:Georgia,serif;font-size:25px
+
+.video-card { text-align: center; }
+
+.video-card h3 { color: var(--gold); font-size: 25px; margin: 0; padding: 15px 10px; }
+
+.video-card video {
+
+  display: block; width: 100%; aspect-ratio: 16 / 9;
+
+  background: #000; object-fit: contain;
+
 }
-.video-card video{
-  width:100%;display:block;aspect-ratio:16/9;
-  object-fit:contain;background:#000
+
+.video-card p { padding: 0 15px; color: #ddd; }
+
+.product { padding: 13px; text-align: center; }
+
+.product img {
+
+  width: 100%; height: 225px; object-fit: contain;
+
+  background: #080808; border-radius: 8px;
+
 }
-.video-card p{padding:13px 16px;color:#ddd}
-.products{border-top:1px solid #333;padding-inline:0}
-.product-grid{margin-top:25px;text-align:left}
-.product{padding:14px}
-.product img{
-  display:block;width:100%;height:230px;
-  object-fit:contain;background:#080808;border-radius:8px
+
+.product h3 { color: var(--gold); font-size: 21px; margin: 10px 0 4px; }
+
+.product p { margin: 5px 0; }
+
+.price { color: var(--gold-light); font-weight: bold; }
+
+.small-note { font-size: 13px; color: #bbb; }
+
+.order-buttons { text-align: center; margin: 20px auto 4px; }
+
+.cosmetics, .contact { padding: 42px 15px; text-align: center; border-top: 1px solid #333; }
+
+.cosmetics h2, .contact h2 { color: var(--gold); font-size: clamp(27px, 4vw, 34px); }
+
+.cosmetics p, .contact p { max-width: 800px; margin: 12px auto; color: #ddd; }
+
+.contact { background: #050505; }
+
+.legal { padding: 30px 15px; background: #0d0d0d; border-top: 1px solid var(--gold); }
+
+.legal h2, .legal h3 { color: var(--gold); }
+
+.legal h2 { text-align: center; }
+
+.legal p { color: #ddd; overflow-wrap: anywhere; }
+
+footer { padding: 20px 12px; text-align: center; color: #aaa; font-size: 13px; background: #000; }
+
+@media (min-width: 760px) {
+
+  .video-grid { grid-template-columns: 1fr 1fr; }
+
+  .video-grid .video-card:first-child { grid-column: 1 / -1; }
+
+  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
 }
-.product h3{
-  color:var(--gold);font-family:Georgia,serif;
-  font-size:21px;margin-top:12px
-}
-.product p{margin:5px 0}
-.price{color:var(--gold-light);font-weight:bold}
-.small-note{color:#bbb;font-size:13px}
-.order-buttons{text-align:center;margin-top:18px}
-.cosmetics,.contact{padding:44px 15px;text-align:center;border-top:1px solid #333}
-.cosmetics h2,.contact h2{
-  color:var(--gold);font-family:Georgia,serif;
-  font-size:clamp(27px,4vw,34px)
-}
-.cosmetics p,.contact p{max-width:800px;margin:12px auto;color:#ddd}
-.contact{background:#050505}
-.legal{padding:32px 15px;background:#0d0d0d;border-top:1px solid var(--gold)}
-.legal h2,.legal h3{color:var(--gold);margin:20px 0 8px}
-.legal h2{text-align:center;font-family:Georgia,serif}
-.legal p{margin:8px 0;color:#ddd;overflow-wrap:anywhere}
-.legal a{overflow-wrap:anywhere}
-footer{
-  text-align:center;padding:20px 12px;background:#000;
-  border-top:1px solid #665323;color:#aaa;font-size:13px
-}
-@media(min-width:760px){
-  .video-grid{grid-template-columns:1fr 1fr}
-  .video-grid .video-card:first-child{grid-column:1/-1}
-  .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-}
-@media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important}
-}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
 </style>
+
 </head>
 
 <body>
+
 <header>
+
   <h1>Parfüm und Düfte Perez</h1>
+
   <p id="tagline">Dein Duft. Dein Stil. Deine Eleganz.</p>
+
   <div class="language">
+
     <label for="language">🌐 Sprache / Idioma: </label>
+
     <select id="language" onchange="changeLanguage(this.value)">
+
       <option value="de">Deutsch</option>
+
       <option value="es">Español</option>
+
       <option value="it">Italiano</option>
+
       <option value="tr">Türkçe</option>
+
       <option value="ru">Русский</option>
+
       <option value="pt">Português</option>
+
       <option value="sq">Shqip</option>
+
     </select>
+
   </div>
+
 </header>
 
 <main>
+
 <section class="hero">
+
   <div class="hero-box">
+
     <h2 id="heroTitle">Chogan Parfüms</h2>
+
     <p id="heroText">Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.</p>
+
     <a class="btn" href="#kollektion" id="heroButton">DUFTWELTEN ENTDECKEN</a>
+
   </div>
+
 </section>
 
 <section class="notice" id="hinweis">
+
   <div class="container">
+
     <h2 class="section-title" id="noticeTitle">Wichtiger Hinweis zu Parfüms in 15 ml</h2>
+
     <p id="noticeText">Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und muss separat bestellt werden.</p>
+
     <a class="btn" href="#etuis" id="caseButton">ETUIS ANSEHEN</a>
+
   </div>
+
 </section>
 
 <!-- ALLE VIER VIDEOS ZUSAMMEN -->
+
 <section class="videos" id="kollektion">
+
   <div class="container">
+
     <h2 class="section-title" id="collectionTitle">Entdecke unsere Duftwelten</h2>
+
     <p class="intro" id="collectionIntro">Sieh dir die Videos an und öffne darunter die Produkte und Preise.</p>
 
     <div class="video-grid">
+
       <article class="video-card">
+
         <h3>MYTHOLOGIK</h3>
+
         <video controls playsinline preload="metadata"
+
           poster="755f5311-6403-4ef0-a837-50070ccb570c.jpeg">
+
           <source src="MYTHOLOGIK_100ml_Salvador_Perez.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p id="mythText">Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.</p>
+
         <a class="btn" href="#produkte-mythologik" id="mythButton">PRODUKTE UND PREISE</a>
+
       </article>
 
       <article class="video-card">
+
         <h3 id="womenTitle">DAMENPARFÜMS</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov" type="video/quicktime">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p id="womenText">Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.</p>
+
         <a class="btn" href="#produkte-damen" id="womenButton">PRODUKTE UND PREISE</a>
+
       </article>
 
       <article class="video-card">
+
         <h3 id="menTitle">HERRENPARFÜMS</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Parfuem_und_Duefte_Perez_Herrenparfum.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p id="menText">Ausdrucksstarke Düfte für Herren – elegant und modern.</p>
+
         <a class="btn" href="#produkte-herren" id="menButton">PRODUKTE UND PREISE</a>
+
       </article>
 
       <!-- LUXUS & UNISEX DIREKT UNTER HERREN -->
+
       <article class="video-card">
+
         <h3>LUXUS &amp; UNISEX</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Luxus_Unisex_romantico.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p id="luxusText">Exklusive olfazeta-Düfte für sie und ihn.</p>
+
         <a class="btn" href="#produkte-luxus" id="luxusButton">PRODUKTE UND PREISE</a>
+
       </article>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- ETUIS -->
+<!-- ETUIS FÜR 15 ML -->
+
 <section class="products" id="etuis">
+
   <div class="container">
+
     <h2 class="section-title" id="caseTitle">Etuis für Parfüms in 15 ml</h2>
+
     <p class="intro" id="caseText">Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus. Es ist nicht im Parfümpreis enthalten.</p>
-    <p class="intro small-note" id="caseNote">Bitte frage nach den verfügbaren Etuis, Artikelnummern und Preisen.</p>
-    <div class="order-buttons">
-      <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-         target="_blank" rel="noopener noreferrer" id="caseOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
-      <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Etui%2015%20ml" id="caseDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
+    <div class="product-grid">
+
+      <article class="product">
+
+        <h3>Etui TCOV010</h3>
+
+        <p>Artikel: TCOV010</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui TCOV011</h3>
+
+        <p>Artikel: TCOV011</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui TCOV012</h3>
+
+        <p>Artikel: TCOV012</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui TCOV014</h3>
+
+        <p>Artikel: TCOV014</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui TCOV015</h3>
+
+        <p>Artikel: TCOV015</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui TCOV019</h3>
+
+        <p>Artikel: TCOV019</p>
+
+        <p class="price">13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui Bordeaux</h3>
+
+        <p>Artikel: TCOV008</p>
+
+        <p class="price">15,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <h3>Etui Schwarz</h3>
+
+        <p>Artikel: TCOV009</p>
+
+        <p class="price">15,00 €</p>
+
+      </article>
+
     </div>
+
+    <div class="order-buttons">
+
+      <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" id="caseOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+      <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%20Salvador%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Etui%20f%C3%BCr%2015-ml-Parf%C3%BCm." target="_blank" rel="noopener noreferrer" id="caseDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
+    </div>
+
   </div>
+
 </section>
 
 <!-- MYTHOLOGIK -->
+
 <section class="products" id="produkte-mythologik">
+
   <div class="container">
+
     <h2 class="section-title">MYTHOLOGIK – Produkte und Preise</h2>
-    <p class="intro" id="mythIntro">Die MYTHOLOGIK-Kollektion wird in 100 ml angeboten. Bitte frage nach den einzelnen Düften und ihrer Verfügbarkeit.</p>
+
+    <p class="intro" id="mythIntro">Die MYTHOLOGIK-Kollektion wird in 100 ml angeboten. Preis: 299,00 € pro Produkt.</p>
+
     <div class="product-grid">
+
       <article class="product">
-        <img src="755f5311-6403-4ef0-a837-50070ccb570c.jpeg"
-             alt="MYTHOLOGIK – Kollektion" loading="lazy">
-        <h3>MYTHOLOGIK</h3>
-        <p>Format: 100 ml</p>
-        <p class="price">Preis: 299,00 € pro Produkt*</p>
-        <p class="small-note" id="mythNote">Kollektion-Motiv. Bitte vor der Bestellung den gewünschten Duft und den aktuellen Preis bestätigen.</p>
+
+        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Hermes MYTHOLOGIK" loading="lazy">
+
+        <h3>Hermes</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
       </article>
+
+      <article class="product">
+
+        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Ares MYTHOLOGIK" loading="lazy">
+
+        <h3>Ares</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="EFBB9C18-0EF0-4E67-81AA-25615C59D244.png" alt="Apollo MYTHOLOGIK" loading="lazy">
+
+        <h3>Apollo</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Afrodita MYTHOLOGIK" loading="lazy">
+
+        <h3>Afrodita</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Medusa MYTHOLOGIK" loading="lazy">
+
+        <h3>Medusa</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Artemide MYTHOLOGIK" loading="lazy">
+
+        <h3>Artemide</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Zeus MYTHOLOGIK" loading="lazy">
+
+        <h3>Zeus</h3><p>MYTHOLOGIK · 100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
     </div>
+
     <div class="order-buttons">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
-      <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=MYTHOLOGIK">DIREKT BEI SALVADOR BESTELLEN</a>
+
+      <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%20Salvador%2C%20ich%20m%C3%B6chte%20mehr%20%C3%BCber%20MYTHOLOGIK%20erfahren." target="_blank" rel="noopener noreferrer">DIREKT BEI SALVADOR BESTELLEN</a>
+
     </div>
-    <p class="small-note intro">*Bitte bestätige den aktuellen Preis und die Verfügbarkeit vor der Veröffentlichung und vor jeder Bestellung.</p>
+
   </div>
+
 </section>
 
 <!-- DAMEN -->
+
 <section class="products" id="produkte-damen">
+
   <div class="container">
+
     <h2 class="section-title" id="womenProductsTitle">Damenparfüms – Produkte und Preise</h2>
-    <p class="intro" id="womenProductsText">Wähle deinen Duft. Preise und Größen: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.</p>
+
+    <p class="intro" id="womenProductsText">70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.</p>
+
     <div class="product-grid">
+
       <article class="product">
-        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Damenparfüm – Produktabbildung" loading="lazy">
-        <h3>Damenparfüm – Duft 1</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
+
+        <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png" alt="Damenparfüms – Produktübersicht" loading="lazy">
+
+        <h3>Damendüfte – Katalog</h3>
+
+        <p>Die vollständige Auswahl an Duftnamen und Artikelnummern erhältst du auf Anfrage.</p>
+
         <p>70 ml: <span class="price">35,00 €</span></p>
+
         <p>30 ml: <span class="price">18,00 €</span></p>
+
         <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
+
       </article>
+
       <article class="product">
-        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Damenparfüm – Produktabbildung" loading="lazy">
-        <h3>Damenparfüm – Duft 2</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
+
+        <h3>006 – OPIUM YSL</h3>
+
+        <p>Inspirierter Damenduft</p>
+
         <p>70 ml: <span class="price">35,00 €</span></p>
+
         <p>30 ml: <span class="price">18,00 €</span></p>
+
         <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
+
       </article>
-      <article class="product">
-        <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Damenparfüm – Produktabbildung" loading="lazy">
-        <h3>Damenparfüm – Duft 3</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
-        <p>70 ml: <span class="price">35,00 €</span></p>
-        <p>30 ml: <span class="price">18,00 €</span></p>
-        <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
-      </article>
-      <article class="product">
-        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Damenparfüm – Produktabbildung" loading="lazy">
-        <h3>Damenparfüm – Duft 4</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
-        <p>70 ml: <span class="price">35,00 €</span></p>
-        <p>30 ml: <span class="price">18,00 €</span></p>
-        <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
-      </article>
+
     </div>
+
     <div class="order-buttons">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" id="womenOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
-      <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Damenparfum" id="womenDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
+      <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%20Salvador%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Damenduft." target="_blank" rel="noopener noreferrer" id="womenDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
     </div>
+
   </div>
+
 </section>
 
 <!-- HERREN -->
+
 <section class="products" id="produkte-herren">
+
   <div class="container">
+
     <h2 class="section-title" id="menProductsTitle">Herrenparfüms – Produkte und Preise</h2>
-    <p class="intro" id="menProductsText">Preise: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Für 15 ml ist ein separates Etui erforderlich.</p>
+
+    <p class="intro" id="menProductsText">70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.</p>
+
     <div class="product-grid">
+
       <article class="product">
-        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Herrenparfüm – Produktabbildung" loading="lazy">
-        <h3>Herrenparfüm – Duft 1</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
+
+        <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Herrenparfüms – Produktübersicht" loading="lazy">
+
+        <h3>Herrendüfte – Katalog</h3>
+
+        <p>Die vollständige Auswahl an Duftnamen und Artikelnummern erhältst du auf Anfrage.</p>
+
         <p>70 ml: <span class="price">35,00 €</span></p>
+
         <p>30 ml: <span class="price">18,00 €</span></p>
+
         <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
+
       </article>
+
       <article class="product">
-        <img src="A760207C-027E-4435-A93E-3C8C0843B498.png" alt="Herrenparfüm – Produktabbildung" loading="lazy">
-        <h3>Herrenparfüm – Duft 2</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
+
+        <h3>001 – ONE MILLION</h3>
+
+        <p>Inspirierter Herrenduft</p>
+
         <p>70 ml: <span class="price">35,00 €</span></p>
+
         <p>30 ml: <span class="price">18,00 €</span></p>
+
         <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
+
       </article>
+
       <article class="product">
-        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Herrenparfüm – Produktabbildung" loading="lazy">
-        <h3>Herrenparfüm – Duft 3</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
+
+        <h3>002 – ACQUA DI GIO</h3>
+
+        <p>Inspirierter Herrenduft</p>
+
         <p>70 ml: <span class="price">35,00 €</span></p>
+
         <p>30 ml: <span class="price">18,00 €</span></p>
+
         <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
+
       </article>
-      <article class="product">
-        <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Herrenparfüm – Produktabbildung" loading="lazy">
-        <h3>Herrenparfüm – Duft 4</h3>
-        <p>Artikelnummer und Duftname bitte erfragen.</p>
-        <p>70 ml: <span class="price">35,00 €</span></p>
-        <p>30 ml: <span class="price">18,00 €</span></p>
-        <p>15 ml: <span class="price">11,90 €</span> + Etui</p>
-      </article>
+
     </div>
+
     <div class="order-buttons">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" id="menOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
-      <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Herrenparfum" id="menDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
+      <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%20Salvador%2C%20ich%20interessiere%20mich%20f%C3%BCr%20einen%20Herrenduft." target="_blank" rel="noopener noreferrer" id="menDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- LUXUS & UNISEX -->
+<!-- LUXUS & UNISEX DIREKT NACH HERREN -->
+
 <section class="products" id="produkte-luxus">
+
   <div class="container">
+
     <h2 class="section-title">LUXUS &amp; UNISEX – Produkte und Preise</h2>
+
     <p class="intro">olfazeta Luxury · Unisex · 50 ml</p>
+
     <div class="product-grid">
+
       <article class="product">
+
         <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Sugar Poison" loading="lazy">
+
         <h3>Sugar Poison</h3><p>Artikelnummer: 128U</p><p>Format: 50 ml</p>
+
         <p class="price">Preis bitte erfragen</p>
+
       </article>
+
       <article class="product">
+
         <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png" alt="Agar Forest" loading="lazy">
+
         <h3>Agar Forest</h3><p>Artikelnummer: 127U</p><p>Format: 50 ml</p>
+
         <p class="price">Preis bitte erfragen</p>
+
       </article>
+
       <article class="product">
-        <img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Sands of Time" loading="lazy">
+
+        <img src="EFBB9C18-0EF0-4E67-81AA-25615C59D244.png" alt="Sands of Time" loading="lazy">
+
         <h3>Sands of Time</h3><p>Artikelnummer: 141U</p><p>Format: 50 ml</p>
+
         <p class="price">Preis bitte erfragen</p>
+
       </article>
+
       <article class="product">
+
         <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Velvet Smoke" loading="lazy">
+
         <h3>Velvet Smoke</h3><p>Artikelnummer: 117U</p><p>Format: 50 ml</p>
+
         <p class="price">Preis bitte erfragen</p>
+
       </article>
+
     </div>
+
     <div class="order-buttons">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" id="luxusOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
-      <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Luxus%20Unisex" id="luxusDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
+      <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%20Salvador%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Luxus-%20und%20Unisex-D%C3%BCfte." target="_blank" rel="noopener noreferrer" id="luxusDirect">DIREKT BEI SALVADOR BESTELLEN</a>
+
     </div>
+
   </div>
+
 </section>
 
-<!-- KOSMETIK -->
+<!-- KOSMETIKSEITE -->
+
 <section class="cosmetics">
+
   <div class="container">
+
     <h2 id="cosmeticsTitle">Cremes und Kosmetik</h2>
+
     <p id="cosmeticsText">Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.</p>
-    <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/"
-       target="_blank" rel="noopener noreferrer" id="cosmeticsButton">CREMES UND KOSMETIK ANSEHEN</a>
+
+    <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/" target="_blank" rel="noopener noreferrer" id="cosmeticsButton">CREMES UND KOSMETIK ANSEHEN</a>
+
   </div>
+
 </section>
 
 <!-- KONTAKT -->
+
 <section class="contact">
+
   <div class="container">
+
     <h2 id="contactTitle">Persönliche Beratung und Bestellung</h2>
+
     <p id="contactText">Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreib mir gerne.</p>
+
     <p><strong>Salvador Pérez</strong><br>
+
       Steinstraße 57<br>
+
       34385 Bad Karlshafen, Deutschland
+
     </p>
+
     <a class="btn btn-outline" href="mailto:info@parfuemperez.com">✉ info@parfuemperez.com</a>
+
     <a class="btn btn-outline" href="tel:+491745201068">☎ +49 174 5201068</a>
+
     <p class="small-note" id="orderNote">Bei einer direkten Bestellung klären wir vorab Verfügbarkeit, Gesamtpreis, Versand und Zahlungsweise.</p>
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-       target="_blank" rel="noopener noreferrer" id="contactOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" id="contactOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn btn-outline" href="https://wa.me/491745201068" target="_blank" rel="noopener noreferrer">WHATSAPP – DIREKT KONTAKTIEREN</a>
+
   </div>
+
 </section>
 
-<!-- AVISOS LEGALES EN ALEMÁN -->
+<!-- RECHTLICHE INFORMATIONEN -->
+
 <section class="legal" id="rechtliches">
+
   <div class="container">
+
     <h2>Rechtliche Informationen</h2>
 
     <h3>Impressum</h3>
+
     <p><strong>Angaben gemäß § 5 DDG</strong></p>
+
     <p>
+
       Salvador Pérez<br>
+
       Parfüm und Düfte Perez<br>
+
       Steinstraße 57<br>
+
       34385 Bad Karlshafen<br>
+
       Deutschland
+
     </p>
+
     <p>
+
       E-Mail: <a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a><br>
+
       Telefon: <a href="tel:+491745201068">+49 174 5201068</a>
+
     </p>
-    <p><strong>Umsatzsteuer:</strong> Es wird auf der Website keine Umsatzsteuer-Identifikationsnummer angegeben. Eine gegebenenfalls erforderliche steuerliche Angabe ist vor Veröffentlichung zu prüfen.</p>
+
     <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</strong> Salvador Pérez, Anschrift wie oben.</p>
 
-    <h3>Hinweis zur Marke und zum Vertrieb</h3>
-    <p>Diese Website wird von Salvador Pérez unter dem Namen „Parfüm und Düfte Perez“ betrieben. Sie ist keine offizielle Website von Chogan. Chogan und weitere erwähnte Marken- und Produktnamen gehören ihren jeweiligen Rechteinhabern. Die Website dient der Produktinformation und persönlichen Kontaktaufnahme. Bestellungen über den offiziellen Chogan-Link werden auf der Website des jeweiligen Anbieters abgewickelt. Bei Nutzung eines Empfehlungslinks kann eine Provision anfallen.</p>
+    <h3>Hinweis zu Chogan und olfazeta</h3>
+
+    <p>„Parfüm und Düfte Perez“ ist eine unabhängige Vertriebs- und Beratungsseite und keine offizielle Website von Chogan oder olfazeta. Die genannten Marken und Produktnamen gehören ihren jeweiligen Rechteinhabern. Bestellungen über den offiziellen Empfehlungslink werden auf der Website des Anbieters abgewickelt. Bei Nutzung des Empfehlungslinks kann eine Provision anfallen.</p>
 
     <h3>Datenschutzhinweise</h3>
-    <p><strong>Verantwortlicher:</strong> Salvador Pérez, Steinstraße 57, 34385 Bad Karlshafen, Deutschland; E-Mail: info@parfuemperez.com.</p>
-    <p><strong>Kontaktaufnahme:</strong> Wenn du per E-Mail oder Telefon Kontakt aufnimmst, werden die von dir übermittelten Daten zur Bearbeitung deiner Anfrage und gegebenenfalls zur Vorbereitung einer Bestellung verwendet. Bitte übermittle keine unnötigen sensiblen Daten.</p>
-    <p><strong>Hosting:</strong> Diese Website wird über GitHub Pages bereitgestellt. Beim Aufruf der Website können technisch erforderliche Daten wie IP-Adresse, Zeitpunkt des Zugriffs und Browserinformationen durch den Hosting-Anbieter verarbeitet werden. Bitte informiere dich über die Datenschutzbestimmungen des Hosting-Anbieters.</p>
-    <p><strong>Externe Links:</strong> Diese Website enthält Links zu externen Anbietern, insbesondere Chogan und einer separaten Kosmetikseite. Beim Anklicken verlässt du diese Website. Für die Verarbeitung personenbezogener Daten auf externen Websites sind deren jeweilige Betreiber verantwortlich.</p>
-    <p><strong>Keine eingebauten Analyse- oder Werbe-Tracker:</strong> In diesem HTML sind keine eigenen Analyse- oder Werbe-Tracking-Skripte eingebaut. Technische Verarbeitungen durch Hosting-Anbieter oder externe Websites können davon unberührt sein.</p>
-    <p><strong>Deine Rechte:</strong> Im Rahmen der gesetzlichen Voraussetzungen hast du Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch sowie gegebenenfalls Datenübertragbarkeit. Du kannst dich außerdem bei einer zuständigen Datenschutzaufsichtsbehörde beschweren. Für Datenschutzanfragen schreibe an info@parfuemperez.com.</p>
 
-    <h3>Informationen zu Bestellungen und Verbraucherrechten</h3>
-    <p>Vor einer direkten Bestellung müssen Produkt, Artikelnummer, Größe, Gesamtpreis einschließlich gegebenenfalls anfallender Versandkosten, Lieferzeit und Zahlungsweise individuell bestätigt werden. Verbindliche Vertragsbedingungen und Informationen zum Widerrufsrecht müssen dem Kunden vor Abschluss eines Fernabsatzvertrags bereitgestellt werden. Die gesetzlichen Verbraucherrechte bleiben unberührt.</p>
-    <p>Bei einer Bestellung über die offizielle Chogan-Website gelten die dort angezeigten Bestellbedingungen und Informationen des jeweiligen Vertragspartners.</p>
+    <p>Verantwortlicher: Salvador Pérez, Steinstraße 57, 34385 Bad Karlshafen, Deutschland. Kontakt: info@parfuemperez.com.</p>
 
-    <h3>Hinweis zu Inhalten und Preisen</h3>
-    <p>Produktverfügbarkeit, Artikelnummern und Preise können sich ändern. Bitte bestätige diese Angaben vor einer Bestellung. Produktabbildungen dienen der Orientierung; Abweichungen sind möglich.</p>
+    <p>Wenn du per E-Mail, Telefon oder WhatsApp Kontakt aufnimmst, werden die von dir übermittelten Angaben zur Bearbeitung deiner Anfrage verwendet. Bei WhatsApp gelten zusätzlich die Datenschutzbedingungen des jeweiligen Dienstanbieters. Bitte sende keine unnötigen sensiblen Informationen.</p>
 
-    <p class="small-note">Wichtig: Diese rechtlichen Texte sind eine Vorlage und keine Rechtsberatung. Bitte prüfe sie vor Veröffentlichung auf Vollständigkeit und Richtigkeit, insbesondere Unternehmensangaben, Datenschutz, Widerrufsbelehrung, AGB und Informationspflichten bei direkten Onlinebestellungen.</p>
+    <p>Die Website verlinkt auf externe Anbieter, darunter Chogan und die separate Kosmetikseite. Für deren Inhalte und Datenverarbeitung gelten die jeweiligen Datenschutzinformationen der Anbieter.</p>
+
+    <h3>Preise, Verfügbarkeit und Bestellungen</h3>
+
+    <p>Die auf dieser Website genannten Preise beziehen sich auf die jeweils bezeichneten Produkte und Größen. Bitte bestätige Verfügbarkeit, Gesamtpreis, Versandkosten und Zahlungsbedingungen vor einer direkten Bestellung. Etuis für 15-ml-Parfüms sind separat zu bestellen und nicht im Parfümpreis enthalten.</p>
+
+    <p>Diese Website dient auch der Produktinformation und Kontaktaufnahme. Falls Bestellungen direkt über diese Website verbindlich abgeschlossen werden, müssen vor Veröffentlichung alle gesetzlich erforderlichen Informationen, insbesondere zu Widerrufsrecht, Versand, Zahlung und Vertragsabschluss, vollständig ergänzt und rechtlich geprüft werden.</p>
+
   </div>
+
 </section>
+
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Parfüm und Düfte Perez. Alle Rechte vorbehalten.</p>
-  <p><a href="#rechtliches">Impressum &amp; Datenschutz</a></p>
+
+  <p>© <span id="year"></span> Parfüm und Düfte Perez · Salvador Pérez</p>
+
+  <p>Eleganz, die bleibt.</p>
+
 </footer>
 
 <script>
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const translations = {
-de: {
-tagline:"Dein Duft. Dein Stil. Deine Eleganz.",
-heroTitle:"Chogan Parfüms",
-heroText:"Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.",
-heroButton:"DUFTWELTEN ENTDECKEN",
-noticeTitle:"Wichtiger Hinweis zu Parfüms in 15 ml",
-noticeText:"Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und muss separat bestellt werden.",
-caseButton:"ETUIS ANSEHEN",
-collectionTitle:"Entdecke unsere Duftwelten",
-collectionIntro:"Sieh dir die Videos an und öffne darunter die Produkte und Preise.",
-mythText:"Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.",
-womenTitle:"DAMENPARFÜMS", womenText:"Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.",
-menTitle:"HERRENPARFÜMS", menText:"Ausdrucksstarke Düfte für Herren – elegant und modern.",
-luxusText:"Exklusive olfazeta-Düfte für sie und ihn.",
-mythButton:"PRODUKTE UND PREISE", womenButton:"PRODUKTE UND PREISE", menButton:"PRODUKTE UND PREISE", luxusButton:"PRODUKTE UND PREISE",
-caseTitle:"Etuis für Parfüms in 15 ml", caseText:"Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus. Es ist nicht im Parfümpreis enthalten.",
-caseNote:"Bitte frage nach den verfügbaren Etuis, Artikelnummern und Preisen.",
-caseOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", caseDirect:"DIREKT BEI SALVADOR BESTELLEN",
-mythIntro:"Die MYTHOLOGIK-Kollektion wird in 100 ml angeboten. Bitte frage nach den einzelnen Düften und ihrer Verfügbarkeit.",
-mythNote:"Kollektion-Motiv. Bitte vor der Bestellung den gewünschten Duft und den aktuellen Preis bestätigen.",
-womenProductsTitle:"Damenparfüms – Produkte und Preise",
-womenProductsText:"Preise: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.",
-menProductsTitle:"Herrenparfüms – Produkte und Preise",
-menProductsText:"Preise: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Für 15 ml ist ein separates Etui erforderlich.",
-womenOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", womenDirect:"DIREKT BEI SALVADOR BESTELLEN",
-menOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", menDirect:"DIREKT BEI SALVADOR BESTELLEN",
-luxusOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", luxusDirect:"DIREKT BEI SALVADOR BESTELLEN",
-cosmeticsTitle:"Cremes und Kosmetik",
-cosmeticsText:"Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.",
-cosmeticsButton:"CREMES UND KOSMETIK ANSEHEN",
-contactTitle:"Persönliche Beratung und Bestellung",
-contactText:"Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreib mir gerne.",
-orderNote:"Bei einer direkten Bestellung klären wir vorab Verfügbarkeit, Gesamtpreis, Versand und Zahlungsweise.",
-contactOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN"
-},
-es: {
-tagline:"Tu perfume. Tu estilo. Tu elegancia.",
-heroTitle:"Perfumes Chogan",
-heroText:"Descubre fragancias italianas con personalidad y encuentra tu perfume favorito.",
-heroButton:"DESCUBRIR FRAGANCIAS",
-noticeTitle:"Aviso importante sobre perfumes de 15 ml",
-noticeText:"Los perfumes de 15 ml necesitan un estuche adecuado. El estuche no está incluido en el precio y debe comprarse por separado.",
-caseButton:"VER ESTUCHES",
-collectionTitle:"Descubre nuestras fragancias",
-collectionIntro:"Mira los vídeos y pulsa debajo para ver los productos y precios.",
-mythText:"Colección MYTHOLOGIK inspirada en el mundo de los dioses. Formato de 100 ml.",
-womenTitle:"PERFUMES DE MUJER", womenText:"Fragancias elegantes para mujer: encuentra tu aroma favorito.",
-menTitle:"PERFUMES DE HOMBRE", menText:"Fragancias masculinas con carácter, elegantes y modernas.",
-luxusText:"Fragancias olfazeta exclusivas para ella y para él.",
-mythButton:"PRODUCTOS Y PRECIOS", womenButton:"PRODUCTOS Y PRECIOS", menButton:"PRODUCTOS Y PRECIOS", luxusButton:"PRODUCTOS Y PRECIOS",
-caseTitle:"Estuches para perfumes de 15 ml", caseText:"Selecciona un estuche adicional para los perfumes de 15 ml. No está incluido en el precio del perfume.",
-caseNote:"Consulta la disponibilidad, las referencias y los precios de los estuches.",
-caseOfficial:"COMPRAR EN CHOGAN", caseDirect:"PEDIR DIRECTAMENTE A SALVADOR",
-mythIntro:"La colección MYTHOLOGIK se ofrece en formato de 100 ml. Consulta los aromas y la disponibilidad.",
-mythNote:"Imagen de la colección. Confirma el perfume y su precio antes de realizar el pedido.",
-womenProductsTitle:"Perfumes de mujer – productos y precios",
-womenProductsText:"Precios: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Para 15 ml se necesita un estuche aparte.",
-menProductsTitle:"Perfumes de hombre – productos y precios",
-menProductsText:"Precios: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Para 15 ml se necesita un estuche aparte.",
-womenOfficial:"COMPRAR EN CHOGAN", womenDirect:"PEDIR DIRECTAMENTE A SALVADOR",
-menOfficial:"COMPRAR EN CHOGAN", menDirect:"PEDIR DIRECTAMENTE A SALVADOR",
-luxusOfficial:"COMPRAR EN CHOGAN", luxusDirect:"PEDIR DIRECTAMENTE A SALVADOR",
-cosmeticsTitle:"Cremas y cosmética",
-cosmeticsText:"Visita nuestra página independiente de cremas, cosmética y cuidado personal.",
-cosmeticsButton:"VER CREMAS Y COSMÉTICA",
-contactTitle:"Atención personalizada y pedidos",
-contactText:"¿Quieres hacerme un pedido directamente o consultar una fragancia? Escríbeme.",
-orderNote:"Antes del pedido directo confirmaremos disponibilidad, precio total, envío y forma de pago.",
-contactOfficial:"COMPRAR EN CHOGAN"
-},
-it: {
-tagline:"Il tuo profumo. Il tuo stile. La tua eleganza.",
-heroTitle:"Profumi Chogan",
-heroText:"Scopri fragranze italiane con carattere e trova il tuo profumo preferito.",
-heroButton:"SCOPRI LE FRAGRANZE",
-noticeTitle:"Avviso importante sui profumi da 15 ml",
-noticeText:"I profumi da 15 ml richiedono una custodia adatta. La custodia non è inclusa nel prezzo e va acquistata separatamente.",
-caseButton:"VEDI LE CUSTODIE",
-collectionTitle:"Scopri le nostre fragranze",
-collectionIntro:"Guarda i video e seleziona la categoria per vedere prodotti e prezzi.",
-mythText:"La collezione MYTHOLOGIK è ispirata al mondo degli dèi. Formato da 100 ml.",
-womenTitle:"PROFUMI DONNA", womenText:"Fragranze eleganti da donna: trova la tua preferita.",
-menTitle:"PROFUMI UOMO", menText:"Fragranze maschili eleganti, moderne e di carattere.",
-luxusText:"Fragranze olfazeta esclusive per lei e per lui.",
-mythButton:"PRODOTTI E PREZZI", womenButton:"PRODOTTI E PREZZI", menButton:"PRODOTTI E PREZZI", luxusButton:"PRODOTTI E PREZZI",
-caseTitle:"Custodie per profumi da 15 ml", caseText:"Seleziona una custodia separata per i profumi da 15 ml. Non è inclusa nel prezzo.",
-caseNote:"Chiedi disponibilità, codici articolo e prezzi delle custodie.",
-caseOfficial:"ORDINA SU CHOGAN", caseDirect:"ORDINA DIRETTAMENTE A SALVADOR",
-mythIntro:"La collezione MYTHOLOGIK è disponibile nel formato da 100 ml. Chiedi informazioni sulle fragranze.",
-mythNote:"Immagine della collezione. Conferma la fragranza e il prezzo prima dell'ordine.",
-womenProductsTitle:"Profumi donna – prodotti e prezzi",
-womenProductsText:"Prezzi: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Per il formato da 15 ml serve una custodia separata.",
-menProductsTitle:"Profumi uomo – prodotti e prezzi",
-menProductsText:"Prezzi: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Per il formato da 15 ml serve una custodia separata.",
-womenOfficial:"ORDINA SU CHOGAN", womenDirect:"ORDINA DIRETTAMENTE A SALVADOR",
-menOfficial:"ORDINA SU CHOGAN", menDirect:"ORDINA DIRETTAMENTE A SALVADOR",
-luxusOfficial:"ORDINA SU CHOGAN", luxusDirect:"ORDINA DIRETTAMENTE A SALVADOR",
-cosmeticsTitle:"Creme e cosmetici",
-cosmeticsText:"Scopri la nostra pagina dedicata a creme, cosmetici e cura personale.",
-cosmeticsButton:"VEDI CREME E COSMETICI",
-contactTitle:"Consulenza e ordini personali",
-contactText:"Vuoi ordinare direttamente o chiedere informazioni su una fragranza? Scrivimi.",
-orderNote:"Prima dell'ordine diretto confermeremo disponibilità, prezzo totale, spedizione e pagamento.",
-contactOfficial:"ORDINA SU CHOGAN"
-},
-tr: {
-tagline:"Parfümün. Tarzın. Zarafetin.",
-heroTitle:"Chogan Parfümleri",
-heroText:"Karakterli İtalyan kokularını keşfet ve favori kokunu bul.",
-heroButton:"KOKULARI KEŞFET",
-noticeTitle:"15 ml parfümler hakkında önemli bilgi",
-noticeText:"15 ml parfümler için uygun bir kılıf gerekir. Kılıf parfüm fiyatına dahil değildir ve ayrıca satın alınmalıdır.",
-caseButton:"KILIFLARI GÖR",
-collectionTitle:"Koku dünyalarımızı keşfet",
-collectionIntro:"Videoları izle ve ürünleri ve fiyatları görmek için ilgili düğmeye bas.",
-mythText:"Tanrılar dünyasından ilham alan MYTHOLOGIK koleksiyonu. 100 ml.",
-womenTitle:"KADIN PARFÜMLERİ", womenText:"Kadınlar için zarif kokular – favorini keşfet.",
-menTitle:"ERKEK PARFÜMLERİ", menText:"Karakterli, zarif ve modern erkek kokuları.",
-luxusText:"Kadınlar ve erkekler için özel olfazeta kokuları.",
-mythButton:"ÜRÜNLER VE FİYATLAR", womenButton:"ÜRÜNLER VE FİYATLAR", menButton:"ÜRÜNLER VE FİYATLAR", luxusButton:"ÜRÜNLER VE FİYATLAR",
-caseTitle:"15 ml parfümler için kılıflar", caseText:"15 ml parfüm için ayrı bir kılıf seç. Kılıf fiyata dahil değildir.",
-caseNote:"Kılıfların stok durumu, ürün numarası ve fiyatını sor.",
-caseOfficial:"CHOGAN'DAN SİPARİŞ VER", caseDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
-mythIntro:"MYTHOLOGIK koleksiyonu 100 ml formatındadır. Kokular ve stok durumu için bilgi al.",
-mythNote:"Koleksiyon görselidir. Siparişten önce kokuyu ve güncel fiyatı doğrula.",
-womenProductsTitle:"Kadın parfümleri – ürünler ve fiyatlar",
-womenProductsText:"Fiyatlar: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. 15 ml için ayrı kılıf gerekir.",
-menProductsTitle:"Erkek parfümleri – ürünler ve fiyatlar",
-menProductsText:"Fiyatlar: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. 15 ml için ayrı kılıf gerekir.",
-womenOfficial:"CHOGAN'DAN SİPARİŞ VER", womenDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
-menOfficial:"CHOGAN'DAN SİPARİŞ VER", menDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
-luxusOfficial:"CHOGAN'DAN SİPARİŞ VER", luxusDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
-cosmeticsTitle:"Kremler ve kozmetik",
-cosmeticsText:"Kremler, kozmetik ve kişisel bakım ürünleri için ayrı sayfamızı ziyaret et.",
-cosmeticsButton:"KREMLERİ VE KOZMETİĞİ GÖR",
-contactTitle:"Kişisel danışmanlık ve sipariş",
-contactText:"Doğrudan sipariş vermek veya bir koku hakkında bilgi almak ister misin? Bana yaz.",
-orderNote:"Doğrudan siparişten önce stok, toplam fiyat, gönderim ve ödeme bilgilerini teyit ederiz.",
-contactOfficial:"CHOGAN'DAN SİPARİŞ VER"
-},
-ru: {
-tagline:"Твой аромат. Твой стиль. Твоя элегантность.",
-heroTitle:"Парфюмерия Chogan",
-heroText:"Открой итальянские ароматы с характером и найди свой любимый.",
-heroButton:"ОТКРЫТЬ МИР АРОМАТОВ",
-noticeTitle:"Важная информация о флаконах 15 мл",
-noticeText:"Для духов объёмом 15 мл нужен отдельный футляр. Он не входит в цену духов и приобретается отдельно.",
-caseButton:"ПОСМОТРЕТЬ ФУТЛЯРЫ",
-collectionTitle:"Открой наши ароматы",
-collectionIntro:"Посмотри видео и нажми кнопку, чтобы увидеть товары и цены.",
-mythText:"Коллекция MYTHOLOGIK вдохновлена миром богов. Объём 100 мл.",
-womenTitle:"ЖЕНСКИЕ АРОМАТЫ", womenText:"Элегантные ароматы для женщин — найди свой любимый.",
-menTitle:"МУЖСКИЕ АРОМАТЫ", menText:"Выразительные, элегантные и современные мужские ароматы.",
-luxusText:"Эксклюзивные ароматы olfazeta для неё и для него.",
-mythButton:"ТОВАРЫ И ЦЕНЫ", womenButton:"ТОВАРЫ И ЦЕНЫ", menButton:"ТОВАРЫ И ЦЕНЫ", luxusButton:"ТОВАРЫ И ЦЕНЫ",
-caseTitle:"Футляры для духов 15 мл", caseText:"Выбери отдельный футляр для духов 15 мл. Он не включён в цену духов.",
-caseNote:"Уточни наличие, артикулы и цены футляров.",
-caseOfficial:"ЗАКАЗАТЬ В CHOGAN", caseDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
-mythIntro:"Коллекция MYTHOLOGIK представлена в объёме 100 мл. Уточни ароматы и наличие.",
-mythNote:"Изображение коллекции. Перед заказом подтверди аромат и актуальную цену.",
-womenProductsTitle:"Женские ароматы – товары и цены",
-womenProductsText:"Цены: 70 мл – 35 €, 30 мл – 18 €, 15 мл – 11,90 €. Для 15 мл нужен отдельный футляр.",
-menProductsTitle:"Мужские ароматы – товары и цены",
-menProductsText:"Цены: 70 мл – 35 €, 30 мл – 18 €, 15 мл – 11,90 €. Для 15 мл нужен отдельный футляр.",
-womenOfficial:"ЗАКАЗАТЬ В CHOGAN", womenDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
-menOfficial:"ЗАКАЗАТЬ В CHOGAN", menDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
-luxusOfficial:"ЗАКАЗАТЬ В CHOGAN", luxusDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
-cosmeticsTitle:"Кремы и косметика",
-cosmeticsText:"Посети нашу отдельную страницу с кремами, косметикой и средствами ухода.",
-cosmeticsButton:"СМОТРЕТЬ КРЕМЫ И КОСМЕТИКУ",
-contactTitle:"Личная консультация и заказ",
-contactText:"Хочешь заказать напрямую или узнать об аромате? Напиши мне.",
-orderNote:"Перед прямым заказом подтвердим наличие, полную стоимость, доставку и оплату.",
-contactOfficial:"ЗАКАЗАТЬ В CHOGAN"
-},
-pt: {
-tagline:"O teu perfume. O teu estilo. A tua elegância.",
-heroTitle:"Perfumes Chogan",
-heroText:"Descobre fragrâncias italianas com personalidade e encontra o teu perfume favorito.",
-heroButton:"DESCOBRIR FRAGRÂNCIAS",
-noticeTitle:"Aviso importante sobre perfumes de 15 ml",
-noticeText:"Os perfumes de 15 ml precisam de um estojo adequado. O estojo não está incluído no preço e deve ser comprado separadamente.",
-caseButton:"VER ESTOJOS",
-collectionTitle:"Descobre as nossas fragrâncias",
-collectionIntro:"Vê os vídeos e seleciona a categoria para consultar produtos e preços.",
-mythText:"A coleção MYTHOLOGIK inspira-se no mundo dos deuses. Formato de 100 ml.",
-womenTitle:"PERFUMES FEMININOS", womenText:"Fragrâncias elegantes para mulher: encontra a tua favorita.",
-menTitle:"PERFUMES MASCULINOS", menText:"Fragrâncias masculinas elegantes, modernas e cheias de personalidade.",
-luxusText:"Fragrâncias olfazeta exclusivas para ela e para ele.",
-mythButton:"PRODUTOS E PREÇOS", womenButton:"PRODUTOS E PREÇOS", menButton:"PRODUTOS E PREÇOS", luxusButton:"PRODUTOS E PREÇOS",
-caseTitle:"Estojos para perfumes de 15 ml", caseText:"Escolhe um estojo separado para os perfumes de 15 ml. Não está incluído no preço.",
-caseNote:"Consulta a disponibilidade, os códigos dos artigos e os preços dos estojos.",
-caseOfficial:"ENCOMENDAR NA CHOGAN", caseDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
-mythIntro:"A coleção MYTHOLOGIK está disponível em 100 ml. Consulta as fragrâncias e a disponibilidade.",
-mythNote:"Imagem da coleção. Confirma a fragrância e o preço atual antes de encomendar.",
-womenProductsTitle:"Perfumes femininos – produtos e preços",
-womenProductsText:"Preços: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. O formato de 15 ml precisa de um estojo separado.",
-menProductsTitle:"Perfumes masculinos – produtos e preços",
-menProductsText:"Preços: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. O formato de 15 ml precisa de um estojo separado.",
-womenOfficial:"ENCOMENDAR NA CHOGAN", womenDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
-menOfficial:"ENCOMENDAR NA CHOGAN", menDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
-luxusOfficial:"ENCOMENDAR NA CHOGAN", luxusDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
-cosmeticsTitle:"Cremes e cosmética",
-cosmeticsText:"Visita a nossa página separada de cremes, cosmética e cuidados pessoais.",
-cosmeticsButton:"VER CREMES E COSMÉTICA",
-contactTitle:"Aconselhamento pessoal e encomendas",
-contactText:"Queres encomendar diretamente ou saber mais sobre uma fragrância? Escreve-me.",
-orderNote:"Antes da encomenda direta, confirmamos disponibilidade, preço total, envio e pagamento.",
-contactOfficial:"ENCOMENDAR NA CHOGAN"
-},
-sq: {
-tagline:"Parfumi yt. Stili yt. Eleganca jote.",
-heroTitle:"Parfumet Chogan",
-heroText:"Zbulo aromat italianë me karakter dhe gjej parfumin tënd të preferuar.",
-heroButton:"ZBULO AROMAT",
-noticeTitle:"Njoftim i rëndësishëm për parfumet 15 ml",
-noticeText:"Parfumet 15 ml kanë nevojë për një kuti të përshtatshme. Kutia nuk përfshihet në çmimin e parfumit dhe blihet veçmas.",
-caseButton:"SHIKO KUTITË",
-collectionTitle:"Zbulo botën tonë të aromave",
-collectionIntro:"Shiko videot dhe shtyp butonin për të parë produktet dhe çmimet.",
-mythText:"Koleksioni MYTHOLOGIK është frymëzuar nga bota e perëndive. Formati 100 ml.",
-womenTitle:"PARFUME PËR FEMRA", womenText:"Aroma elegante për femra – gjej të preferuarën tënde.",
-menTitle:"PARFUME PËR MESHKUJ", menText:"Aroma për meshkuj me karakter, elegante dhe moderne.",
-luxusText:"Aroma ekskluzive olfazeta për të dhe për të.",
-mythButton:"PRODUKTE DHE ÇMIME", womenButton:"PRODUKTE DHE ÇMIME", menButton:"PRODUKTE DHE ÇMIME", luxusButton:"PRODUKTE DHE ÇMIME",
-caseTitle:"Kuti për parfume 15 ml", caseText:"Zgjidh një kuti veçmas për parfumet 15 ml. Ajo nuk përfshihet në çmim.",
-caseNote:"Pyet për disponueshmërinë, numrat e artikujve dhe çmimet e kutive.",
-caseOfficial:"POROSIT NË CHOGAN", caseDirect:"POROSIT DIREKT TE SALVADOR",
-mythIntro:"Koleksioni MYTHOLOGIK ofrohet në formatin 100 ml. Pyet për aromat dhe disponueshmërinë.",
-mythNote:"Imazh i koleksionit. Konfirmo aromën dhe çmimin aktual para porosisë.",
-womenProductsTitle:"Parfume për femra – produkte dhe çmime",
-womenProductsText:"Çmimet: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Për 15 ml nevojitet kuti veçmas.",
-menProductsTitle:"Parfume për meshkuj – produkte dhe çmime",
-menProductsText:"Çmimet: 70 ml – 35 €, 30 ml – 18 €, 15 ml – 11,90 €. Për 15 ml nevojitet kuti veçmas.",
-womenOfficial:"POROSIT NË CHOGAN", womenDirect:"POROSIT DIREKT TE SALVADOR",
-menOfficial:"POROSIT NË CHOGAN", menDirect:"POROSIT DIREKT TE SALVADOR",
-luxusOfficial:"POROSIT NË CHOGAN", luxusDirect:"POROSIT DIREKT TE SALVADOR",
-cosmeticsTitle:"Kremra dhe kozmetikë",
-cosmeticsText:"Vizito faqen tonë të veçantë për kremra, kozmetikë dhe kujdes personal.",
-cosmeticsButton:"SHIKO KREMRA DHE KOZMETIKË",
-contactTitle:"Këshillim personal dhe porosi",
-contactText:"Dëshiron të porosisësh direkt ose të pyesësh për një aromë? Më shkruaj.",
-orderNote:"Para porosisë direkte konfirmojmë disponueshmërinë, çmimin total, dërgesën dhe pagesën.",
-contactOfficial:"POROSIT NË CHOGAN"
-}
+
+  de: {
+
+    tagline:"Dein Duft. Dein Stil. Deine Eleganz.",
+
+    heroTitle:"Chogan Parfüms",
+
+    heroText:"Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.",
+
+    heroButton:"DUFTWELTEN ENTDECKEN",
+
+    noticeTitle:"Wichtiger Hinweis zu Parfüms in 15 ml",
+
+    noticeText:"Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und muss separat bestellt werden.",
+
+    caseButton:"ETUIS ANSEHEN",
+
+    collectionTitle:"Entdecke unsere Duftwelten",
+
+    collectionIntro:"Sieh dir die Videos an und öffne darunter die Produkte und Preise.",
+
+    mythText:"Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.",
+
+    womenTitle:"DAMENPARFÜMS", womenText:"Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.",
+
+    menTitle:"HERRENPARFÜMS", menText:"Ausdrucksstarke Düfte für Herren – elegant und modern.",
+
+    luxusText:"Exklusive olfazeta-Düfte für sie und ihn.",
+
+    mythButton:"PRODUKTE UND PREISE", womenButton:"PRODUKTE UND PREISE",
+
+    menButton:"PRODUKTE UND PREISE", luxusButton:"PRODUKTE UND PREISE",
+
+    caseTitle:"Etuis für Parfüms in 15 ml",
+
+    caseText:"Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus. Es ist nicht im Parfümpreis enthalten.",
+
+    caseOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", caseDirect:"DIREKT BEI SALVADOR BESTELLEN",
+
+    mythIntro:"Die MYTHOLOGIK-Kollektion wird in 100 ml angeboten. Preis: 299,00 € pro Produkt.",
+
+    womenProductsTitle:"Damenparfüms – Produkte und Preise",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.",
+
+    menProductsTitle:"Herrenparfüms – Produkte und Preise",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Bei 15 ml ist ein separates Etui erforderlich.",
+
+    womenOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", womenDirect:"DIREKT BEI SALVADOR BESTELLEN",
+
+    menOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", menDirect:"DIREKT BEI SALVADOR BESTELLEN",
+
+    luxusOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", luxusDirect:"DIREKT BEI SALVADOR BESTELLEN",
+
+    cosmeticsTitle:"Cremes und Kosmetik",
+
+    cosmeticsText:"Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.",
+
+    cosmeticsButton:"CREMES UND KOSMETIK ANSEHEN",
+
+    contactTitle:"Persönliche Beratung und Bestellung",
+
+    contactText:"Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreib mir gerne.",
+
+    orderNote:"Bei einer direkten Bestellung klären wir vorab Verfügbarkeit, Gesamtpreis, Versand und Zahlungsweise.",
+
+    contactOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN"
+
+  },
+
+  es: {
+
+    tagline:"Tu perfume. Tu estilo. Tu elegancia.",
+
+    heroTitle:"Perfumes Chogan",
+
+    heroText:"Descubre fragancias italianas con personalidad y encuentra tu perfume favorito.",
+
+    heroButton:"DESCUBRIR FRAGANCIAS",
+
+    noticeTitle:"Aviso importante sobre perfumes de 15 ml",
+
+    noticeText:"Los perfumes de 15 ml necesitan un estuche adecuado. El estuche no está incluido en el precio y debe comprarse por separado.",
+
+    caseButton:"VER ESTUCHES",
+
+    collectionTitle:"Descubre nuestras fragancias",
+
+    collectionIntro:"Mira los vídeos y pulsa debajo para ver los productos y precios.",
+
+    mythText:"Colección MYTHOLOGIK inspirada en el mundo de los dioses. Formato de 100 ml.",
+
+    womenTitle:"PERFUMES DE MUJER", womenText:"Fragancias elegantes para mujer: encuentra tu aroma favorito.",
+
+    menTitle:"PERFUMES DE HOMBRE", menText:"Fragancias masculinas con carácter, elegantes y modernas.",
+
+    luxusText:"Fragancias olfazeta exclusivas para ella y para él.",
+
+    mythButton:"PRODUCTOS Y PRECIOS", womenButton:"PRODUCTOS Y PRECIOS",
+
+    menButton:"PRODUCTOS Y PRECIOS", luxusButton:"PRODUCTOS Y PRECIOS",
+
+    caseTitle:"Estuches para perfumes de 15 ml",
+
+    caseText:"Selecciona un estuche adicional para los perfumes de 15 ml. No está incluido en el precio del perfume.",
+
+    caseOfficial:"COMPRAR EN CHOGAN", caseDirect:"PEDIR DIRECTAMENTE A SALVADOR",
+
+    mythIntro:"La colección MYTHOLOGIK se ofrece en formato de 100 ml. Precio: 299,00 € por producto.",
+
+    womenProductsTitle:"Perfumes de mujer – productos y precios",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Para 15 ml se necesita un estuche aparte.",
+
+    menProductsTitle:"Perfumes de hombre – productos y precios",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Para 15 ml se necesita un estuche aparte.",
+
+    womenOfficial:"COMPRAR EN CHOGAN", womenDirect:"PEDIR DIRECTAMENTE A SALVADOR",
+
+    menOfficial:"COMPRAR EN CHOGAN", menDirect:"PEDIR DIRECTAMENTE A SALVADOR",
+
+    luxusOfficial:"COMPRAR EN CHOGAN", luxusDirect:"PEDIR DIRECTAMENTE A SALVADOR",
+
+    cosmeticsTitle:"Cremas y cosmética",
+
+    cosmeticsText:"Visita nuestra página independiente de cremas, cosmética y cuidado personal.",
+
+    cosmeticsButton:"VER CREMAS Y COSMÉTICA",
+
+    contactTitle:"Atención personalizada y pedidos",
+
+    contactText:"¿Quieres hacerme un pedido directamente o consultar una fragancia? Escríbeme.",
+
+    orderNote:"Antes del pedido directo confirmaremos disponibilidad, precio total, envío y forma de pago.",
+
+    contactOfficial:"COMPRAR EN CHOGAN"
+
+  },
+
+  it: {
+
+    tagline:"Il tuo profumo. Il tuo stile. La tua eleganza.",
+
+    heroTitle:"Profumi Chogan",
+
+    heroText:"Scopri fragranze italiane con carattere e trova il tuo profumo preferito.",
+
+    heroButton:"SCOPRI LE FRAGRANZE",
+
+    noticeTitle:"Avviso importante sui profumi da 15 ml",
+
+    noticeText:"I profumi da 15 ml richiedono una custodia adatta. La custodia non è inclusa nel prezzo e va acquistata separatamente.",
+
+    caseButton:"VEDI LE CUSTODIE",
+
+    collectionTitle:"Scopri le nostre fragranze",
+
+    collectionIntro:"Guarda i video e seleziona la categoria per vedere prodotti e prezzi.",
+
+    mythText:"La collezione MYTHOLOGIK è ispirata al mondo degli dèi. Formato da 100 ml.",
+
+    womenTitle:"PROFUMI DONNA", womenText:"Fragranze eleganti da donna: trova la tua preferita.",
+
+    menTitle:"PROFUMI UOMO", menText:"Fragranze maschili eleganti, moderne e di carattere.",
+
+    luxusText:"Fragranze olfazeta esclusive per lei e per lui.",
+
+    mythButton:"PRODOTTI E PREZZI", womenButton:"PRODOTTI E PREZZI",
+
+    menButton:"PRODOTTI E PREZZI", luxusButton:"PRODOTTI E PREZZI",
+
+    caseTitle:"Custodie per profumi da 15 ml",
+
+    caseText:"Seleziona una custodia separata per i profumi da 15 ml. Non è inclusa nel prezzo.",
+
+    caseOfficial:"ORDINA SU CHOGAN", caseDirect:"ORDINA DIRETTAMENTE A SALVADOR",
+
+    mythIntro:"La collezione MYTHOLOGIK è disponibile nel formato da 100 ml. Prezzo: 299,00 € per prodotto.",
+
+    womenProductsTitle:"Profumi donna – prodotti e prezzi",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Per il formato da 15 ml serve una custodia separata.",
+
+    menProductsTitle:"Profumi uomo – prodotti e prezzi",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Per il formato da 15 ml serve una custodia separata.",
+
+    womenOfficial:"ORDINA SU CHOGAN", womenDirect:"ORDINA DIRETTAMENTE A SALVADOR",
+
+    menOfficial:"ORDINA SU CHOGAN", menDirect:"ORDINA DIRETTAMENTE A SALVADOR",
+
+    luxusOfficial:"ORDINA SU CHOGAN", luxusDirect:"ORDINA DIRETTAMENTE A SALVADOR",
+
+    cosmeticsTitle:"Creme e cosmetici",
+
+    cosmeticsText:"Scopri la nostra pagina dedicata a creme, cosmetici e cura personale.",
+
+    cosmeticsButton:"VEDI CREME E COSMETICI",
+
+    contactTitle:"Consulenza e ordini personali",
+
+    contactText:"Vuoi ordinare direttamente o chiedere informazioni su una fragranza? Scrivimi.",
+
+    orderNote:"Prima dell'ordine diretto confermeremo disponibilità, prezzo totale, spedizione e pagamento.",
+
+    contactOfficial:"ORDINA SU CHOGAN"
+
+  },
+
+  tr: {
+
+    tagline:"Parfümün. Tarzın. Zarafetin.",
+
+    heroTitle:"Chogan Parfümleri",
+
+    heroText:"Karakterli İtalyan kokularını keşfet ve favori kokunu bul.",
+
+    heroButton:"KOKULARI KEŞFET",
+
+    noticeTitle:"15 ml parfümler hakkında önemli bilgi",
+
+    noticeText:"15 ml parfümler için uygun bir kılıf gerekir. Kılıf parfüm fiyatına dahil değildir ve ayrıca satın alınmalıdır.",
+
+    caseButton:"KILIFLARI GÖR",
+
+    collectionTitle:"Koku dünyalarımızı keşfet",
+
+    collectionIntro:"Videoları izle ve ürünleri ve fiyatları görmek için ilgili düğmeye bas.",
+
+    mythText:"Tanrılar dünyasından ilham alan MYTHOLOGIK koleksiyonu. 100 ml.",
+
+    womenTitle:"KADIN PARFÜMLERİ", womenText:"Kadınlar için zarif kokular – favorini keşfet.",
+
+    menTitle:"ERKEK PARFÜMLERİ", menText:"Karakterli, zarif ve modern erkek kokuları.",
+
+    luxusText:"Kadınlar ve erkekler için özel olfazeta kokuları.",
+
+    mythButton:"ÜRÜNLER VE FİYATLAR", womenButton:"ÜRÜNLER VE FİYATLAR",
+
+    menButton:"ÜRÜNLER VE FİYATLAR", luxusButton:"ÜRÜNLER VE FİYATLAR",
+
+    caseTitle:"15 ml parfümler için kılıflar",
+
+    caseText:"15 ml parfüm için ayrı bir kılıf seç. Kılıf fiyata dahil değildir.",
+
+    caseOfficial:"CHOGAN'DAN SİPARİŞ VER", caseDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
+
+    mythIntro:"MYTHOLOGIK koleksiyonu 100 ml formatındadır. Ürün başına fiyat: 299,00 €.",
+
+    womenProductsTitle:"Kadın parfümleri – ürünler ve fiyatlar",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. 15 ml için ayrı kılıf gerekir.",
+
+    menProductsTitle:"Erkek parfümleri – ürünler ve fiyatlar",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. 15 ml için ayrı kılıf gerekir.",
+
+    womenOfficial:"CHOGAN'DAN SİPARİŞ VER", womenDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
+
+    menOfficial:"CHOGAN'DAN SİPARİŞ VER", menDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
+
+    luxusOfficial:"CHOGAN'DAN SİPARİŞ VER", luxusDirect:"SALVADOR'A DOĞRUDAN SİPARİŞ VER",
+
+    cosmeticsTitle:"Kremler ve kozmetik",
+
+    cosmeticsText:"Kremler, kozmetik ve kişisel bakım ürünleri için ayrı sayfamızı ziyaret et.",
+
+    cosmeticsButton:"KREMLERİ VE KOZMETİĞİ GÖR",
+
+    contactTitle:"Kişisel danışmanlık ve sipariş",
+
+    contactText:"Doğrudan sipariş vermek veya bir koku hakkında bilgi almak ister misin? Bana yaz.",
+
+    orderNote:"Doğrudan siparişten önce stok, toplam fiyat, gönderim ve ödeme bilgilerini teyit ederiz.",
+
+    contactOfficial:"CHOGAN'DAN SİPARİŞ VER"
+
+  },
+
+  ru: {
+
+    tagline:"Твой аромат. Твой стиль. Твоя элегантность.",
+
+    heroTitle:"Парфюмерия Chogan",
+
+    heroText:"Открой итальянские ароматы с характером и найди свой любимый.",
+
+    heroButton:"ОТКРЫТЬ МИР АРОМАТОВ",
+
+    noticeTitle:"Важная информация о флаконах 15 мл",
+
+    noticeText:"Для духов объёмом 15 мл нужен отдельный футляр. Он не входит в цену духов и приобретается отдельно.",
+
+    caseButton:"ПОСМОТРЕТЬ ФУТЛЯРЫ",
+
+    collectionTitle:"Открой наши ароматы",
+
+    collectionIntro:"Посмотри видео и нажми кнопку, чтобы увидеть товары и цены.",
+
+    mythText:"Коллекция MYTHOLOGIK вдохновлена миром богов. Объём 100 мл.",
+
+    womenTitle:"ЖЕНСКИЕ АРОМАТЫ", womenText:"Элегантные ароматы для женщин — найди свой любимый.",
+
+    menTitle:"МУЖСКИЕ АРОМАТЫ", menText:"Выразительные, элегантные и современные мужские ароматы.",
+
+    luxusText:"Эксклюзивные ароматы olfazeta для неё и для него.",
+
+    mythButton:"ТОВАРЫ И ЦЕНЫ", womenButton:"ТОВАРЫ И ЦЕНЫ",
+
+    menButton:"ТОВАРЫ И ЦЕНЫ", luxusButton:"ТОВАРЫ И ЦЕНЫ",
+
+    caseTitle:"Футляры для духов 15 мл",
+
+    caseText:"Выбери отдельный футляр для духов 15 мл. Он не включён в цену духов.",
+
+    caseOfficial:"ЗАКАЗАТЬ В CHOGAN", caseDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
+
+    mythIntro:"Коллекция MYTHOLOGIK представлена в объёме 100 мл. Цена за продукт: 299,00 €.",
+
+    womenProductsTitle:"Женские ароматы – товары и цены",
+
+    womenProductsText:"70 мл – 35,00 € · 30 мл – 18,00 € · 15 мл – 11,90 €. Для 15 мл нужен отдельный футляр.",
+
+    menProductsTitle:"Мужские ароматы – товары и цены",
+
+    menProductsText:"70 мл – 35,00 € · 30 мл – 18,00 € · 15 мл – 11,90 €. Для 15 мл нужен отдельный футляр.",
+
+    womenOfficial:"ЗАКАЗАТЬ В CHOGAN", womenDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
+
+    menOfficial:"ЗАКАЗАТЬ В CHOGAN", menDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
+
+    luxusOfficial:"ЗАКАЗАТЬ В CHOGAN", luxusDirect:"ЗАКАЗАТЬ НАПРЯМУЮ У SALVADOR",
+
+    cosmeticsTitle:"Кремы и косметика",
+
+    cosmeticsText:"Посети нашу отдельную страницу с кремами, косметикой и средствами ухода.",
+
+    cosmeticsButton:"СМОТРЕТЬ КРЕМЫ И КОСМЕТИКУ",
+
+    contactTitle:"Личная консультация и заказ",
+
+    contactText:"Хочешь заказать напрямую или узнать об аромате? Напиши мне.",
+
+    orderNote:"Перед прямым заказом подтвердим наличие, полную стоимость, доставку и оплату.",
+
+    contactOfficial:"ЗАКАЗАТЬ В CHOGAN"
+
+  },
+
+  pt: {
+
+    tagline:"O teu perfume. O teu estilo. A tua elegância.",
+
+    heroTitle:"Perfumes Chogan",
+
+    heroText:"Descobre fragrâncias italianas com personalidade e encontra o teu perfume favorito.",
+
+    heroButton:"DESCOBRIR FRAGRÂNCIAS",
+
+    noticeTitle:"Aviso importante sobre perfumes de 15 ml",
+
+    noticeText:"Os perfumes de 15 ml precisam de um estojo adequado. O estojo não está incluído no preço e deve ser comprado separadamente.",
+
+    caseButton:"VER ESTOJOS",
+
+    collectionTitle:"Descobre as nossas fragrâncias",
+
+    collectionIntro:"Vê os vídeos e seleciona a categoria para consultar produtos e preços.",
+
+    mythText:"A coleção MYTHOLOGIK inspira-se no mundo dos deuses. Formato de 100 ml.",
+
+    womenTitle:"PERFUMES FEMININOS", womenText:"Fragrâncias elegantes para mulher: encontra a tua favorita.",
+
+    menTitle:"PERFUMES MASCULINOS", menText:"Fragrâncias masculinas elegantes, modernas e cheias de personalidade.",
+
+    luxusText:"Fragrâncias olfazeta exclusivas para ela e para ele.",
+
+    mythButton:"PRODUTOS E PREÇOS", womenButton:"PRODUTOS E PREÇOS",
+
+    menButton:"PRODUTOS E PREÇOS", luxusButton:"PRODUTOS E PREÇOS",
+
+    caseTitle:"Estojos para perfumes de 15 ml",
+
+    caseText:"Escolhe um estojo separado para os perfumes de 15 ml. Não está incluído no preço.",
+
+    caseOfficial:"ENCOMENDAR NA CHOGAN", caseDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
+
+    mythIntro:"A coleção MYTHOLOGIK está disponível em 100 ml. Preço por produto: 299,00 €.",
+
+    womenProductsTitle:"Perfumes femininos – produtos e preços",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. O formato de 15 ml precisa de um estojo separado.",
+
+    menProductsTitle:"Perfumes masculinos – produtos e preços",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. O formato de 15 ml precisa de um estojo separado.",
+
+    womenOfficial:"ENCOMENDAR NA CHOGAN", womenDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
+
+    menOfficial:"ENCOMENDAR NA CHOGAN", menDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
+
+    luxusOfficial:"ENCOMENDAR NA CHOGAN", luxusDirect:"ENCOMENDAR DIRETAMENTE A SALVADOR",
+
+    cosmeticsTitle:"Cremes e cosmética",
+
+    cosmeticsText:"Visita a nossa página separada de cremes, cosmética e cuidados pessoais.",
+
+    cosmeticsButton:"VER CREMES E COSMÉTICA",
+
+    contactTitle:"Aconselhamento pessoal e encomendas",
+
+    contactText:"Queres encomendar diretamente ou saber mais sobre uma fragrância? Escreve-me.",
+
+    orderNote:"Antes da encomenda direta, confirmamos disponibilidade, preço total, envio e pagamento.",
+
+    contactOfficial:"ENCOMENDAR NA CHOGAN"
+
+  },
+
+  sq: {
+
+    tagline:"Parfumi yt. Stili yt. Eleganca jote.",
+
+    heroTitle:"Parfumet Chogan",
+
+    heroText:"Zbulo aroma italianë me karakter dhe gjej parfumin tënd të preferuar.",
+
+    heroButton:"ZBULO AROMAT",
+
+    noticeTitle:"Njoftim i rëndësishëm për parfumet 15 ml",
+
+    noticeText:"Parfumet 15 ml kanë nevojë për një kuti të përshtatshme. Kutia nuk përfshihet në çmimin e parfumit dhe blihet veçmas.",
+
+    caseButton:"SHIKO KUTITË",
+
+    collectionTitle:"Zbulo botën tonë të aromave",
+
+    collectionIntro:"Shiko videot dhe shtyp butonin për të parë produktet dhe çmimet.",
+
+    mythText:"Koleksioni MYTHOLOGIK është frymëzuar nga bota e perëndive. Formati 100 ml.",
+
+    womenTitle:"PARFUME PËR FEMRA", womenText:"Aroma elegante për femra – gjej të preferuarën tënde.",
+
+    menTitle:"PARFUME PËR MESHKUJ", menText:"Aroma për meshkuj me karakter, elegante dhe moderne.",
+
+    luxusText:"Aroma ekskluzive olfazeta për të dhe për të.",
+
+    mythButton:"PRODUKTE DHE ÇMIME", womenButton:"PRODUKTE DHE ÇMIME",
+
+    menButton:"PRODUKTE DHE ÇMIME", luxusButton:"PRODUKTE DHE ÇMIME",
+
+    caseTitle:"Kuti për parfume 15 ml",
+
+    caseText:"Zgjidh një kuti veçmas për parfumet 15 ml. Ajo nuk përfshihet në çmim.",
+
+    caseOfficial:"POROSIT NË CHOGAN", caseDirect:"POROSIT DIREKT TE SALVADOR",
+
+    mythIntro:"Koleksioni MYTHOLOGIK ofrohet në formatin 100 ml. Çmimi për produkt: 299,00 €.",
+
+    womenProductsTitle:"Parfume për femra – produkte dhe çmime",
+
+    womenProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Për 15 ml nevojitet kuti veçmas.",
+
+    menProductsTitle:"Parfume për meshkuj – produkte dhe çmime",
+
+    menProductsText:"70 ml – 35,00 € · 30 ml – 18,00 € · 15 ml – 11,90 €. Për 15 ml nevojitet kuti veçmas.",
+
+    womenOfficial:"POROSIT NË CHOGAN", womenDirect:"POROSIT DIREKT TE SALVADOR",
+
+    menOfficial:"POROSIT NË CHOGAN", menDirect:"POROSIT DIREKT TE SALVADOR",
+
+    luxusOfficial:"POROSIT NË CHOGAN", luxusDirect:"POROSIT DIREKT TE SALVADOR",
+
+    cosmeticsTitle:"Kremra dhe kozmetikë",
+
+    cosmeticsText:"Vizito faqen tonë të veçantë për kremra, kozmetikë dhe kujdes personal.",
+
+    cosmeticsButton:"SHIKO KREMRA DHE KOZMETIKË",
+
+    contactTitle:"Këshillim personal dhe porosi",
+
+    contactText:"Dëshiron të porosisësh direkt ose të pyesësh për një aromë? Më shkruaj.",
+
+    orderNote:"Para porosisë direkte konfirmojmë disponueshmërinë, çmimin total, dërgesën dhe pagesën.",
+
+    contactOfficial:"POROSIT NË CHOGAN"
+
+  }
+
 };
 
-function changeLanguage(lang){
+function changeLanguage(lang) {
+
   const dict = translations[lang] || translations.de;
+
   document.documentElement.lang = lang;
-  Object.keys(dict).forEach(function(id){
+
+  Object.keys(dict).forEach(function(id) {
+
     const el = document.getElementById(id);
-    if(el) el.textContent = dict[id];
+
+    if (el) el.textContent = dict[id];
+
   });
+
 }
+
 </script>
+
 </body>
+
 </html>
