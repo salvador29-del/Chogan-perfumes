@@ -8,13 +8,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Parfüm und Düfte Perez – Chogan Parfüms, Luxus & Unisex, persönliche Beratung und Bestellungen.">
+<meta name="description" content="Parfüm und Düfte Perez – Chogan Parfüms, persönliche Beratung und Bestellungen.">
 
-<title>Parfüm und Düfte Perez | Chogan Parfüms</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<title>Parfüm und Düfte Perez</title>
 
 <style>
 
@@ -24,9 +20,9 @@
 
   --black: #090909;
 
-  --panel: #171717;
+  --panel: #191919;
 
-  --text: #f5f5f5;
+  --white: #f5f5f5;
 
 }
 
@@ -36,25 +32,23 @@ html { scroll-behavior: smooth; }
 
 body {
 
-  font-family: Lato, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 
   background: var(--black);
 
-  color: var(--text);
+  color: var(--white);
 
-  line-height: 1.65;
+  line-height: 1.6;
 
 }
 
-.container { width: min(1120px, 92%); margin: auto; }
+.container { width: 92%; max-width: 1100px; margin: auto; }
 
 header {
 
-  position: relative;
+  text-align: center;
 
   padding: 25px 15px;
-
-  text-align: center;
 
   background: #000;
 
@@ -64,9 +58,11 @@ header {
 
 header h1 {
 
-  font: 700 clamp(1.7rem, 5vw, 2.5rem) 'Playfair Display', serif;
-
   color: var(--gold);
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(26px, 5vw, 42px);
 
 }
 
@@ -76,6 +72,8 @@ header p { color: #ddd; font-style: italic; }
 
 .language select {
 
+  padding: 9px 12px;
+
   background: #111;
 
   color: white;
@@ -84,23 +82,15 @@ header p { color: #ddd; font-style: italic; }
 
   border-radius: 8px;
 
-  padding: 9px 12px;
-
 }
 
 .hero {
 
-  min-height: 390px;
+  text-align: center;
 
   padding: 65px 18px;
 
-  display: grid;
-
-  place-items: center;
-
-  text-align: center;
-
-  background: linear-gradient(135deg, #080808, #241b0b, #080808);
+  background: linear-gradient(135deg, #050505, #30230b, #050505);
 
 }
 
@@ -108,13 +98,13 @@ header p { color: #ddd; font-style: italic; }
 
   max-width: 800px;
 
-  padding: 35px 22px;
+  margin: auto;
 
-  border: 1px solid #8c722b;
+  padding: 30px 20px;
 
-  border-radius: 14px;
+  border: 1px solid var(--gold);
 
-  background: #0008;
+  border-radius: 15px;
 
 }
 
@@ -122,33 +112,35 @@ header p { color: #ddd; font-style: italic; }
 
   color: var(--gold);
 
-  font: 700 clamp(2.2rem, 6vw, 3.5rem) 'Playfair Display', serif;
+  font-family: Georgia, serif;
+
+  font-size: clamp(32px, 6vw, 52px);
 
 }
 
-.hero p { margin: 15px auto; max-width: 680px; }
+.hero p { margin: 15px auto; }
 
 .btn {
 
   display: inline-block;
 
+  padding: 12px 19px;
+
+  margin: 10px 5px 0;
+
+  border-radius: 25px;
+
   background: var(--gold);
 
-  color: #080808;
+  color: #090909;
 
   text-decoration: none;
 
-  font-weight: 700;
-
-  border-radius: 28px;
-
-  padding: 12px 22px;
-
-  margin: 15px 5px 0;
+  font-weight: bold;
 
 }
 
-.btn:hover { background: #f1d976; }
+.btn:hover { background: #f1dc8b; }
 
 .btn-outline {
 
@@ -166,21 +158,23 @@ header p { color: #ddd; font-style: italic; }
 
   padding: 30px 15px;
 
-  background: #191407;
+  background: #211906;
 
-  border-top: 1px solid var(--gold);
-
-  border-bottom: 1px solid var(--gold);
+  border-block: 1px solid var(--gold);
 
 }
 
-h2.section-title {
-
-  text-align: center;
+.section-title {
 
   color: var(--gold);
 
-  font: 700 clamp(1.8rem, 4vw, 2.5rem) 'Playfair Display', serif;
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: clamp(25px, 4vw, 36px);
+
+  margin-bottom: 12px;
 
 }
 
@@ -194,33 +188,39 @@ h2.section-title {
 
 }
 
-.videos { padding: 55px 0; background: #101010; }
+.videos, .products {
 
-.section-intro { text-align: center; margin-bottom: 30px; }
+  padding: 45px 0;
 
-.video-grid {
+  background: #101010;
+
+}
+
+.section-intro { text-align: center; margin-bottom: 25px; }
+
+.video-grid, .product-grid {
 
   display: grid;
 
   grid-template-columns: 1fr;
 
-  gap: 25px;
+  gap: 22px;
 
 }
 
-.video-card {
+.video-card, .product {
 
   overflow: hidden;
 
-  text-align: center;
+  padding-bottom: 20px;
 
   background: var(--panel);
 
-  border: 1px solid #51431e;
+  border: 1px solid #665323;
 
-  border-radius: 14px;
+  border-radius: 13px;
 
-  padding-bottom: 24px;
+  text-align: center;
 
 }
 
@@ -228,15 +228,15 @@ h2.section-title {
 
   color: var(--gold);
 
-  font: 700 1.65rem 'Playfair Display', serif;
+  font-family: Georgia, serif;
 
-  padding: 22px 12px;
+  font-size: 25px;
+
+  padding: 18px 10px;
 
 }
 
 .video-card video {
-
-  display: block;
 
   width: 100%;
 
@@ -244,49 +244,43 @@ h2.section-title {
 
   object-fit: contain;
 
+  display: block;
+
   background: #000;
 
 }
 
-.video-card p { padding: 17px 18px 0; color: #ddd; }
+.video-card p { padding: 14px 16px 0; color: #ddd; }
 
-.products {
+.products { padding: 45px 15px; border-top: 1px solid #333; }
 
-  padding: 50px 15px;
+.products > .container > p {
+
+  max-width: 850px;
+
+  margin: 12px auto;
 
   text-align: center;
 
-  border-top: 1px solid #333;
-
-  background: #121212;
+  color: #ddd;
 
 }
 
-.products p { max-width: 850px; margin: 12px auto; color: #ddd; }
+.product-grid { margin-top: 24px; text-align: left; }
 
-.product-grid {
+.product { padding: 14px; }
 
-  display: grid;
+.product img {
 
-  grid-template-columns: 1fr;
+  width: 100%;
 
-  gap: 18px;
+  height: 240px;
 
-  margin-top: 25px;
+  object-fit: contain;
 
-  text-align: left;
+  background: #080808;
 
-}
-
-.product {
-
-  padding: 20px;
-
-  background: #1b1b1b;
-
-  border: 1px solid #6c5724;
-
-  border-radius: 12px;
+  border-radius: 8px;
 
 }
 
@@ -294,21 +288,25 @@ h2.section-title {
 
   color: var(--gold);
 
-  font: 700 1.3rem 'Playfair Display', serif;
+  font-family: Georgia, serif;
+
+  font-size: 21px;
+
+  margin-top: 10px;
 
 }
 
-.product p { margin: 6px 0; }
+.product p { margin: 5px 0; }
 
-.price { color: #f2d77b; font-weight: 700; }
+.price { color: #f2d77b; font-weight: bold; }
 
-.product-note { color: #aaa !important; font-size: .95rem; }
+.note { color: #aaa !important; font-size: 13px; }
 
 .cosmetics, .contact {
 
-  padding: 50px 15px;
-
   text-align: center;
+
+  padding: 45px 15px;
 
   border-top: 1px solid #333;
 
@@ -318,15 +316,17 @@ h2.section-title {
 
   color: var(--gold);
 
-  font: 700 clamp(1.8rem, 4vw, 2.5rem) 'Playfair Display', serif;
+  font-family: Georgia, serif;
+
+  font-size: 30px;
 
 }
 
 .cosmetics p, .contact p {
 
-  max-width: 800px;
-
   margin: 12px auto;
+
+  max-width: 800px;
 
   color: #ddd;
 
@@ -336,19 +336,23 @@ h2.section-title {
 
 footer {
 
+  background: #080808;
+
+  border-top: 1px solid var(--gold);
+
+  color: #bbb;
+
   padding: 25px 15px;
 
   text-align: center;
 
-  color: #999;
-
-  font-size: .9rem;
-
-  border-top: 1px solid #333;
+  font-size: 13px;
 
 }
 
-footer p { margin: 7px auto; max-width: 900px; }
+footer p { max-width: 950px; margin: 10px auto; }
+
+footer a { color: var(--gold); }
 
 @media (min-width: 760px) {
 
@@ -356,7 +360,7 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   .video-card:first-child { grid-column: 1 / -1; }
 
-  .product-grid { grid-template-columns: 1fr 1fr; }
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
 
 }
 
@@ -370,13 +374,13 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <h1>Parfüm und Düfte Perez</h1>
 
-  <p data-i18n="tagline">Dein Duft. Dein Stil. Deine Eleganz.</p>
+  <p id="tagline">Dein Duft. Dein Stil. Deine Eleganz.</p>
 
   <div class="language">
 
-    <label for="language-select">🌐 </label>
+    <label for="language">🌐 </label>
 
-    <select id="language-select" aria-label="Sprache wählen">
+    <select id="language" onchange="changeLanguage(this.value)">
 
       <option value="de">Deutsch</option>
 
@@ -404,11 +408,11 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="hero-box">
 
-    <h2 data-i18n="heroTitle">Chogan Parfüms</h2>
+    <h2 id="heroTitle">Chogan Parfüms</h2>
 
-    <p data-i18n="heroText">Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.</p>
+    <p id="heroText">Entdecke italienische Düfte mit Charakter und finde deinen persönlichen Lieblingsduft.</p>
 
-    <a class="btn" href="#kollektion" data-i18n="heroButton">DUFTWELTEN ENTDECKEN</a>
+    <a class="btn" href="#kollektion" id="heroButton">DUFTWELTEN ENTDECKEN</a>
 
   </div>
 
@@ -418,11 +422,11 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title" data-i18n="noticeTitle">Wichtiger Hinweis zu Parfüms in 15 ml</h2>
+    <h2 class="section-title" id="noticeTitle">Wichtiger Hinweis zu Parfüms in 15 ml</h2>
 
-    <p data-i18n="noticeText">Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten.</p>
+    <p id="noticeText">Für Parfüms im 15-ml-Format wird ein passendes Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten.</p>
 
-    <a class="btn" href="#etuis" data-i18n="caseButton">ETUIS ANSEHEN</a>
+    <a class="btn" href="#etuis" id="caseButton">ETUIS ANSEHEN</a>
 
   </div>
 
@@ -432,9 +436,9 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title" data-i18n="collectionTitle">Entdecke unsere Duftwelten</h2>
+    <h2 class="section-title" id="collectionTitle">Entdecke unsere Duftwelten</h2>
 
-    <p class="section-intro" data-i18n="collectionIntro">Sieh dir die Präsentationsvideos an und öffne darunter den jeweiligen Produktbereich.</p>
+    <p class="section-intro" id="collectionIntro">Sieh dir die Videos an und öffne darunter die Produkte und Preise.</p>
 
     <div class="video-grid">
 
@@ -442,7 +446,9 @@ footer p { margin: 7px auto; max-width: 900px; }
 
         <h3>MYTHOLOGIK</h3>
 
-        <video controls playsinline preload="metadata" poster="755f5311-6403-4ef0-a837-50070ccb570c.jpeg">
+        <video controls playsinline preload="metadata"
+
+          poster="755f5311-6403-4ef0-a837-50070ccb570c.jpeg">
 
           <source src="MYTHOLOGIK_100ml_Salvador_Perez.mp4" type="video/mp4">
 
@@ -450,35 +456,33 @@ footer p { margin: 7px auto; max-width: 900px; }
 
         </video>
 
-        <p data-i18n="mythText">Die MYTHOLOGIK-Kollektion – inspiriert von der Welt der Götter. Alle Düfte dieser Linie werden als 100 ml präsentiert.</p>
+        <p id="mythText">Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.</p>
 
-        <a class="btn" href="#produkte-mythologik" data-i18n="productsButton">PRODUKTE UND PREISE</a>
+        <a class="btn" href="#produkte-mythologik" id="mythButton">PRODUKTE UND PREISE</a>
 
       </article>
 
       <article class="video-card">
 
-        <h3 data-i18n="womenTitle">DAMENPARFÜMS</h3>
+        <h3 id="womenTitle">DAMENPARFÜMS</h3>
 
         <video controls playsinline preload="metadata">
 
           <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov" type="video/quicktime">
 
-          <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov">
-
           Dein Browser unterstützt dieses Video nicht.
 
         </video>
 
-        <p data-i18n="womenText">Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.</p>
+        <p id="womenText">Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.</p>
 
-        <a class="btn" href="#produkte-damen" data-i18n="productsButton">PRODUKTE UND PREISE</a>
+        <a class="btn" href="#produkte-damen" id="womenButton">PRODUKTE UND PREISE</a>
 
       </article>
 
       <article class="video-card">
 
-        <h3 data-i18n="menTitle">HERRENPARFÜMS</h3>
+        <h3 id="menTitle">HERRENPARFÜMS</h3>
 
         <video controls playsinline preload="metadata">
 
@@ -488,9 +492,9 @@ footer p { margin: 7px auto; max-width: 900px; }
 
         </video>
 
-        <p data-i18n="menText">Ausdrucksstarke Düfte für Herren – elegant, modern und unverwechselbar.</p>
+        <p id="menText">Ausdrucksstarke Düfte für Herren – elegant und modern.</p>
 
-        <a class="btn" href="#produkte-herren" data-i18n="productsButton">PRODUKTE UND PREISE</a>
+        <a class="btn" href="#produkte-herren" id="menButton">PRODUKTE UND PREISE</a>
 
       </article>
 
@@ -506,9 +510,9 @@ footer p { margin: 7px auto; max-width: 900px; }
 
         </video>
 
-        <p data-i18n="luxusText">Exklusive olfazeta-Düfte für sie und ihn – elegant, modern und besonders.</p>
+        <p id="luxusText">Exklusive olfazeta-Düfte für sie und ihn.</p>
 
-        <a class="btn" href="#produkte-luxus" data-i18n="productsButton">PRODUKTE UND PREISE</a>
+        <a class="btn" href="#produkte-luxus" id="luxusButton">PRODUKTE UND PREISE</a>
 
       </article>
 
@@ -522,11 +526,17 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title" data-i18n="caseTitle">Etuis für Parfüms in 15 ml</h2>
+    <h2 class="section-title" id="caseTitle">Etuis für Parfüms in 15 ml</h2>
 
-    <p data-i18n="caseDesc">Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus.</p>
+    <p id="caseText">Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus.</p>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+    <p class="note" id="caseNote">Die Artikelnummern und Preise der Etuis werden ergänzt, sobald die endgültige Produktliste vorliegt.</p>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+       target="_blank" rel="noopener noreferrer" id="caseOfficial">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Etui%2015%20ml" id="caseDirect">DIREKT BEI SALVADOR BESTELLEN</a>
 
   </div>
 
@@ -536,15 +546,33 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title">MYTHOLOGIK – <span data-i18n="productsPrices">Produkte und Preise</span></h2>
+    <h2 class="section-title">MYTHOLOGIK – Produkte und Preise</h2>
 
-    <p data-i18n="mythProductsDesc">Die MYTHOLOGIK-Kollektion umfasst Düfte, die von der Welt der Götter inspiriert sind.</p>
+    <div class="product-grid">
 
-    <p class="product-note" data-i18n="mythPriceNote">Der bisher genannte Preis beträgt 299,00 € pro MYTHOLOGIK-Artikel. Bitte die einzelnen Produktangaben vor der Veröffentlichung prüfen.</p>
+      <article class="product">
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+        <img src="755f5311-6403-4ef0-a837-50070ccb570c.jpeg"
 
-    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=MYTHOLOGIK%20Bestellung" data-i18n="directOrder">DIREKT BEI SALVADOR BESTELLEN</a>
+             alt="MYTHOLOGIK Kollektion" loading="lazy">
+
+        <h3>MYTHOLOGIK</h3>
+
+        <p>Format: 100 ml</p>
+
+        <p class="price">299,00 €*</p>
+
+        <p class="note" id="mythNote">Kollektion-Motiv. Die einzelnen Produktfotos und Duftdetails müssen noch ergänzt werden.</p>
+
+      </article>
+
+    </div>
+
+    <p class="note">*Bitte bestätige den Preis vor der Veröffentlichung.</p>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=MYTHOLOGIK">DIREKT BEI SALVADOR BESTELLEN</a>
 
   </div>
 
@@ -554,13 +582,49 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title" data-i18n="womenProductsTitle">Damenparfüms – Produkte und Preise</h2>
+    <h2 class="section-title" id="womenProductsTitle">Damenparfüms – Produkte und Preise</h2>
 
-    <p data-i18n="womenProductsDesc">Für die Produktliste bitte die aktuellen Duftnamen, Artikelnummern, Größen und Preise ergänzen.</p>
+    <p id="womenProductsText">Die vorhandenen Bilder dienen zunächst als Vorschau. Artikelnummern und Preise müssen noch den richtigen Produkten zugeordnet werden.</p>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+    <div class="product-grid">
 
-    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Damenparfum%20Bestellung" data-i18n="directOrder">DIREKT BEI SALVADOR BESTELLEN</a>
+      <article class="product">
+
+        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Damenparfüm Produktfoto 1" loading="lazy">
+
+        <h3>Duft – Vorschau 1</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Damenparfüm Produktfoto 2" loading="lazy">
+
+        <h3>Duft – Vorschau 2</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Damenparfüm Produktfoto 3" loading="lazy">
+
+        <h3>Duft – Vorschau 3</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Damenparfüm Produktfoto 4" loading="lazy">
+
+        <h3>Duft – Vorschau 4</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+    </div>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Damenparfum">DIREKT BEI SALVADOR BESTELLEN</a>
 
   </div>
 
@@ -570,13 +634,49 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title" data-i18n="menProductsTitle">Herrenparfüms – Produkte und Preise</h2>
+    <h2 class="section-title" id="menProductsTitle">Herrenparfüms – Produkte und Preise</h2>
 
-    <p data-i18n="menProductsDesc">Für die Produktliste bitte die aktuellen Duftnamen, Artikelnummern, Größen und Preise ergänzen.</p>
+    <p id="menProductsText">Die vorhandenen Bilder dienen zunächst als Vorschau. Artikelnummern und Preise müssen noch den richtigen Produkten zugeordnet werden.</p>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+    <div class="product-grid">
 
-    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Herrenparfum%20Bestellung" data-i18n="directOrder">DIREKT BEI SALVADOR BESTELLEN</a>
+      <article class="product">
+
+        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Herrenparfüm Produktfoto 1" loading="lazy">
+
+        <h3>Duft – Vorschau 1</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="A760207C-027E-4435-A93E-3C8C0843B498.png" alt="Herrenparfüm Produktfoto 2" loading="lazy">
+
+        <h3>Duft – Vorschau 2</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Herrenparfüm Produktfoto 3" loading="lazy">
+
+        <h3>Duft – Vorschau 3</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Herrenparfüm Produktfoto 4" loading="lazy">
+
+        <h3>Duft – Vorschau 4</h3><p class="note">Artikelnummer und Preis noch zuordnen</p>
+
+      </article>
+
+    </div>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+
+    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Herrenparfum">DIREKT BEI SALVADOR BESTELLEN</a>
 
   </div>
 
@@ -586,67 +686,51 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 class="section-title">LUXUS &amp; UNISEX – <span data-i18n="productsPrices">Produkte und Preise</span></h2>
+    <h2 class="section-title">LUXUS &amp; UNISEX – Produkte und Preise</h2>
 
-    <p data-i18n="luxusIntro">Entdecke die olfazeta Luxury Unisex-Düfte in 50 ml mit 30 % Essenz.</p>
+    <p>olfazeta Luxury · Unisex · 50 ml</p>
 
     <div class="product-grid">
 
       <article class="product">
 
-        <h3>Sugar Poison</h3>
+        <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Sugar Poison" loading="lazy">
 
-        <p><strong>Artikelnummer:</strong> 128U</p>
-
-        <p>olfazeta Luxury · Unisex · 50 ml</p>
-
-        <p class="price" data-i18n="askPrice">Preis bitte erfragen</p>
+        <h3>Sugar Poison</h3><p>Artikelnummer: 128U</p><p>50 ml</p><p class="price">Preis bitte erfragen</p>
 
       </article>
 
       <article class="product">
 
-        <h3>Agar Forest</h3>
+        <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png" alt="Agar Forest" loading="lazy">
 
-        <p><strong>Artikelnummer:</strong> 127U</p>
-
-        <p>olfazeta Luxury · Unisex · 50 ml</p>
-
-        <p class="price" data-i18n="askPrice">Preis bitte erfragen</p>
+        <h3>Agar Forest</h3><p>Artikelnummer: 127U</p><p>50 ml</p><p class="price">Preis bitte erfragen</p>
 
       </article>
 
       <article class="product">
 
-        <h3>Sands of Time</h3>
+        <img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Sands of Time" loading="lazy">
 
-        <p><strong>Artikelnummer:</strong> 141U</p>
-
-        <p>olfazeta Luxury · Unisex · 50 ml</p>
-
-        <p class="price" data-i18n="askPrice">Preis bitte erfragen</p>
+        <h3>Sands of Time</h3><p>Artikelnummer: 141U</p><p>50 ml</p><p class="price">Preis bitte erfragen</p>
 
       </article>
 
       <article class="product">
 
-        <h3>Velvet Smoke</h3>
+        <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Velvet Smoke" loading="lazy">
 
-        <p><strong>Artikelnummer:</strong> 117U</p>
-
-        <p>olfazeta Luxury · Unisex · 50 ml</p>
-
-        <p class="price" data-i18n="askPrice">Preis bitte erfragen</p>
+        <h3>Velvet Smoke</h3><p>Artikelnummer: 117U</p><p>50 ml</p><p class="price">Preis bitte erfragen</p>
 
       </article>
 
     </div>
 
-    <p class="product-note" data-i18n="luxusPriceNote">Die Verkaufspreise wurden nicht in den bereitgestellten Produktbildern angezeigt. Bitte bestätige die Preise, bevor sie veröffentlicht werden.</p>
+    <p class="note">Bitte bestätige die Preise vor der Veröffentlichung.</p>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
 
-    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Luxus%20und%20Unisex%20Bestellung" data-i18n="directOrder">DIREKT BEI SALVADOR BESTELLEN</a>
+    <a class="btn btn-outline" href="mailto:info@parfuemperez.com?subject=Luxus%20Unisex">DIREKT BEI SALVADOR BESTELLEN</a>
 
   </div>
 
@@ -656,11 +740,11 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 data-i18n="cosmeticsTitle">Cremes und Kosmetik</h2>
+    <h2 id="cosmeticsTitle">Cremes und Kosmetik</h2>
 
-    <p data-i18n="cosmeticsText">Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.</p>
+    <p id="cosmeticsText">Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.</p>
 
-    <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/" target="_blank" rel="noopener noreferrer" data-i18n="cosmeticsButton">CREMES UND KOSMETIK ANSEHEN</a>
+    <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/" target="_blank" rel="noopener noreferrer" id="cosmeticsButton">CREMES UND KOSMETIK ANSEHEN</a>
 
   </div>
 
@@ -670,13 +754,17 @@ footer p { margin: 7px auto; max-width: 900px; }
 
   <div class="container">
 
-    <h2 data-i18n="contactTitle">Persönliche Beratung</h2>
+    <h2 id="contactTitle">Persönliche Beratung und Bestellung</h2>
 
-    <p data-i18n="contactText">Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreibe mir gerne.</p>
+    <p id="contactText">Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreibe mir gerne.</p>
+
+    <p><strong>Salvador Pérez</strong><br>Steinstraße 57<br>34385 Bad Karlshafen, Deutschland</p>
 
     <a class="btn btn-outline" href="mailto:info@parfuemperez.com">✉ info@parfuemperez.com</a>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer" data-i18n="officialOrder">OFFIZIELL BEI CHOGAN BESTELLEN</a>
+    <a class="btn btn-outline" href="tel:+491745201068">☎ +49 174 5201068</a>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">OFFIZIELL BEI CHOGAN BESTELLEN</a>
 
   </div>
 
@@ -686,7 +774,21 @@ footer p { margin: 7px auto; max-width: 900px; }
 
 <footer>
 
-  <p data-i18n="legal">Diese Website wird von Salvador Pérez als unabhängiger Chogan-Vertriebspartner betrieben. Chogan ist eine Marke ihres jeweiligen Inhabers.</p>
+  <p><strong>Impressum – vorläufiger Entwurf</strong></p>
+
+  <p>Salvador Pérez · Parfüm und Düfte Perez<br>
+
+  Steinstraße 57, 34385 Bad Karlshafen, Deutschland<br>
+
+  E-Mail: info@parfuemperez.com · Telefon: +49 174 5201068</p>
+
+  <p><strong>Hinweis zu Chogan:</strong> Diese Website wird von einem unabhängigen Vertriebspartner betrieben und ist keine offizielle Website von Chogan. Marken und Produktnamen gehören ihren jeweiligen Inhabern.</p>
+
+  <p><strong>Datenschutz – vorläufiger Hinweis:</strong> Bei Kontaktaufnahme per E-Mail oder Telefon werden die übermittelten Daten zur Bearbeitung der Anfrage verwendet. Das Hosting über GitHub Pages kann technische Zugriffsdaten verarbeiten. Externe Links führen zu Websites Dritter, deren Datenschutzbestimmungen gelten.</p>
+
+  <p><strong>Verbraucherhinweis:</strong> Bitte bestätige vor einer Bestellung den Endpreis, Versandkosten, Lieferzeit und Zahlungsweise. Gesetzliche Verbraucherrechte bleiben unberührt.</p>
+
+  <p class="note">Die rechtlichen Texte sind ein Entwurf und müssen vor Veröffentlichung auf Vollständigkeit und Richtigkeit geprüft werden.</p>
 
   <p>© <span id="year"></span> Parfüm und Düfte Perez</p>
 
@@ -694,7 +796,9 @@ footer p { margin: 7px auto; max-width: 900px; }
 
 <script>
 
-const translations = {
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const languages = {
 
 de: {
 
@@ -714,61 +818,41 @@ caseButton:"ETUIS ANSEHEN",
 
 collectionTitle:"Entdecke unsere Duftwelten",
 
-collectionIntro:"Sieh dir die Präsentationsvideos an und öffne darunter den jeweiligen Produktbereich.",
+collectionIntro:"Sieh dir die Videos an und öffne darunter die Produkte und Preise.",
 
-mythText:"Die MYTHOLOGIK-Kollektion – inspiriert von der Welt der Götter. Alle Düfte dieser Linie werden als 100 ml präsentiert.",
+mythText:"Die MYTHOLOGIK-Kollektion, inspiriert von der Welt der Götter. Format 100 ml.",
 
-womenTitle:"DAMENPARFÜMS",
+womenTitle:"DAMENPARFÜMS", womenText:"Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.",
 
-womenText:"Elegante Duftideen für Damen – finde deinen persönlichen Lieblingsduft.",
+menTitle:"HERRENPARFÜMS", menText:"Ausdrucksstarke Düfte für Herren – elegant und modern.",
 
-menTitle:"HERRENPARFÜMS",
+luxusText:"Exklusive olfazeta-Düfte für sie und ihn.",
 
-menText:"Ausdrucksstarke Düfte für Herren – elegant, modern und unverwechselbar.",
+mythButton:"PRODUKTE UND PREISE", womenButton:"PRODUKTE UND PREISE", menButton:"PRODUKTE UND PREISE", luxusButton:"PRODUKTE UND PREISE",
 
-luxusText:"Exklusive olfazeta-Düfte für sie und ihn – elegant, modern und besonders.",
+caseTitle:"Etuis für Parfüms in 15 ml", caseText:"Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus.",
 
-productsButton:"PRODUKTE UND PREISE",
+caseNote:"Die Artikelnummern und Preise der Etuis werden ergänzt, sobald die endgültige Produktliste vorliegt.",
 
-caseTitle:"Etuis für Parfüms in 15 ml",
+caseOfficial:"OFFIZIELL BEI CHOGAN BESTELLEN", caseDirect:"DIREKT BEI SALVADOR BESTELLEN",
 
-caseDesc:"Bitte wähle das passende Etui zusätzlich zum 15-ml-Parfüm aus.",
-
-productsPrices:"Produkte und Preise",
-
-mythProductsDesc:"Die MYTHOLOGIK-Kollektion umfasst Düfte, die von der Welt der Götter inspiriert sind.",
-
-mythPriceNote:"Der bisher genannte Preis beträgt 299,00 € pro MYTHOLOGIK-Artikel. Bitte die einzelnen Produktangaben vor der Veröffentlichung prüfen.",
+mythNote:"Kollektion-Motiv. Die einzelnen Produktfotos und Duftdetails müssen noch ergänzt werden.",
 
 womenProductsTitle:"Damenparfüms – Produkte und Preise",
 
-womenProductsDesc:"Für die Produktliste bitte die aktuellen Duftnamen, Artikelnummern, Größen und Preise ergänzen.",
+womenProductsText:"Die vorhandenen Bilder dienen zunächst als Vorschau. Artikelnummern und Preise müssen noch den richtigen Produkten zugeordnet werden.",
 
 menProductsTitle:"Herrenparfüms – Produkte und Preise",
 
-menProductsDesc:"Für die Produktliste bitte die aktuellen Duftnamen, Artikelnummern, Größen und Preise ergänzen.",
+menProductsText:"Die vorhandenen Bilder dienen zunächst als Vorschau. Artikelnummern und Preise müssen noch den richtigen Produkten zugeordnet werden.",
 
-luxusIntro:"Entdecke die olfazeta Luxury Unisex-Düfte in 50 ml mit 30 % Essenz.",
-
-askPrice:"Preis bitte erfragen",
-
-luxusPriceNote:"Die Verkaufspreise wurden nicht in den bereitgestellten Produktbildern angezeigt. Bitte bestätige die Preise, bevor sie veröffentlicht werden.",
-
-officialOrder:"OFFIZIELL BEI CHOGAN BESTELLEN",
-
-directOrder:"DIREKT BEI SALVADOR BESTELLEN",
-
-cosmeticsTitle:"Cremes und Kosmetik",
-
-cosmeticsText:"Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.",
+cosmeticsTitle:"Cremes und Kosmetik", cosmeticsText:"Entdecke unsere separate Seite mit Cremes, Kosmetik und Produkten für die persönliche Pflege.",
 
 cosmeticsButton:"CREMES UND KOSMETIK ANSEHEN",
 
-contactTitle:"Persönliche Beratung",
+contactTitle:"Persönliche Beratung und Bestellung",
 
-contactText:"Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreibe mir gerne.",
-
-legal:"Diese Website wird von Salvador Pérez als unabhängiger Chogan-Vertriebspartner betrieben. Chogan ist eine Marke ihres jeweiligen Inhabers."
+contactText:"Du möchtest direkt bei mir bestellen oder mehr über einen Duft erfahren? Schreibe mir gerne."
 
 },
 
@@ -788,63 +872,43 @@ noticeText:"Los perfumes de 15 ml necesitan un estuche adecuado. El estuche no e
 
 caseButton:"VER ESTUCHES",
 
-collectionTitle:"Descubre nuestros mundos de fragancias",
+collectionTitle:"Descubre nuestras fragancias",
 
-collectionIntro:"Mira los vídeos de presentación y pulsa el botón de cada categoría para ver sus productos.",
+collectionIntro:"Mira los vídeos y pulsa el botón de cada categoría para ver los productos y precios.",
 
-mythText:"La colección MYTHOLOGIK está inspirada en el mundo de los dioses. Esta línea se presenta en formato de 100 ml.",
+mythText:"La colección MYTHOLOGIK está inspirada en el mundo de los dioses. Formato de 100 ml.",
 
-womenTitle:"PERFUMES DE MUJER",
+womenTitle:"PERFUMES DE MUJER", womenText:"Fragancias elegantes para mujer: encuentra tu aroma favorito.",
 
-womenText:"Fragancias elegantes para mujer: encuentra tu aroma favorito.",
+menTitle:"PERFUMES DE HOMBRE", menText:"Fragancias masculinas con carácter, elegantes y modernas.",
 
-menTitle:"PERFUMES DE HOMBRE",
+luxusText:"Fragancias olfazeta exclusivas para ella y para él.",
 
-menText:"Fragancias masculinas con carácter, elegantes y modernas.",
+mythButton:"PRODUCTOS Y PRECIOS", womenButton:"PRODUCTOS Y PRECIOS", menButton:"PRODUCTOS Y PRECIOS", luxusButton:"PRODUCTOS Y PRECIOS",
 
-luxusText:"Fragancias olfazeta exclusivas para ella y para él: elegantes, modernas y especiales.",
+caseTitle:"Estuches para perfumes de 15 ml", caseText:"Selecciona un estuche adicional para los perfumes de 15 ml.",
 
-productsButton:"PRODUCTOS Y PRECIOS",
+caseNote:"Añadiremos las referencias y precios de los estuches cuando esté lista la lista definitiva.",
 
-caseTitle:"Estuches para perfumes de 15 ml",
+caseOfficial:"COMPRAR EN CHOGAN", caseDirect:"PEDIR DIRECTAMENTE A SALVADOR",
 
-caseDesc:"Recuerda seleccionar un estuche adicional para los perfumes de 15 ml.",
-
-productsPrices:"Productos y precios",
-
-mythProductsDesc:"La colección MYTHOLOGIK reúne perfumes inspirados en el mundo de los dioses.",
-
-mythPriceNote:"El precio indicado anteriormente es de 299,00 € por artículo MYTHOLOGIK. Comprueba los datos antes de publicarlos.",
+mythNote:"Imagen de la colección. Faltan las fotos y los detalles de cada perfume.",
 
 womenProductsTitle:"Perfumes de mujer – productos y precios",
 
-womenProductsDesc:"Aquí se deben añadir los nombres, referencias, tamaños y precios actualizados.",
+womenProductsText:"Estas imágenes son una vista previa. Hay que asociar las referencias y los precios a cada producto.",
 
 menProductsTitle:"Perfumes de hombre – productos y precios",
 
-menProductsDesc:"Aquí se deben añadir los nombres, referencias, tamaños y precios actualizados.",
+menProductsText:"Estas imágenes son una vista previa. Hay que asociar las referencias y los precios a cada producto.",
 
-luxusIntro:"Descubre los perfumes olfazeta Luxury Unisex de 50 ml con un 30 % de esencia.",
-
-askPrice:"Consultar precio",
-
-luxusPriceNote:"Las imágenes facilitadas no muestran los precios de venta. Confirma los precios antes de publicarlos.",
-
-officialOrder:"COMPRAR OFICIALMENTE EN CHOGAN",
-
-directOrder:"PEDIR DIRECTAMENTE A SALVADOR",
-
-cosmeticsTitle:"Cremas y cosmética",
-
-cosmeticsText:"Visita nuestra página independiente de cremas, cosmética y cuidado personal.",
+cosmeticsTitle:"Cremas y cosmética", cosmeticsText:"Visita nuestra página independiente de cremas, cosmética y cuidado personal.",
 
 cosmeticsButton:"VER CREMAS Y COSMÉTICA",
 
-contactTitle:"Atención personalizada",
+contactTitle:"Atención personalizada y pedidos",
 
-contactText:"¿Quieres hacerme un pedido directamente o consultar una fragancia? Escríbeme.",
-
-legal:"Esta página está gestionada por Salvador Pérez como distribuidor independiente de Chogan. Chogan es una marca de su respectivo titular."
+contactText:"¿Quieres hacerme un pedido directamente o consultar una fragancia? Escríbeme."
 
 },
 
@@ -864,93 +928,63 @@ noticeText:"I profumi da 15 ml richiedono una custodia adatta, non inclusa nel p
 
 caseButton:"VEDI LE CUSTODIE",
 
-collectionTitle:"Scopri i nostri mondi olfattivi",
+collectionTitle:"Scopri le nostre fragranze",
 
-collectionIntro:"Guarda i video e seleziona la categoria per vedere i prodotti.",
+collectionIntro:"Guarda i video e seleziona la categoria per vedere prodotti e prezzi.",
 
-mythText:"La collezione MYTHOLOGIK è ispirata al mondo degli dèi ed è presentata nel formato da 100 ml.",
+mythText:"La collezione MYTHOLOGIK è ispirata al mondo degli dèi. Formato da 100 ml.",
 
-womenTitle:"PROFUMI DONNA",
+womenTitle:"PROFUMI DONNA", womenText:"Fragranze eleganti da donna: trova la tua preferita.",
 
-womenText:"Fragranze eleganti da donna: trova la tua preferita.",
+menTitle:"PROFUMI UOMO", menText:"Fragranze maschili eleganti, moderne e di carattere.",
 
-menTitle:"PROFUMI UOMO",
+luxusText:"Fragranze olfazeta esclusive per lei e per lui.",
 
-menText:"Fragranze maschili eleganti, moderne e di carattere.",
+mythButton:"PRODOTTI E PREZZI", womenButton:"PRODOTTI E PREZZI", menButton:"PRODOTTI E PREZZI", luxusButton:"PRODOTTI E PREZZI",
 
-luxusText:"Fragranze olfazeta esclusive per lei e per lui, eleganti e moderne.",
+caseTitle:"Custodie per profumi da 15 ml", caseText:"Seleziona una custodia separata per i profumi da 15 ml.",
 
-productsButton:"PRODOTTI E PREZZI",
+caseNote:"Aggiungeremo codici e prezzi delle custodie quando sarà pronta la lista definitiva.",
 
-caseTitle:"Custodie per profumi da 15 ml",
+caseOfficial:"ORDINA SU CHOGAN", caseDirect:"ORDINA DIRETTAMENTE A SALVADOR",
 
-caseDesc:"Ricorda di selezionare una custodia separata per i profumi da 15 ml.",
-
-productsPrices:"Prodotti e prezzi",
-
-mythProductsDesc:"La collezione MYTHOLOGIK comprende fragranze ispirate al mondo degli dèi.",
-
-mythPriceNote:"Il prezzo indicato in precedenza è di 299,00 € per articolo MYTHOLOGIK. Verifica i dati prima della pubblicazione.",
+mythNote:"Immagine della collezione. Mancano le foto e i dettagli dei singoli profumi.",
 
 womenProductsTitle:"Profumi donna – prodotti e prezzi",
 
-womenProductsDesc:"Aggiungi i nomi, i codici, i formati e i prezzi aggiornati.",
+womenProductsText:"Le immagini sono un'anteprima. Codici e prezzi devono essere associati ai prodotti corretti.",
 
 menProductsTitle:"Profumi uomo – prodotti e prezzi",
 
-menProductsDesc:"Aggiungi i nomi, i codici, i formati e i prezzi aggiornati.",
+menProductsText:"Le immagini sono un'anteprima. Codici e prezzi devono essere associati ai prodotti corretti.",
 
-luxusIntro:"Scopri i profumi olfazeta Luxury Unisex da 50 ml con il 30% di essenza.",
-
-askPrice:"Prezzo su richiesta",
-
-luxusPriceNote:"Le immagini fornite non mostrano i prezzi di vendita. Confermali prima della pubblicazione.",
-
-officialOrder:"ORDINA SU CHOGAN",
-
-directOrder:"ORDINA DIRETTAMENTE A SALVADOR",
-
-cosmeticsTitle:"Creme e cosmetici",
-
-cosmeticsText:"Scopri la nostra pagina dedicata a creme, cosmetici e cura personale.",
+cosmeticsTitle:"Creme e cosmetici", cosmeticsText:"Scopri la nostra pagina dedicata a creme, cosmetici e cura personale.",
 
 cosmeticsButton:"VEDI CREME E COSMETICI",
 
-contactTitle:"Consulenza personale",
+contactTitle:"Consulenza e ordini personali",
 
-contactText:"Vuoi ordinare direttamente o chiedere informazioni su una fragranza? Scrivimi.",
-
-legal:"Questo sito è gestito da Salvador Pérez come distributore indipendente Chogan. Chogan è un marchio del rispettivo titolare."
+contactText:"Vuoi ordinare direttamente o chiedere informazioni su una fragranza? Scrivimi."
 
 }
 
 };
 
-function setLanguage(lang) {
+function changeLanguage(lang) {
 
-  const dict = translations[lang] || translations.de;
+  const dict = languages[lang] || languages.de;
 
   document.documentElement.lang = lang;
 
-  document.querySelectorAll("[data-i18n]").forEach(el => {
+  Object.keys(dict).forEach(function(key) {
 
-    const key = el.dataset.i18n;
+    const element = document.getElementById(key);
 
-    if (dict[key]) el.textContent = dict[key];
+    if (element) element.textContent = dict[key];
 
   });
 
 }
-
-document.getElementById("language-select").addEventListener("change", function() {
-
-  setLanguage(this.value);
-
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-setLanguage("de");
 
 </script>
 
