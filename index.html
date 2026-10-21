@@ -46,6 +46,10 @@ h2{color:var(--gold)}
 
 .btn:hover{background:#f1d976}
 
+.direct-order{display:inline-block;background:#168447;color:#fff!important;text-decoration:none;font-weight:bold;padding:13px 18px;border-radius:28px;margin:10px 4px;text-align:center;border:1px solid #43c879}
+
+.direct-order:hover{background:#116b38}
+
 section{padding:44px 0;border-bottom:1px solid #292929}
 
 .title{text-align:center;font-size:clamp(26px,4vw,36px);margin:0 0 12px}
@@ -80,11 +84,25 @@ video{display:block;width:100%;height:auto;max-height:650px;background:#000}
 
 .cosmetics img{display:block;width:100%;max-width:650px;height:auto;margin:22px auto;border:1px solid var(--gold);border-radius:10px}
 
+.contact-highlight{background:#151208;border:2px solid var(--gold);border-radius:16px;padding:28px 16px;margin:20px auto;max-width:800px;text-align:center}
+
+.contact-highlight p{font-size:1.05rem;overflow-wrap:anywhere}
+
 footer{text-align:center;padding:28px 12px;color:#bbb;background:#000}
 
 footer a{color:var(--gold)}
 
-@media(max-width:600px){.head{justify-content:center;text-align:center}.language{width:100%}section{padding:32px 0}}
+@media(max-width:600px){
+
+ .head{justify-content:center;text-align:center}
+
+ .language{width:100%}
+
+ section{padding:32px 0}
+
+ .direct-order,.contact-highlight .btn{display:block;width:100%;margin:10px 0}
+
+}
 
 </style>
 
@@ -106,7 +124,7 @@ footer a{color:var(--gold)}
 
     <div class="language">
 
-      <label for="lang">🌐</label>
+      <label for="lang">🌐 </label>
 
       <select id="lang" aria-label="Sprache auswählen">
 
@@ -132,8 +150,6 @@ footer a{color:var(--gold)}
 
 </header>
 
-<!-- 1. AVISO DE LOS ESTUCHES -->
-
 <div class="notice">
 
   <div class="container">
@@ -147,8 +163,6 @@ footer a{color:var(--gold)}
   </div>
 
 </div>
-
-<!-- 2. VIDEOS DE PRESENTACIÓN -->
 
 <section id="kollektionen">
 
@@ -219,8 +233,6 @@ footer a{color:var(--gold)}
   </div>
 
 </section>
-
-<!-- 3. MYTHOLOGIK: FOTOS EN SU ORDEN CORRECTO -->
 
 <section id="mythologik">
 
@@ -294,8 +306,6 @@ footer a{color:var(--gold)}
 
 </section>
 
-<!-- 4. PERFUMES DE MUJER -->
-
 <section id="damen">
 
   <div class="container">
@@ -314,9 +324,7 @@ footer a{color:var(--gold)}
 
     <div class="list-image">
 
-      <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png"
-
-           alt="Übersicht der Damenparfüms mit Duftnamen, Artikelnummern und Preisen">
+      <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png" alt="Damenparfüms mit Artikelnummern und Preisen">
 
     </div>
 
@@ -327,8 +335,6 @@ footer a{color:var(--gold)}
   </div>
 
 </section>
-
-<!-- 5. PERFUMES DE HOMBRE -->
 
 <section id="herren">
 
@@ -348,9 +354,7 @@ footer a{color:var(--gold)}
 
     <div class="list-image">
 
-      <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png"
-
-           alt="Übersicht der Herrenparfüms mit Duftnamen, Artikelnummern und Preisen">
+      <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Herrenparfüms mit Artikelnummern und Preisen">
 
     </div>
 
@@ -361,8 +365,6 @@ footer a{color:var(--gold)}
   </div>
 
 </section>
-
-<!-- 6. LUXUS & UNISEX -->
 
 <section id="luxus-unisex">
 
@@ -378,8 +380,6 @@ footer a{color:var(--gold)}
 
 </section>
 
-<!-- 7. ESTUCHES -->
-
 <section id="etuis">
 
   <div class="container">
@@ -392,7 +392,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Etuis in verschiedenen Farben und Euro Event">
+        <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Etuis in verschiedenen Farben">
 
         <h3 id="caseColoursTitle">Etuis in verschiedenen Farben</h3>
 
@@ -414,7 +414,7 @@ footer a{color:var(--gold)}
 
       <article class="product">
 
-        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Schwarze und bordeauxrote Parfüm-Etuis">
+        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Schwarze und bordeauxrote Etuis">
 
         <h3 id="casePremiumTitle">Elegante Etuis</h3>
 
@@ -434,8 +434,6 @@ footer a{color:var(--gold)}
 
 </section>
 
-<!-- 8. COSMÉTICA AL FINAL -->
-
 <section class="cosmetics" id="kosmetik">
 
   <div class="container">
@@ -452,23 +450,27 @@ footer a{color:var(--gold)}
 
 </section>
 
-<!-- 9. CONTACTO Y AVISO LEGAL -->
-
 <section id="kontakt">
 
-  <div class="container" style="text-align:center">
+  <div class="container">
 
-    <h2 id="contactTitle">Bestellung und Kontakt</h2>
+    <div class="contact-highlight">
 
-    <p id="contactText">Bei Fragen zu Düften und Bestellungen kontaktiere mich gerne.</p>
+      <h2 id="contactTitle">Bestellung und Kontakt</h2>
 
-    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer" id="orderButton">Zum Chogan-Shop</a>
+      <p id="contactText">Du kannst über die offizielle Chogan-Seite kaufen oder direkt bei mir bestellen.</p>
 
-    <a class="btn" href="https://wa.me/491745201068">WhatsApp: +49 174 520 1068</a>
+      <a class="direct-order" href="https://wa.me/491745201068?text=Hola%20Salvador%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener noreferrer">💬 Pedir directamente conmigo por WhatsApp</a>
 
-    <p><a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a></p>
+      <p><strong>WhatsApp:</strong><br><a href="https://wa.me/491745201068" style="color:#d4af37">+49 174 520 1068</a></p>
 
-    <p><a href="https://parfuemperez.com/">parfuemperez.com</a></p>
+      <p><strong>E-Mail:</strong><br><a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a></p>
+
+      <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">🛍️ Im offiziellen Chogan-Shop kaufen</a>
+
+      <p><a href="https://parfuemperez.com/">parfuemperez.com</a></p>
+
+    </div>
 
   </div>
 
@@ -480,7 +482,7 @@ footer a{color:var(--gold)}
 
   <p>Salvador Perez</p>
 
-  <p id="legalText">Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben. Bestellungen erfolgen über die offizielle Chogan-Website.</p>
+  <p id="legalText">Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben.</p>
 
   <p>© Parfüm und Düfte Perez</p>
 
@@ -514,35 +516,23 @@ mythPriceText:"299,00 € pro Flakon",
 
 womenProductsTitle:"Damenparfüms – Produkte und Preise",womenProductsText:"Die Duftübersicht mit Artikeln und Preisen.",
 
-womenCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",
-
-womenShopButton:"Im Chogan-Shop bestellen",
+womenCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",womenShopButton:"Im Chogan-Shop bestellen",
 
 menProductsTitle:"Herrenparfüms – Produkte und Preise",menProductsText:"Die Duftübersicht mit Artikeln und Preisen.",
 
-menCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",
+menCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",menShopButton:"Im Chogan-Shop bestellen",
 
-menShopButton:"Im Chogan-Shop bestellen",
-
-luxuryTitle:"Luxus & Unisex",luxuryText:"Entdecke elegante Luxus- und Unisex-Düfte im offiziellen Chogan-Shop.",
-
-luxuryButton:"Luxus & Unisex entdecken",
+luxuryTitle:"Luxus & Unisex",luxuryText:"Entdecke elegante Luxus- und Unisex-Düfte im offiziellen Chogan-Shop.",luxuryButton:"Luxus & Unisex entdecken",
 
 casesTitle:"Etuis für 15-ml-Parfüms",casesText:"Die Etuis sind nicht im Parfümpreis enthalten und werden separat verkauft.",
 
-caseColoursTitle:"Etuis in verschiedenen Farben",casePremiumTitle:"Elegante Etuis",
+caseColoursTitle:"Etuis in verschiedenen Farben",casePremiumTitle:"Elegante Etuis",casesShopButton:"Etuis bei Chogan ansehen",
 
-casesShopButton:"Etuis bei Chogan ansehen",
+cosmeticsTitle:"Cremes & Kosmetik",cosmeticsText:"Entdecke Cremes, Körperöle und Kosmetik.",cosmeticsButton:"Zur Kosmetikseite",
 
-cosmeticsTitle:"Cremes & Kosmetik",cosmeticsText:"Entdecke Cremes, Körperöle und Kosmetik.",
+contactTitle:"Bestellung und Kontakt",contactText:"Du kannst über die offizielle Chogan-Seite kaufen oder direkt bei mir bestellen.",
 
-cosmeticsButton:"Zur Kosmetikseite",contactTitle:"Bestellung und Kontakt",
-
-contactText:"Bei Fragen zu Düften und Bestellungen kontaktiere mich gerne.",
-
-orderButton:"Zum Chogan-Shop",
-
-legalText:"Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben. Bestellungen erfolgen über die offizielle Chogan-Website."
+legalText:"Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben."
 
 },
 
@@ -570,35 +560,23 @@ mythPriceText:"299,00 € por frasco",
 
 womenProductsTitle:"Perfumes de mujer – productos y precios",womenProductsText:"Consulta la lista de fragancias, artículos y precios.",
 
-womenCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",
-
-womenShopButton:"Pedir en la tienda Chogan",
+womenCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",womenShopButton:"Pedir en la tienda Chogan",
 
 menProductsTitle:"Perfumes de hombre – productos y precios",menProductsText:"Consulta la lista de fragancias, artículos y precios.",
 
-menCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",
+menCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",menShopButton:"Pedir en la tienda Chogan",
 
-menShopButton:"Pedir en la tienda Chogan",
-
-luxuryTitle:"Lujo y Unisex",luxuryText:"Descubre fragancias de lujo y unisex en la tienda oficial de Chogan.",
-
-luxuryButton:"Descubrir Lujo y Unisex",
+luxuryTitle:"Lujo y Unisex",luxuryText:"Descubre fragancias de lujo y unisex en la tienda oficial de Chogan.",luxuryButton:"Descubrir Lujo y Unisex",
 
 casesTitle:"Estuches para perfumes de 15 ml",casesText:"Los estuches no están incluidos en el precio del perfume y se venden por separado.",
 
-caseColoursTitle:"Estuches de varios colores",casePremiumTitle:"Estuches elegantes",
+caseColoursTitle:"Estuches de varios colores",casePremiumTitle:"Estuches elegantes",casesShopButton:"Ver estuches en Chogan",
 
-casesShopButton:"Ver estuches en Chogan",
+cosmeticsTitle:"Cremas y cosméticos",cosmeticsText:"Descubre cremas, aceites corporales y cosméticos.",cosmeticsButton:"Ir a la página de cosmética",
 
-cosmeticsTitle:"Cremas y cosméticos",cosmeticsText:"Descubre cremas, aceites corporales y cosméticos.",
+contactTitle:"Pedidos y contacto",contactText:"Puedes comprar en la tienda oficial de Chogan o hacer tu pedido directamente conmigo.",
 
-cosmeticsButton:"Ir a la página de cosmética",contactTitle:"Pedidos y contacto",
-
-contactText:"Si tienes preguntas sobre los perfumes o los pedidos, puedes contactar conmigo.",
-
-orderButton:"Ir a la tienda Chogan",
-
-legalText:"Esta página está gestionada por Salvador Perez como distribuidor independiente de Chogan. Los pedidos se realizan a través de la web oficial de Chogan."
+legalText:"Esta página está gestionada por Salvador Perez como distribuidor independiente de Chogan."
 
 },
 
@@ -626,55 +604,37 @@ mythPriceText:"299,00 € per flacone",
 
 womenProductsTitle:"Profumi donna – prodotti e prezzi",womenProductsText:"Consulta la lista delle fragranze e dei prezzi.",
 
-womenCaseText:"La custodia da 15 ml è venduta separatamente.",
-
-womenShopButton:"Ordina nel negozio Chogan",
+womenCaseText:"La custodia da 15 ml è venduta separatamente.",womenShopButton:"Ordina nel negozio Chogan",
 
 menProductsTitle:"Profumi uomo – prodotti e prezzi",menProductsText:"Consulta la lista delle fragranze e dei prezzi.",
 
-menCaseText:"La custodia da 15 ml è venduta separatamente.",
+menCaseText:"La custodia da 15 ml è venduta separatamente.",menShopButton:"Ordina nel negozio Chogan",
 
-menShopButton:"Ordina nel negozio Chogan",
-
-luxuryTitle:"Lusso e Unisex",luxuryText:"Scopri le fragranze di lusso e unisex nel negozio ufficiale Chogan.",
-
-luxuryButton:"Scopri Lusso e Unisex",
+luxuryTitle:"Lusso e Unisex",luxuryText:"Scopri le fragranze di lusso e unisex nel negozio ufficiale Chogan.",luxuryButton:"Scopri Lusso e Unisex",
 
 casesTitle:"Custodie per profumi da 15 ml",casesText:"Le custodie sono vendute separatamente.",
 
-caseColoursTitle:"Custodie in vari colori",casePremiumTitle:"Custodie eleganti",
+caseColoursTitle:"Custodie in vari colori",casePremiumTitle:"Custodie eleganti",casesShopButton:"Vedi le custodie Chogan",
 
-casesShopButton:"Vedi le custodie Chogan",
+cosmeticsTitle:"Creme e cosmetici",cosmeticsText:"Scopri creme, oli per il corpo e cosmetici.",cosmeticsButton:"Vai alla pagina cosmetici",
 
-cosmeticsTitle:"Creme e cosmetici",cosmeticsText:"Scopri creme, oli per il corpo e cosmetici.",
+contactTitle:"Ordini e contatti",contactText:"Puoi acquistare nel negozio ufficiale Chogan o ordinare direttamente da me.",
 
-cosmeticsButton:"Vai alla pagina cosmetici",contactTitle:"Ordini e contatti",
-
-contactText:"Per domande su profumi e ordini, contattami.",
-
-orderButton:"Negozio Chogan",
-
-legalText:"Questo sito è gestito da Salvador Perez come distributore indipendente Chogan. Gli ordini vengono effettuati sul sito ufficiale Chogan."
+legalText:"Questo sito è gestito da Salvador Perez come distributore indipendente Chogan."
 
 },
 
 tr:{
 
-tagline:"İz bırakan zarafet",
+tagline:"İz bırakan zarafet",noticeTitle:"15 ml parfümler hakkında önemli bilgi",
 
-noticeTitle:"15 ml parfümler hakkında önemli bilgi",
+noticeText:"15 ml parfümler için ayrıca satılan bir kılıf gereklidir.",noticeButton:"Kılıflar ve fiyatlar",
 
-noticeText:"15 ml parfümler için ayrıca satılan bir kılıf gereklidir.",
+videoTitle:"Parfüm koleksiyonlarımız",videoSubtitle:"Videoları izleyin ve ilgili ürün listesini açın.",
 
-noticeButton:"Kılıflar ve fiyatlar",videoTitle:"Parfüm koleksiyonlarımız",
+mythVideoText:"Yunan mitolojisinden ilham alan özel koleksiyon.",mythButton:"Mythologik – Ürünler ve fiyatlar",
 
-videoSubtitle:"Videoları izleyin ve ilgili ürün listesini açın.",
-
-mythVideoText:"Yunan mitolojisinden ilham alan özel koleksiyon.",
-
-mythButton:"Mythologik – Ürünler ve fiyatlar",womenHeading:"KADIN PARFÜMLERİ",
-
-womenVideoText:"Kadın parfümlerimizi keşfedin.",womenButton:"Ürünler ve fiyatlar",
+womenHeading:"KADIN PARFÜMLERİ",womenVideoText:"Kadın parfümlerimizi keşfedin.",womenButton:"Ürünler ve fiyatlar",
 
 menHeading:"ERKEK PARFÜMLERİ",menVideoText:"Erkek parfümlerimizi keşfedin.",menButton:"Ürünler ve fiyatlar",
 
@@ -688,45 +648,31 @@ menProductsTitle:"Erkek parfümleri – ürünler ve fiyatlar",menProductsText:"
 
 menCaseText:"15 ml kılıfı ayrıca satılır.",menShopButton:"Chogan mağazasından sipariş ver",
 
-luxuryTitle:"Lüks ve Unisex",luxuryText:"Chogan'ın resmî mağazasında lüks ve unisex kokuları keşfedin.",
-
-luxuryButton:"Lüks ve Unisex'i keşfet",
+luxuryTitle:"Lüks ve Unisex",luxuryText:"Chogan'ın resmî mağazasında lüks ve unisex kokuları keşfedin.",luxuryButton:"Lüks ve Unisex'i keşfet",
 
 casesTitle:"15 ml parfümler için kılıflar",casesText:"Kılıflar ayrıca satılır.",
 
-caseColoursTitle:"Farklı renklerde kılıflar",casePremiumTitle:"Şık kılıflar",
+caseColoursTitle:"Farklı renklerde kılıflar",casePremiumTitle:"Şık kılıflar",casesShopButton:"Chogan kılıflarını gör",
 
-casesShopButton:"Chogan kılıflarını gör",
+cosmeticsTitle:"Kremler ve kozmetik",cosmeticsText:"Kremleri, vücut yağlarını ve kozmetik ürünlerini keşfedin.",cosmeticsButton:"Kozmetik sayfasına git",
 
-cosmeticsTitle:"Kremler ve kozmetik",cosmeticsText:"Kremleri, vücut yağlarını ve kozmetik ürünlerini keşfedin.",
+contactTitle:"Sipariş ve iletişim",contactText:"Chogan mağazasından satın alabilir veya doğrudan benden sipariş verebilirsiniz.",
 
-cosmeticsButton:"Kozmetik sayfasına git",contactTitle:"Sipariş ve iletişim",
-
-contactText:"Parfümler veya siparişler hakkında sorularınız varsa iletişime geçin.",
-
-orderButton:"Chogan mağazası",
-
-legalText:"Bu site bağımsız Chogan distribütörü Salvador Perez tarafından işletilmektedir. Siparişler Chogan'ın resmî web sitesinden verilir."
+legalText:"Bu site bağımsız Chogan distribütörü Salvador Perez tarafından işletilmektedir."
 
 },
 
 ru:{
 
-tagline:"Элегантность, которая оставляет впечатление",
+tagline:"Элегантность, которая оставляет впечатление",noticeTitle:"Важная информация о парфюмерии 15 мл",
 
-noticeTitle:"Важная информация о парфюмерии 15 мл",
+noticeText:"Для флаконов 15 мл нужен футляр, который продаётся отдельно.",noticeButton:"Футляры и цены",
 
-noticeText:"Для флаконов 15 мл нужен футляр, который продаётся отдельно.",
+videoTitle:"Наши коллекции ароматов",videoSubtitle:"Посмотрите видео и откройте соответствующий список товаров.",
 
-noticeButton:"Футляры и цены",videoTitle:"Наши коллекции ароматов",
+mythVideoText:"Эксклюзивная коллекция по мотивам греческой мифологии.",mythButton:"Mythologik – товары и цены",
 
-videoSubtitle:"Посмотрите видео и откройте соответствующий список товаров.",
-
-mythVideoText:"Эксклюзивная коллекция по мотивам греческой мифологии.",
-
-mythButton:"Mythologik – товары и цены",womenHeading:"ЖЕНСКИЕ АРОМАТЫ",
-
-womenVideoText:"Откройте коллекцию женских ароматов.",womenButton:"Товары и цены",
+womenHeading:"ЖЕНСКИЕ АРОМАТЫ",womenVideoText:"Откройте коллекцию женских ароматов.",womenButton:"Товары и цены",
 
 menHeading:"МУЖСКИЕ АРОМАТЫ",menVideoText:"Откройте коллекцию мужских ароматов.",menButton:"Товары и цены",
 
@@ -740,45 +686,31 @@ menProductsTitle:"Мужские ароматы – товары и цены",me
 
 menCaseText:"Футляр для 15 мл продаётся отдельно.",menShopButton:"Заказать в магазине Chogan",
 
-luxuryTitle:"Люкс и унисекс",luxuryText:"Откройте ароматы люкс и унисекс в официальном магазине Chogan.",
-
-luxuryButton:"Люкс и унисекс",
+luxuryTitle:"Люкс и унисекс",luxuryText:"Откройте ароматы люкс и унисекс в официальном магазине Chogan.",luxuryButton:"Люкс и унисекс",
 
 casesTitle:"Футляры для духов 15 мл",casesText:"Футляры продаются отдельно.",
 
-caseColoursTitle:"Футляры разных цветов",casePremiumTitle:"Элегантные футляры",
+caseColoursTitle:"Футляры разных цветов",casePremiumTitle:"Элегантные футляры",casesShopButton:"Футляры Chogan",
 
-casesShopButton:"Футляры Chogan",
+cosmeticsTitle:"Кремы и косметика",cosmeticsText:"Кремы, масла для тела и косметика.",cosmeticsButton:"Перейти к косметике",
 
-cosmeticsTitle:"Кремы и косметика",cosmeticsText:"Кремы, масла для тела и косметика.",
+contactTitle:"Заказ и контакты",contactText:"Вы можете купить в магазине Chogan или заказать напрямую у меня.",
 
-cosmeticsButton:"Перейти к косметике",contactTitle:"Заказ и контакты",
-
-contactText:"По вопросам о парфюмерии и заказах свяжитесь со мной.",
-
-orderButton:"Магазин Chogan",
-
-legalText:"Сайт управляется Сальвадором Пересом как независимым дистрибьютором Chogan. Заказы оформляются на официальном сайте Chogan."
+legalText:"Сайт управляется Сальвадором Пересом как независимым дистрибьютором Chogan."
 
 },
 
 pt:{
 
-tagline:"Elegância que deixa marca",
+tagline:"Elegância que deixa marca",noticeTitle:"Aviso sobre perfumes de 15 ml",
 
-noticeTitle:"Aviso sobre perfumes de 15 ml",
+noticeText:"Os perfumes de 15 ml precisam de um estojo vendido separadamente.",noticeButton:"Estojos e preços",
 
-noticeText:"Os perfumes de 15 ml precisam de um estojo vendido separadamente.",
+videoTitle:"As nossas coleções de perfumes",videoSubtitle:"Veja os vídeos e abra a lista de produtos correspondente.",
 
-noticeButton:"Estojos e preços",videoTitle:"As nossas coleções de perfumes",
+mythVideoText:"Coleção exclusiva inspirada na mitologia grega.",mythButton:"Mythologik – Produtos e preços",
 
-videoSubtitle:"Veja os vídeos e abra a lista de produtos correspondente.",
-
-mythVideoText:"Coleção exclusiva inspirada na mitologia grega.",
-
-mythButton:"Mythologik – Produtos e preços",womenHeading:"PERFUMES FEMININOS",
-
-womenVideoText:"Descubra os nossos perfumes femininos.",womenButton:"Produtos e preços",
+womenHeading:"PERFUMES FEMININOS",womenVideoText:"Descubra os nossos perfumes femininos.",womenButton:"Produtos e preços",
 
 menHeading:"PERFUMES MASCULINOS",menVideoText:"Descubra os nossos perfumes masculinos.",menButton:"Produtos e preços",
 
@@ -792,45 +724,31 @@ menProductsTitle:"Perfumes masculinos – produtos e preços",menProductsText:"C
 
 menCaseText:"O estojo de 15 ml é vendido separadamente.",menShopButton:"Encomendar na Chogan",
 
-luxuryTitle:"Luxo e Unissexo",luxuryText:"Descubra fragrâncias de luxo e unissexo na loja oficial Chogan.",
-
-luxuryButton:"Descobrir Luxo e Unissexo",
+luxuryTitle:"Luxo e Unissexo",luxuryText:"Descubra fragrâncias de luxo e unissexo na loja oficial Chogan.",luxuryButton:"Descobrir Luxo e Unissexo",
 
 casesTitle:"Estojos para perfumes de 15 ml",casesText:"Os estojos são vendidos separadamente.",
 
-caseColoursTitle:"Estojos de várias cores",casePremiumTitle:"Estojos elegantes",
+caseColoursTitle:"Estojos de várias cores",casePremiumTitle:"Estojos elegantes",casesShopButton:"Ver estojos Chogan",
 
-casesShopButton:"Ver estojos Chogan",
+cosmeticsTitle:"Cremes e cosméticos",cosmeticsText:"Descubra cremes, óleos corporais e cosméticos.",cosmeticsButton:"Ir para cosméticos",
 
-cosmeticsTitle:"Cremes e cosméticos",cosmeticsText:"Descubra cremes, óleos corporais e cosméticos.",
+contactTitle:"Encomendas e contacto",contactText:"Pode comprar na loja oficial Chogan ou encomendar diretamente comigo.",
 
-cosmeticsButton:"Ir para cosméticos",contactTitle:"Encomendas e contacto",
-
-contactText:"Para questões sobre perfumes ou encomendas, entre em contacto.",
-
-orderButton:"Loja Chogan",
-
-legalText:"Este site é gerido por Salvador Perez como distribuidor independente Chogan. As encomendas são feitas no site oficial Chogan."
+legalText:"Este site é gerido por Salvador Perez como distribuidor independente Chogan."
 
 },
 
 sq:{
 
-tagline:"Elegancë që lë gjurmë",
+tagline:"Elegancë që lë gjurmë",noticeTitle:"Njoftim për parfumet 15 ml",
 
-noticeTitle:"Njoftim për parfumet 15 ml",
+noticeText:"Parfumet 15 ml kanë nevojë për një këllëf që shitet veçmas.",noticeButton:"Këllëfët dhe çmimet",
 
-noticeText:"Parfumet 15 ml kanë nevojë për një këllëf që shitet veçmas.",
+videoTitle:"Koleksionet tona të parfumeve",videoSubtitle:"Shikoni videot dhe hapni listën përkatëse të produkteve.",
 
-noticeButton:"Këllëfët dhe çmimet",videoTitle:"Koleksionet tona të parfumeve",
+mythVideoText:"Koleksion ekskluziv i frymëzuar nga mitologjia greke.",mythButton:"Mythologik – Produktet dhe çmimet",
 
-videoSubtitle:"Shikoni videot dhe hapni listën përkatëse të produkteve.",
-
-mythVideoText:"Koleksion ekskluziv i frymëzuar nga mitologjia greke.",
-
-mythButton:"Mythologik – Produktet dhe çmimet",womenHeading:"PARFUME PËR FEMRA",
-
-womenVideoText:"Zbuloni parfumet tona për femra.",womenButton:"Produktet dhe çmimet",
+womenHeading:"PARFUME PËR FEMRA",womenVideoText:"Zbuloni parfumet tona për femra.",womenButton:"Produktet dhe çmimet",
 
 menHeading:"PARFUME PËR MESHKUJ",menVideoText:"Zbuloni parfumet tona për meshkuj.",menButton:"Produktet dhe çmimet",
 
@@ -844,25 +762,17 @@ menProductsTitle:"Parfume për meshkuj – produktet dhe çmimet",menProductsTex
 
 menCaseText:"Këllëfi për 15 ml shitet veçmas.",menShopButton:"Porosit në Chogan",
 
-luxuryTitle:"Luks dhe Unisex",luxuryText:"Zbuloni aromat luksoze dhe unisex në dyqanin zyrtar Chogan.",
-
-luxuryButton:"Zbulo Luks dhe Unisex",
+luxuryTitle:"Luks dhe Unisex",luxuryText:"Zbuloni aromat luksoze dhe unisex në dyqanin zyrtar Chogan.",luxuryButton:"Zbulo Luks dhe Unisex",
 
 casesTitle:"Këllëfë për parfume 15 ml",casesText:"Këllëfët shiten veçmas.",
 
-caseColoursTitle:"Këllëfë me ngjyra të ndryshme",casePremiumTitle:"Këllëfë elegantë",
+caseColoursTitle:"Këllëfë me ngjyra të ndryshme",casePremiumTitle:"Këllëfë elegantë",casesShopButton:"Shiko këllëfët Chogan",
 
-casesShopButton:"Shiko këllëfët Chogan",
+cosmeticsTitle:"Kremra dhe kozmetikë",cosmeticsText:"Zbuloni kremrat, vajrat për trupin dhe kozmetikën.",cosmeticsButton:"Shko te kozmetika",
 
-cosmeticsTitle:"Kremra dhe kozmetikë",cosmeticsText:"Zbuloni kremrat, vajrat për trupin dhe kozmetikën.",
+contactTitle:"Porosi dhe kontakt",contactText:"Mund të blini në dyqanin Chogan ose të porosisni drejtpërdrejt tek unë.",
 
-cosmeticsButton:"Shko te kozmetika",contactTitle:"Porosi dhe kontakt",
-
-contactText:"Për pyetje rreth parfumeve ose porosive, kontaktoni me mua.",
-
-orderButton:"Dyqani Chogan",
-
-legalText:"Kjo faqe menaxhohet nga Salvador Perez si distributor i pavarur Chogan. Porositë bëhen përmes faqes zyrtare Chogan."
+legalText:"Kjo faqe menaxhohet nga Salvador Perez si distributor i pavarur Chogan."
 
 }
 
@@ -889,6 +799,947 @@ function changeLanguage(lang){
 langSelect.addEventListener("change",e=>changeLanguage(e.target.value));
 
 changeLanguage("de");
+
+/* BOTONES DE PEDIDO DIRECTO POR WHATSAPP */
+
+const whatsappNumber="491745201068";
+
+function createWhatsAppLink(message){
+
+  return "https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message);
+
+}
+
+document.querySelectorAll(".product").forEach(function(card){
+
+  const title=card.querySelector("h3");
+
+  const productName=title?title.textContent.trim():"productos y estuches";
+
+  const price=card.querySelector(".price");
+
+  const productPrice=price?" Precio indicado: "+price.textContent.trim()+".":"";
+
+  const button=document.createElement("a");
+
+  button.className="direct-order";
+
+  button.href=createWhatsAppLink("Hola Salvador, quiero hacer un pedido directamente contigo de: "+productName+"."+productPrice);
+
+  button.target="_blank";
+
+  button.rel="noopener noreferrer";
+
+  button.textContent="💬 Pedir directamente conmigo";
+
+  card.appendChild(button);
+
+});
+
+[
+
+{id:"womenShopButton",message:"Hola Salvador, quiero pedir perfumes de mujer directamente contigo."},
+
+{id:"menShopButton",message:"Hola Salvador, quiero pedir perfumes de hombre directamente contigo."},
+
+{id:"luxuryButton",message:"Hola Salvador, quiero información sobre los perfumes de lujo y unisex."},
+
+{id:"casesShopButton",message:"Hola Salvador, quiero pedir estuches para perfumes de 15 ml."}
+
+].forEach(function(item){
+
+  const originalButton=document.getElementById(item.id);
+
+  if(!originalButton)return;
+
+  const button=document.createElement("a");
+
+  button.className="direct-order";
+
+  button.href=createWhatsAppLink(item.message);
+
+  button.target="_blank";
+
+  button.rel="noopener noreferrer";
+
+  button.textContent="💬 Pedir directamente conmigo";
+
+  originalButton.insertAdjacentElement("afterend",button);
+
+});
+
+</script>
+
+</body>
+
+</html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="theme-color" content="#080808">
+
+<meta name="description" content="Parfüm und Düfte Perez – Chogan Parfüms, Mythologik, Damen- und Herrendüfte, Etuis und Kosmetik.">
+
+<title>Parfüm und Düfte Perez</title>
+
+<style>
+
+:root{--gold:#d4af37;--bg:#080808;--panel:#171717}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth;scroll-padding-top:20px}
+
+body{margin:0;background:var(--bg);color:#fff;font-family:Arial,sans-serif;line-height:1.6}
+
+header{background:#000;border-bottom:2px solid var(--gold);padding:24px 4%}
+
+.head{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+h1,h2,h3{font-family:Georgia,serif}
+
+h1{color:var(--gold);margin:0;font-size:clamp(26px,4vw,38px)}
+
+header p{margin:5px 0;color:#ddd}
+
+select{background:#111;color:#fff;border:1px solid var(--gold);padding:10px;border-radius:8px}
+
+.container{width:92%;max-width:1150px;margin:auto}
+
+.notice{text-align:center;background:#211b0b;padding:25px 14px;border-bottom:1px solid var(--gold)}
+
+h2{color:var(--gold)}
+
+.btn{display:inline-block;background:var(--gold);color:#111;text-decoration:none;font-weight:bold;padding:12px 21px;border-radius:24px;margin:12px 4px}
+
+.btn:hover{background:#f1d976}
+
+.direct-order{display:inline-block;background:#168447;color:#fff!important;text-decoration:none;font-weight:bold;padding:13px 18px;border-radius:28px;margin:10px 4px;text-align:center;border:1px solid #43c879}
+
+.direct-order:hover{background:#116b38}
+
+section{padding:44px 0;border-bottom:1px solid #292929}
+
+.title{text-align:center;font-size:clamp(26px,4vw,36px);margin:0 0 12px}
+
+.subtitle{text-align:center;color:#ccc;margin:0 auto 28px;max-width:850px}
+
+.videos,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+
+.video-card,.product{background:var(--panel);border:1px solid #5b4a1d;border-radius:12px;overflow:hidden;text-align:center}
+
+.video-card{padding-bottom:20px}
+
+.video-card h3,.product h3{color:var(--gold);padding:0 12px}
+
+video{display:block;width:100%;height:auto;max-height:650px;background:#000}
+
+.video-card p{padding:0 15px;color:#ddd}
+
+.product{padding:15px}
+
+.product img{display:block;width:100%;height:auto;max-height:440px;object-fit:contain;background:#090909;border-radius:8px}
+
+.price{color:var(--gold);font-weight:bold}
+
+.small{color:#bbb;font-size:.92rem}
+
+.list-image{max-width:900px;margin:20px auto}
+
+.list-image img{width:100%;height:auto;display:block;border:1px solid #66531f;border-radius:10px}
+
+.cosmetics{text-align:center;background:#151208;padding:40px 15px}
+
+.cosmetics img{display:block;width:100%;max-width:650px;height:auto;margin:22px auto;border:1px solid var(--gold);border-radius:10px}
+
+.contact-highlight{background:#151208;border:2px solid var(--gold);border-radius:16px;padding:28px 16px;margin:20px auto;max-width:800px;text-align:center}
+
+.contact-highlight p{font-size:1.05rem;overflow-wrap:anywhere}
+
+footer{text-align:center;padding:28px 12px;color:#bbb;background:#000}
+
+footer a{color:var(--gold)}
+
+@media(max-width:600px){
+
+ .head{justify-content:center;text-align:center}
+
+ .language{width:100%}
+
+ section{padding:32px 0}
+
+ .direct-order,.contact-highlight .btn{display:block;width:100%;margin:10px 0}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="head">
+
+    <div>
+
+      <h1>Parfüm und Düfte Perez</h1>
+
+      <p id="tagline">Eleganz, die einen bleibenden Eindruck hinterlässt</p>
+
+    </div>
+
+    <div class="language">
+
+      <label for="lang">🌐 </label>
+
+      <select id="lang" aria-label="Sprache auswählen">
+
+        <option value="de">🇩🇪 Deutsch</option>
+
+        <option value="es">🇪🇸 Español</option>
+
+        <option value="it">🇮🇹 Italiano</option>
+
+        <option value="tr">🇹🇷 Türkçe</option>
+
+        <option value="ru">🇷🇺 Русский</option>
+
+        <option value="pt">🇵🇹 Português</option>
+
+        <option value="sq">🇦🇱 Shqip</option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+</header>
+
+<div class="notice">
+
+  <div class="container">
+
+    <h2 id="noticeTitle">Wichtiger Hinweis zu 15-ml-Parfüms</h2>
+
+    <p id="noticeText">Für alle 15-ml-Parfüms wird ein Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und wird separat verkauft.</p>
+
+    <a class="btn" href="#etuis" id="noticeButton">Etuis ansehen und Preise</a>
+
+  </div>
+
+</div>
+
+<section id="kollektionen">
+
+  <div class="container">
+
+    <h2 class="title" id="videoTitle">Unsere Parfümkollektionen</h2>
+
+    <p class="subtitle" id="videoSubtitle">Sieh dir die Präsentationsvideos an und öffne danach die jeweilige Produktliste.</p>
+
+    <div class="videos">
+
+      <article class="video-card">
+
+        <h3>MYTHOLOGIK</h3>
+
+        <video controls playsinline preload="metadata">
+
+          <source src="MYTHOLOGIK_100ml_Salvador_Perez.mp4" type="video/mp4">
+
+          Dein Browser kann dieses Video nicht abspielen.
+
+        </video>
+
+        <p id="mythVideoText">Die exklusive Duftkollektion, inspiriert von der griechischen Mythologie.</p>
+
+        <a class="btn" href="#mythologik" id="mythButton">Mythologik – Produkte und Preise</a>
+
+      </article>
+
+      <article class="video-card">
+
+        <h3 id="womenHeading">DAMENPARFÜMS</h3>
+
+        <video controls playsinline preload="metadata">
+
+          <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov" type="video/quicktime">
+
+          Dein Browser kann dieses Video nicht abspielen.
+
+        </video>
+
+        <p id="womenVideoText">Entdecke unsere Damendüfte.</p>
+
+        <a class="btn" href="#damen" id="womenButton">Produkte und Preise</a>
+
+      </article>
+
+      <article class="video-card">
+
+        <h3 id="menHeading">HERRENPARFÜMS</h3>
+
+        <video controls playsinline preload="metadata">
+
+          <source src="Parfuem_und_Duefte_Perez_Herrenparfum.mp4" type="video/mp4">
+
+          Dein Browser kann dieses Video nicht abspielen.
+
+        </video>
+
+        <p id="menVideoText">Entdecke unsere Herrendüfte.</p>
+
+        <a class="btn" href="#herren" id="menButton">Produkte und Preise</a>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="mythologik">
+
+  <div class="container">
+
+    <h2 class="title">MYTHOLOGIK – 100 ml</h2>
+
+    <p class="subtitle" id="mythPriceText">299,00 € pro Flakon</p>
+
+    <div class="products">
+
+      <article class="product">
+
+        <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Mythologik Hermes">
+
+        <h3>HERMES</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Mythologik Ares">
+
+        <h3>ARES</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Mythologik Apollo">
+
+        <h3>APOLLO</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Mythologik Afrodita">
+
+        <h3>AFRODITA</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Mythologik Medusa">
+
+        <h3>MEDUSA</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Mythologik Artemide">
+
+        <h3>ARTEMIDE</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Mythologik Zeus">
+
+        <h3>ZEUS</h3><p>100 ml</p><p class="price">299,00 €</p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="damen">
+
+  <div class="container">
+
+    <h2 class="title" id="womenProductsTitle">Damenparfüms – Produkte und Preise</h2>
+
+    <p class="subtitle" id="womenProductsText">Die Duftübersicht mit Artikeln und Preisen.</p>
+
+    <p class="subtitle">70 ml: <strong class="price">35,00 €</strong> ·
+
+      30 ml: <strong class="price">18,00 €</strong> ·
+
+      15 ml: <strong class="price">11,90 €</strong>
+
+    </p>
+
+    <div class="list-image">
+
+      <img src="E6F6746F-7546-4797-A6EA-5EB2A58FC561.png" alt="Damenparfüms mit Artikelnummern und Preisen">
+
+    </div>
+
+    <p class="small" id="womenCaseText">Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.</p>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer" id="womenShopButton">Im Chogan-Shop bestellen</a>
+
+  </div>
+
+</section>
+
+<section id="herren">
+
+  <div class="container">
+
+    <h2 class="title" id="menProductsTitle">Herrenparfüms – Produkte und Preise</h2>
+
+    <p class="subtitle" id="menProductsText">Die Duftübersicht mit Artikeln und Preisen.</p>
+
+    <p class="subtitle">70 ml: <strong class="price">35,00 €</strong> ·
+
+      30 ml: <strong class="price">18,00 €</strong> ·
+
+      15 ml: <strong class="price">11,90 €</strong>
+
+    </p>
+
+    <div class="list-image">
+
+      <img src="634DD60F-F87F-47B5-82D2-64DC1ED052EA.png" alt="Herrenparfüms mit Artikelnummern und Preisen">
+
+    </div>
+
+    <p class="small" id="menCaseText">Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.</p>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer" id="menShopButton">Im Chogan-Shop bestellen</a>
+
+  </div>
+
+</section>
+
+<section id="luxus-unisex">
+
+  <div class="container">
+
+    <h2 class="title" id="luxuryTitle">Luxus & Unisex</h2>
+
+    <p class="subtitle" id="luxuryText">Entdecke elegante Luxus- und Unisex-Düfte im offiziellen Chogan-Shop.</p>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer" id="luxuryButton">Luxus & Unisex entdecken</a>
+
+  </div>
+
+</section>
+
+<section id="etuis">
+
+  <div class="container">
+
+    <h2 class="title" id="casesTitle">Etuis für 15-ml-Parfüms</h2>
+
+    <p class="subtitle" id="casesText">Die Etuis sind nicht im Parfümpreis enthalten und werden separat verkauft.</p>
+
+    <div class="products">
+
+      <article class="product">
+
+        <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Etuis in verschiedenen Farben">
+
+        <h3 id="caseColoursTitle">Etuis in verschiedenen Farben</h3>
+
+        <p>TCOV010 – Grau/Taupe</p>
+
+        <p>TCOV011 – Flieder</p>
+
+        <p>TCOV012 – Grün</p>
+
+        <p>TCOV014 – Rosa</p>
+
+        <p>TCOV015 – Mocha Mousse</p>
+
+        <p>TCOV019 – Euro Event</p>
+
+        <p class="price">Je 13,00 €</p>
+
+      </article>
+
+      <article class="product">
+
+        <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Schwarze und bordeauxrote Etuis">
+
+        <h3 id="casePremiumTitle">Elegante Etuis</h3>
+
+        <p>TCOV008 – Bordeaux</p>
+
+        <p>TCOV009 – Schwarz</p>
+
+        <p class="price">Je 15,00 €</p>
+
+      </article>
+
+    </div>
+
+    <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer" id="casesShopButton">Etuis bei Chogan ansehen</a>
+
+  </div>
+
+</section>
+
+<section class="cosmetics" id="kosmetik">
+
+  <div class="container">
+
+    <h2 id="cosmeticsTitle">Cremes & Kosmetik</h2>
+
+    <p id="cosmeticsText">Entdecke Cremes, Körperöle und Kosmetik.</p>
+
+    <img src="755f5311-6403-4ef0-a837-50070ccb570c.jpeg" alt="Parfüm und Düfte Perez – Kosmetik">
+
+    <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/" id="cosmeticsButton">Zur Kosmetikseite</a>
+
+  </div>
+
+</section>
+
+<section id="kontakt">
+
+  <div class="container">
+
+    <div class="contact-highlight">
+
+      <h2 id="contactTitle">Bestellung und Kontakt</h2>
+
+      <p id="contactText">Du kannst über die offizielle Chogan-Seite kaufen oder direkt bei mir bestellen.</p>
+
+      <a class="direct-order" href="https://wa.me/491745201068?text=Hola%20Salvador%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener noreferrer">💬 Pedir directamente conmigo por WhatsApp</a>
+
+      <p><strong>WhatsApp:</strong><br><a href="https://wa.me/491745201068" style="color:#d4af37">+49 174 520 1068</a></p>
+
+      <p><strong>E-Mail:</strong><br><a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a></p>
+
+      <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">🛍️ Im offiziellen Chogan-Shop kaufen</a>
+
+      <p><a href="https://parfuemperez.com/">parfuemperez.com</a></p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p><strong>Parfüm und Düfte Perez</strong></p>
+
+  <p>Salvador Perez</p>
+
+  <p id="legalText">Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben.</p>
+
+  <p>© Parfüm und Düfte Perez</p>
+
+</footer>
+
+<script>
+
+const translations={
+
+de:{
+
+tagline:"Eleganz, die einen bleibenden Eindruck hinterlässt",
+
+noticeTitle:"Wichtiger Hinweis zu 15-ml-Parfüms",
+
+noticeText:"Für alle 15-ml-Parfüms wird ein Etui benötigt. Das Etui ist nicht im Parfümpreis enthalten und wird separat verkauft.",
+
+noticeButton:"Etuis ansehen und Preise",videoTitle:"Unsere Parfümkollektionen",
+
+videoSubtitle:"Sieh dir die Präsentationsvideos an und öffne danach die jeweilige Produktliste.",
+
+mythVideoText:"Die exklusive Duftkollektion, inspiriert von der griechischen Mythologie.",
+
+mythButton:"Mythologik – Produkte und Preise",womenHeading:"DAMENPARFÜMS",
+
+womenVideoText:"Entdecke unsere Damendüfte.",womenButton:"Produkte und Preise",
+
+menHeading:"HERRENPARFÜMS",menVideoText:"Entdecke unsere Herrendüfte.",menButton:"Produkte und Preise",
+
+mythPriceText:"299,00 € pro Flakon",
+
+womenProductsTitle:"Damenparfüms – Produkte und Preise",womenProductsText:"Die Duftübersicht mit Artikeln und Preisen.",
+
+womenCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",womenShopButton:"Im Chogan-Shop bestellen",
+
+menProductsTitle:"Herrenparfüms – Produkte und Preise",menProductsText:"Die Duftübersicht mit Artikeln und Preisen.",
+
+menCaseText:"Das Etui für 15 ml ist nicht enthalten und wird separat verkauft.",menShopButton:"Im Chogan-Shop bestellen",
+
+luxuryTitle:"Luxus & Unisex",luxuryText:"Entdecke elegante Luxus- und Unisex-Düfte im offiziellen Chogan-Shop.",luxuryButton:"Luxus & Unisex entdecken",
+
+casesTitle:"Etuis für 15-ml-Parfüms",casesText:"Die Etuis sind nicht im Parfümpreis enthalten und werden separat verkauft.",
+
+caseColoursTitle:"Etuis in verschiedenen Farben",casePremiumTitle:"Elegante Etuis",casesShopButton:"Etuis bei Chogan ansehen",
+
+cosmeticsTitle:"Cremes & Kosmetik",cosmeticsText:"Entdecke Cremes, Körperöle und Kosmetik.",cosmeticsButton:"Zur Kosmetikseite",
+
+contactTitle:"Bestellung und Kontakt",contactText:"Du kannst über die offizielle Chogan-Seite kaufen oder direkt bei mir bestellen.",
+
+legalText:"Diese Website wird von Salvador Perez als unabhängiger Chogan-Vertriebspartner betrieben."
+
+},
+
+es:{
+
+tagline:"Elegancia que deja huella",
+
+noticeTitle:"Aviso importante sobre los perfumes de 15 ml",
+
+noticeText:"Todos los perfumes de 15 ml necesitan un estuche. No está incluido en el precio del perfume y se vende por separado.",
+
+noticeButton:"Ver estuches y precios",videoTitle:"Nuestras colecciones de perfumes",
+
+videoSubtitle:"Mira los vídeos de presentación y después abre la lista de productos correspondiente.",
+
+mythVideoText:"Colección exclusiva inspirada en la mitología griega.",
+
+mythButton:"Mythologik – Productos y precios",womenHeading:"PERFUMES DE MUJER",
+
+womenVideoText:"Descubre nuestros perfumes de mujer.",womenButton:"Productos y precios",
+
+menHeading:"PERFUMES DE HOMBRE",menVideoText:"Descubre nuestros perfumes de hombre.",menButton:"Productos y precios",
+
+mythPriceText:"299,00 € por frasco",
+
+womenProductsTitle:"Perfumes de mujer – productos y precios",womenProductsText:"Consulta la lista de fragancias, artículos y precios.",
+
+womenCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",womenShopButton:"Pedir en la tienda Chogan",
+
+menProductsTitle:"Perfumes de hombre – productos y precios",menProductsText:"Consulta la lista de fragancias, artículos y precios.",
+
+menCaseText:"El estuche de 15 ml no está incluido y se vende por separado.",menShopButton:"Pedir en la tienda Chogan",
+
+luxuryTitle:"Lujo y Unisex",luxuryText:"Descubre fragancias de lujo y unisex en la tienda oficial de Chogan.",luxuryButton:"Descubrir Lujo y Unisex",
+
+casesTitle:"Estuches para perfumes de 15 ml",casesText:"Los estuches no están incluidos en el precio del perfume y se venden por separado.",
+
+caseColoursTitle:"Estuches de varios colores",casePremiumTitle:"Estuches elegantes",casesShopButton:"Ver estuches en Chogan",
+
+cosmeticsTitle:"Cremas y cosméticos",cosmeticsText:"Descubre cremas, aceites corporales y cosméticos.",cosmeticsButton:"Ir a la página de cosmética",
+
+contactTitle:"Pedidos y contacto",contactText:"Puedes comprar en la tienda oficial de Chogan o hacer tu pedido directamente conmigo.",
+
+legalText:"Esta página está gestionada por Salvador Perez como distribuidor independiente de Chogan."
+
+},
+
+it:{
+
+tagline:"Eleganza che lascia il segno",
+
+noticeTitle:"Avviso importante sui profumi da 15 ml",
+
+noticeText:"I profumi da 15 ml richiedono una custodia venduta separatamente.",
+
+noticeButton:"Custodie e prezzi",videoTitle:"Le nostre collezioni di profumi",
+
+videoSubtitle:"Guarda i video e apri la relativa lista dei prodotti.",
+
+mythVideoText:"Collezione esclusiva ispirata alla mitologia greca.",
+
+mythButton:"Mythologik – Prodotti e prezzi",womenHeading:"PROFUMI DONNA",
+
+womenVideoText:"Scopri i nostri profumi da donna.",womenButton:"Prodotti e prezzi",
+
+menHeading:"PROFUMI UOMO",menVideoText:"Scopri i nostri profumi da uomo.",menButton:"Prodotti e prezzi",
+
+mythPriceText:"299,00 € per flacone",
+
+womenProductsTitle:"Profumi donna – prodotti e prezzi",womenProductsText:"Consulta la lista delle fragranze e dei prezzi.",
+
+womenCaseText:"La custodia da 15 ml è venduta separatamente.",womenShopButton:"Ordina nel negozio Chogan",
+
+menProductsTitle:"Profumi uomo – prodotti e prezzi",menProductsText:"Consulta la lista delle fragranze e dei prezzi.",
+
+menCaseText:"La custodia da 15 ml è venduta separatamente.",menShopButton:"Ordina nel negozio Chogan",
+
+luxuryTitle:"Lusso e Unisex",luxuryText:"Scopri le fragranze di lusso e unisex nel negozio ufficiale Chogan.",luxuryButton:"Scopri Lusso e Unisex",
+
+casesTitle:"Custodie per profumi da 15 ml",casesText:"Le custodie sono vendute separatamente.",
+
+caseColoursTitle:"Custodie in vari colori",casePremiumTitle:"Custodie eleganti",casesShopButton:"Vedi le custodie Chogan",
+
+cosmeticsTitle:"Creme e cosmetici",cosmeticsText:"Scopri creme, oli per il corpo e cosmetici.",cosmeticsButton:"Vai alla pagina cosmetici",
+
+contactTitle:"Ordini e contatti",contactText:"Puoi acquistare nel negozio ufficiale Chogan o ordinare direttamente da me.",
+
+legalText:"Questo sito è gestito da Salvador Perez come distributore indipendente Chogan."
+
+},
+
+tr:{
+
+tagline:"İz bırakan zarafet",noticeTitle:"15 ml parfümler hakkında önemli bilgi",
+
+noticeText:"15 ml parfümler için ayrıca satılan bir kılıf gereklidir.",noticeButton:"Kılıflar ve fiyatlar",
+
+videoTitle:"Parfüm koleksiyonlarımız",videoSubtitle:"Videoları izleyin ve ilgili ürün listesini açın.",
+
+mythVideoText:"Yunan mitolojisinden ilham alan özel koleksiyon.",mythButton:"Mythologik – Ürünler ve fiyatlar",
+
+womenHeading:"KADIN PARFÜMLERİ",womenVideoText:"Kadın parfümlerimizi keşfedin.",womenButton:"Ürünler ve fiyatlar",
+
+menHeading:"ERKEK PARFÜMLERİ",menVideoText:"Erkek parfümlerimizi keşfedin.",menButton:"Ürünler ve fiyatlar",
+
+mythPriceText:"Şişe başına 299,00 €",
+
+womenProductsTitle:"Kadın parfümleri – ürünler ve fiyatlar",womenProductsText:"Koku listesini ve fiyatları inceleyin.",
+
+womenCaseText:"15 ml kılıfı ayrıca satılır.",womenShopButton:"Chogan mağazasından sipariş ver",
+
+menProductsTitle:"Erkek parfümleri – ürünler ve fiyatlar",menProductsText:"Koku listesini ve fiyatları inceleyin.",
+
+menCaseText:"15 ml kılıfı ayrıca satılır.",menShopButton:"Chogan mağazasından sipariş ver",
+
+luxuryTitle:"Lüks ve Unisex",luxuryText:"Chogan'ın resmî mağazasında lüks ve unisex kokuları keşfedin.",luxuryButton:"Lüks ve Unisex'i keşfet",
+
+casesTitle:"15 ml parfümler için kılıflar",casesText:"Kılıflar ayrıca satılır.",
+
+caseColoursTitle:"Farklı renklerde kılıflar",casePremiumTitle:"Şık kılıflar",casesShopButton:"Chogan kılıflarını gör",
+
+cosmeticsTitle:"Kremler ve kozmetik",cosmeticsText:"Kremleri, vücut yağlarını ve kozmetik ürünlerini keşfedin.",cosmeticsButton:"Kozmetik sayfasına git",
+
+contactTitle:"Sipariş ve iletişim",contactText:"Chogan mağazasından satın alabilir veya doğrudan benden sipariş verebilirsiniz.",
+
+legalText:"Bu site bağımsız Chogan distribütörü Salvador Perez tarafından işletilmektedir."
+
+},
+
+ru:{
+
+tagline:"Элегантность, которая оставляет впечатление",noticeTitle:"Важная информация о парфюмерии 15 мл",
+
+noticeText:"Для флаконов 15 мл нужен футляр, который продаётся отдельно.",noticeButton:"Футляры и цены",
+
+videoTitle:"Наши коллекции ароматов",videoSubtitle:"Посмотрите видео и откройте соответствующий список товаров.",
+
+mythVideoText:"Эксклюзивная коллекция по мотивам греческой мифологии.",mythButton:"Mythologik – товары и цены",
+
+womenHeading:"ЖЕНСКИЕ АРОМАТЫ",womenVideoText:"Откройте коллекцию женских ароматов.",womenButton:"Товары и цены",
+
+menHeading:"МУЖСКИЕ АРОМАТЫ",menVideoText:"Откройте коллекцию мужских ароматов.",menButton:"Товары и цены",
+
+mythPriceText:"299,00 € за флакон",
+
+womenProductsTitle:"Женские ароматы – товары и цены",womenProductsText:"Список ароматов и цен.",
+
+womenCaseText:"Футляр для 15 мл продаётся отдельно.",womenShopButton:"Заказать в магазине Chogan",
+
+menProductsTitle:"Мужские ароматы – товары и цены",menProductsText:"Список ароматов и цен.",
+
+menCaseText:"Футляр для 15 мл продаётся отдельно.",menShopButton:"Заказать в магазине Chogan",
+
+luxuryTitle:"Люкс и унисекс",luxuryText:"Откройте ароматы люкс и унисекс в официальном магазине Chogan.",luxuryButton:"Люкс и унисекс",
+
+casesTitle:"Футляры для духов 15 мл",casesText:"Футляры продаются отдельно.",
+
+caseColoursTitle:"Футляры разных цветов",casePremiumTitle:"Элегантные футляры",casesShopButton:"Футляры Chogan",
+
+cosmeticsTitle:"Кремы и косметика",cosmeticsText:"Кремы, масла для тела и косметика.",cosmeticsButton:"Перейти к косметике",
+
+contactTitle:"Заказ и контакты",contactText:"Вы можете купить в магазине Chogan или заказать напрямую у меня.",
+
+legalText:"Сайт управляется Сальвадором Пересом как независимым дистрибьютором Chogan."
+
+},
+
+pt:{
+
+tagline:"Elegância que deixa marca",noticeTitle:"Aviso sobre perfumes de 15 ml",
+
+noticeText:"Os perfumes de 15 ml precisam de um estojo vendido separadamente.",noticeButton:"Estojos e preços",
+
+videoTitle:"As nossas coleções de perfumes",videoSubtitle:"Veja os vídeos e abra a lista de produtos correspondente.",
+
+mythVideoText:"Coleção exclusiva inspirada na mitologia grega.",mythButton:"Mythologik – Produtos e preços",
+
+womenHeading:"PERFUMES FEMININOS",womenVideoText:"Descubra os nossos perfumes femininos.",womenButton:"Produtos e preços",
+
+menHeading:"PERFUMES MASCULINOS",menVideoText:"Descubra os nossos perfumes masculinos.",menButton:"Produtos e preços",
+
+mythPriceText:"299,00 € por frasco",
+
+womenProductsTitle:"Perfumes femininos – produtos e preços",womenProductsText:"Consulte a lista de fragrâncias e preços.",
+
+womenCaseText:"O estojo de 15 ml é vendido separadamente.",womenShopButton:"Encomendar na Chogan",
+
+menProductsTitle:"Perfumes masculinos – produtos e preços",menProductsText:"Consulte a lista de fragrâncias e preços.",
+
+menCaseText:"O estojo de 15 ml é vendido separadamente.",menShopButton:"Encomendar na Chogan",
+
+luxuryTitle:"Luxo e Unissexo",luxuryText:"Descubra fragrâncias de luxo e unissexo na loja oficial Chogan.",luxuryButton:"Descobrir Luxo e Unissexo",
+
+casesTitle:"Estojos para perfumes de 15 ml",casesText:"Os estojos são vendidos separadamente.",
+
+caseColoursTitle:"Estojos de várias cores",casePremiumTitle:"Estojos elegantes",casesShopButton:"Ver estojos Chogan",
+
+cosmeticsTitle:"Cremes e cosméticos",cosmeticsText:"Descubra cremes, óleos corporais e cosméticos.",cosmeticsButton:"Ir para cosméticos",
+
+contactTitle:"Encomendas e contacto",contactText:"Pode comprar na loja oficial Chogan ou encomendar diretamente comigo.",
+
+legalText:"Este site é gerido por Salvador Perez como distribuidor independente Chogan."
+
+},
+
+sq:{
+
+tagline:"Elegancë që lë gjurmë",noticeTitle:"Njoftim për parfumet 15 ml",
+
+noticeText:"Parfumet 15 ml kanë nevojë për një këllëf që shitet veçmas.",noticeButton:"Këllëfët dhe çmimet",
+
+videoTitle:"Koleksionet tona të parfumeve",videoSubtitle:"Shikoni videot dhe hapni listën përkatëse të produkteve.",
+
+mythVideoText:"Koleksion ekskluziv i frymëzuar nga mitologjia greke.",mythButton:"Mythologik – Produktet dhe çmimet",
+
+womenHeading:"PARFUME PËR FEMRA",womenVideoText:"Zbuloni parfumet tona për femra.",womenButton:"Produktet dhe çmimet",
+
+menHeading:"PARFUME PËR MESHKUJ",menVideoText:"Zbuloni parfumet tona për meshkuj.",menButton:"Produktet dhe çmimet",
+
+mythPriceText:"299,00 € për shishe",
+
+womenProductsTitle:"Parfume për femra – produktet dhe çmimet",womenProductsText:"Lista e aromave dhe çmimeve.",
+
+womenCaseText:"Këllëfi për 15 ml shitet veçmas.",womenShopButton:"Porosit në Chogan",
+
+menProductsTitle:"Parfume për meshkuj – produktet dhe çmimet",menProductsText:"Lista e aromave dhe çmimeve.",
+
+menCaseText:"Këllëfi për 15 ml shitet veçmas.",menShopButton:"Porosit në Chogan",
+
+luxuryTitle:"Luks dhe Unisex",luxuryText:"Zbuloni aromat luksoze dhe unisex në dyqanin zyrtar Chogan.",luxuryButton:"Zbulo Luks dhe Unisex",
+
+casesTitle:"Këllëfë për parfume 15 ml",casesText:"Këllëfët shiten veçmas.",
+
+caseColoursTitle:"Këllëfë me ngjyra të ndryshme",casePremiumTitle:"Këllëfë elegantë",casesShopButton:"Shiko këllëfët Chogan",
+
+cosmeticsTitle:"Kremra dhe kozmetikë",cosmeticsText:"Zbuloni kremrat, vajrat për trupin dhe kozmetikën.",cosmeticsButton:"Shko te kozmetika",
+
+contactTitle:"Porosi dhe kontakt",contactText:"Mund të blini në dyqanin Chogan ose të porosisni drejtpërdrejt tek unë.",
+
+legalText:"Kjo faqe menaxhohet nga Salvador Perez si distributor i pavarur Chogan."
+
+}
+
+};
+
+const langSelect=document.getElementById("lang");
+
+function changeLanguage(lang){
+
+  const dict=translations[lang]||translations.de;
+
+  document.documentElement.lang=lang;
+
+  Object.keys(dict).forEach(id=>{
+
+    const el=document.getElementById(id);
+
+    if(el)el.textContent=dict[id];
+
+  });
+
+}
+
+langSelect.addEventListener("change",e=>changeLanguage(e.target.value));
+
+changeLanguage("de");
+
+/* BOTONES DE PEDIDO DIRECTO POR WHATSAPP */
+
+const whatsappNumber="491745201068";
+
+function createWhatsAppLink(message){
+
+  return "https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message);
+
+}
+
+document.querySelectorAll(".product").forEach(function(card){
+
+  const title=card.querySelector("h3");
+
+  const productName=title?title.textContent.trim():"productos y estuches";
+
+  const price=card.querySelector(".price");
+
+  const productPrice=price?" Precio indicado: "+price.textContent.trim()+".":"";
+
+  const button=document.createElement("a");
+
+  button.className="direct-order";
+
+  button.href=createWhatsAppLink("Hola Salvador, quiero hacer un pedido directamente contigo de: "+productName+"."+productPrice);
+
+  button.target="_blank";
+
+  button.rel="noopener noreferrer";
+
+  button.textContent="💬 Pedir directamente conmigo";
+
+  card.appendChild(button);
+
+});
+
+[
+
+{id:"womenShopButton",message:"Hola Salvador, quiero pedir perfumes de mujer directamente contigo."},
+
+{id:"menShopButton",message:"Hola Salvador, quiero pedir perfumes de hombre directamente contigo."},
+
+{id:"luxuryButton",message:"Hola Salvador, quiero información sobre los perfumes de lujo y unisex."},
+
+{id:"casesShopButton",message:"Hola Salvador, quiero pedir estuches para perfumes de 15 ml."}
+
+].forEach(function(item){
+
+  const originalButton=document.getElementById(item.id);
+
+  if(!originalButton)return;
+
+  const button=document.createElement("a");
+
+  button.className="direct-order";
+
+  button.href=createWhatsAppLink(item.message);
+
+  button.target="_blank";
+
+  button.rel="noopener noreferrer";
+
+  button.textContent="💬 Pedir directamente conmigo";
+
+  originalButton.insertAdjacentElement("afterend",button);
+
+});
 
 </script>
 
