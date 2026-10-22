@@ -1,444 +1,1169 @@
 <!DOCTYPE html>
+
 <html lang="de">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta name="theme-color" content="#090909">
+
 <meta name="description" content="Parfüm und Düfte Perez – italienische Duftinspirationen, persönliche Duftberatung, Produkte und Kosmetik.">
+
 <title>Parfüm und Düfte Perez | Eleganz, die bleibt</title>
+
 <style>
+
 :root {
+
   --gold: #d4af37;
+
   --light-gold: #f5df91;
+
   --black: #090909;
+
   --panel: #191919;
+
   --white: #f7f5ef;
+
   --grey: #dddddd;
+
 }
+
 * { box-sizing: border-box; }
+
 html { scroll-behavior: smooth; }
+
 body {
+
   margin: 0;
+
   background: var(--black);
+
   color: var(--white);
+
   font-family: Arial, Helvetica, sans-serif;
+
   line-height: 1.65;
+
 }
+
+body.modal-active { overflow: hidden; }
+
 a { color: var(--light-gold); }
+
 header {
+
   text-align: center;
+
   padding: 24px 14px;
+
   background: #000;
+
   border-bottom: 2px solid var(--gold);
+
 }
+
 header h1 {
+
   margin: 0;
+
   color: var(--gold);
+
   font-family: Georgia, serif;
+
   font-size: clamp(27px, 5vw, 43px);
+
 }
+
 header p {
+
   color: #ddd;
+
   font-style: italic;
+
   margin: 8px 0 14px;
+
 }
+
 .language {
+
   display: inline-block;
+
   padding: 9px;
+
   background: #171717;
+
   color: white;
+
   border: 1px solid var(--gold);
+
   border-radius: 8px;
+
   max-width: 100%;
+
 }
+
 .container { width: 92%; max-width: 1120px; margin: auto; }
+
 .hero {
+
   padding: 48px 14px;
+
   text-align: center;
+
   background: radial-gradient(ellipse at center, #3a2b0a, #100e08 55%, #050505);
+
 }
+
 .hero-box {
+
   max-width: 850px;
+
   margin: auto;
+
   padding: 26px 18px;
+
   border: 1px solid var(--gold);
+
   border-radius: 16px;
+
 }
+
 h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+
 .hero h2 {
+
   color: var(--gold);
+
   font-size: clamp(32px, 6vw, 54px);
+
   line-height: 1.2;
+
   margin: 0;
+
 }
+
 .hero-box p { color: #eee; }
+
 .section-title {
+
   color: var(--gold);
+
   text-align: center;
+
   font-size: clamp(25px, 4vw, 36px);
+
   margin: 0 0 14px;
+
 }
+
 .intro {
+
   max-width: 850px;
+
   margin: 12px auto 25px;
+
   text-align: center;
+
   color: #ddd;
+
 }
+
 .btn {
+
   display: inline-block;
+
   margin: 7px 4px;
+
   padding: 12px 20px;
+
   background: linear-gradient(135deg, #f5df91, #d4af37, #b88625);
+
   color: #090909;
+
   border: 1px solid var(--light-gold);
+
   border-radius: 28px;
+
   text-decoration: none;
+
   font-weight: bold;
+
   text-align: center;
+
   box-shadow: 0 3px 12px #0006;
+
+  cursor: pointer;
+
 }
+
 .btn:hover { filter: brightness(1.12); }
+
 .btn-outline { background: transparent; color: var(--light-gold); }
+
 .notice {
+
   padding: 22px 14px;
+
   text-align: center;
+
   background: #211906;
+
   border-bottom: 1px solid var(--gold);
+
 }
+
 .notice strong { color: var(--light-gold); }
+
 section { scroll-margin-top: 12px; }
-.videos, .products { padding: 42px 0; background: #101010; border-top: 1px solid #333; }
+
+.videos, .products {
+
+  padding: 42px 0;
+
+  background: #101010;
+
+  border-top: 1px solid #333;
+
+}
+
 .video-grid, .product-grid {
+
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 20px;
+
 }
+
 .video-card, .product-card {
+
   overflow: hidden;
+
   background: var(--panel);
+
   border: 1px solid #6a5623;
+
   border-radius: 13px;
+
 }
+
 .video-card { text-align: center; }
-.video-card h3 { color: var(--gold); font-size: 25px; margin: 0; padding: 15px 10px; }
+
+.video-card h3 {
+
+  color: var(--gold);
+
+  font-size: 25px;
+
+  margin: 0;
+
+  padding: 15px 10px;
+
+}
+
 .video-card video {
+
   display: block;
+
   width: 100%;
+
   aspect-ratio: 16 / 9;
+
   background: #000;
+
   object-fit: contain;
+
 }
+
 .video-card p { padding: 0 15px; color: #ddd; }
+
 .product-card { padding: 14px; text-align: center; }
+
 .product-card img {
+
   width: 100%;
+
   max-height: 340px;
+
   object-fit: contain;
+
   display: block;
+
   background: #080808;
+
   border-radius: 8px;
+
 }
-.product-card h3 { color: var(--gold); font-size: 21px; margin: 12px 0 5px; }
+
+.product-card h3 {
+
+  color: var(--gold);
+
+  font-size: 21px;
+
+  margin: 12px 0 5px;
+
+}
+
 .price { color: var(--light-gold); font-weight: bold; }
+
 .gallery, .catalog-gallery, .etui-photos {
+
   display: grid;
+
   grid-template-columns: 1fr;
+
   gap: 18px;
+
 }
+
 .gallery img, .catalog-gallery img, .etui-photos img {
+
   display: block;
+
   width: 100%;
+
   height: auto;
+
   border: 1px solid var(--gold);
+
   border-radius: 12px;
+
 }
+
 .catalog-gallery { max-width: 900px; margin: auto; }
-.etui-photos { max-width: 950px; margin: 24px auto 32px; gap: 24px; }
+
+.etui-photos {
+
+  max-width: 950px;
+
+  margin: 24px auto 32px;
+
+  gap: 24px;
+
+}
+
 .etui-photos img { box-shadow: 0 8px 28px #0008; }
-.contact, .cosmetics { padding: 42px 15px; text-align: center; border-top: 1px solid #333; }
-.contact { background: #050505; }
-.cosmetics { background: #12100b; }
-.contact h2, .cosmetics h2, .legal h2, .legal h3 { color: var(--gold); }
-.contact-box {
-  max-width: 850px;
-  margin: auto;
-  padding: 22px;
-  border: 1px solid #6a5623;
-  border-radius: 14px;
-  background: #151515;
-}
-.legal { padding: 32px 15px; background: #0d0d0d; border-top: 1px solid var(--gold); }
-.legal p { color: #ddd; overflow-wrap: anywhere; }
-.legal h3 { margin-top: 24px; }
-footer {
-  padding: 20px 12px;
+
+.contact, .cosmetics {
+
+  padding: 42px 15px;
+
   text-align: center;
+
+  border-top: 1px solid #333;
+
+}
+
+.contact { background: #050505; }
+
+.cosmetics { background: #12100b; }
+
+.contact h2, .cosmetics h2, .legal h2, .legal h3 { color: var(--gold); }
+
+.contact-box {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 22px;
+
+  border: 1px solid #6a5623;
+
+  border-radius: 14px;
+
+  background: #151515;
+
+}
+
+.legal {
+
+  padding: 32px 15px;
+
+  background: #0d0d0d;
+
+  border-top: 1px solid var(--gold);
+
+}
+
+.legal p { color: #ddd; overflow-wrap: anywhere; }
+
+.legal h3 { margin-top: 24px; }
+
+footer {
+
+  padding: 20px 12px;
+
+  text-align: center;
+
   color: #aaa;
+
   font-size: 13px;
+
   background: #000;
+
 }
+
+/* Ventanas emergentes de los catálogos */
+
+body.modal-active { overflow: hidden; }
+
+.modal-overlay {
+
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  background: rgba(0,0,0,.94);
+
+  padding: 10px;
+
+  overflow-y: auto;
+
+}
+
+.modal-overlay.is-open { display: block; }
+
+.modal-window {
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1150px;
+
+  min-height: 70vh;
+
+  margin: 10px auto 25px;
+
+  background: #090909;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+}
+
+.modal-close {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 3;
+
+  display: block;
+
+  margin: 0 0 15px auto;
+
+  background: var(--gold);
+
+  color: #090909;
+
+  border: 0;
+
+  border-radius: 25px;
+
+  padding: 11px 19px;
+
+  font-weight: bold;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+.modal-window .products {
+
+  display: block !important;
+
+  padding: 20px 0;
+
+  border: 0;
+
+}
+
+.modal-window .container { width: 100%; }
+
 @media (min-width: 760px) {
+
   .video-grid { grid-template-columns: 1fr 1fr; }
+
   .video-grid .video-card:first-child { grid-column: 1 / -1; }
+
   .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
   .gallery, .catalog-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
   .etui-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .modal-window { padding: 24px; }
+
 }
+
 @media (min-width: 1000px) {
+
   .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
 }
+
 </style>
+
 </head>
+
 <body>
+
 <header>
+
   <h1>Parfüm und Düfte Perez</h1>
+
   <p>Dein Duft. Dein Stil. Deine Eleganz.</p>
+
   <label for="language">🌐 Sprache / Idioma:</label>
+
   <select class="language" id="language" aria-label="Sprache auswählen">
+
     <option value="de" selected>🇩🇪 Deutsch</option>
+
     <option value="es">🇪🇸 Español</option>
+
     <option value="it">🇮🇹 Italiano</option>
+
     <option value="tr">🇹🇷 Türkçe</option>
+
     <option value="ru">🇷🇺 Русский</option>
+
     <option value="pt">🇵🇹 Português</option>
+
     <option value="sq">🇦🇱 Shqip</option>
+
+    <option value="pl">🇵🇱 Polski</option>
+
+    <option value="en">🇬🇧 English</option>
+
+    <option value="fr">🇫🇷 Français</option>
+
   </select>
+
 </header>
+
 <main>
+
 <section class="hero">
+
   <div class="hero-box">
+
     <h2>Eleganz, die bleibt</h2>
+
     <p>Entdecke faszinierende Duftinspirationen und finde den Duft, der zu dir passt.</p>
+
     <p>Persönliche Beratung, Duftproben und Bestellanfragen bei Parfüm und Düfte Perez.</p>
+
     <a class="btn" href="#duftwelten">DÜFTE ENTDECKEN</a>
+
     <a class="btn btn-outline" href="#beratung">PERSÖNLICHE BERATUNG</a>
+
   </div>
+
 </section>
+
 <section class="notice">
+
   <div class="container">
+
     <p><strong>Wichtiger Hinweis zu 15-ml-Parfüms:</strong> Für die 15-ml-Flakons wird ein passendes Etui benötigt. Das Etui ist nicht im Preis des Parfüms enthalten.</p>
-    <a class="btn" href="#etuis">ETUIS ANSEHEN</a>
+
+    <a class="btn" href="#" data-open-modal="etuis">ETUIS ANSEHEN</a>
+
   </div>
+
 </section>
+
 <section class="videos" id="duftwelten">
+
   <div class="container">
+
     <h2 class="section-title">Unsere Duftwelten</h2>
+
     <p class="intro">Wähle deine Duftwelt. Schau dir die Präsentation an und öffne anschließend den jeweiligen Produktkatalog.</p>
+
     <div class="video-grid">
+
       <article class="video-card">
+
         <h3>Mythologik – Die Welt der Götter</h3>
+
         <video controls playsinline preload="metadata" poster="755f5311-6403-4ef0-a837-50070ccb570c.jpeg">
+
           <source src="MYTHOLOGIK_100ml_Salvador_Perez.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p>Eine außergewöhnliche Duftwelt, inspiriert von der Mythologie. Mythologik-Parfüms: 100 ml.</p>
-        <a class="btn" href="#mythologik">MYTHOLOGIK-PRODUKTE UND PREISE</a>
+
+        <a class="btn" href="#" data-open-modal="mythologik">MYTHOLOGIK-PRODUKTE UND PREISE</a>
+
       </article>
+
       <article class="video-card">
+
         <h3>Damenparfüms</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Parfum_und_Dufte_Perez_Damenparfum_Lambada.mov" type="video/quicktime">
+
           Dein Browser unterstützt dieses Video nicht. Bitte prüfe, ob dein Video als MP4 vorliegt.
+
         </video>
+
         <p>Entdecke elegante, sinnliche und feminine Duftinspirationen.</p>
-        <a class="btn" href="#damen">DAMENKATALOG ANSEHEN</a>
+
+        <a class="btn" href="#" data-open-modal="damen">DAMENKATALOG ANSEHEN</a>
+
       </article>
+
       <article class="video-card">
+
         <h3>Herrenparfüms</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Parfuem_Perez_Herrenparfum_iPhone.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p>Charaktervolle, frische und elegante Duftinspirationen für Herren.</p>
-        <a class="btn" href="#herren">HERRENKATALOG ANSEHEN</a>
+
+        <a class="btn" href="#" data-open-modal="herren">HERRENKATALOG ANSEHEN</a>
+
       </article>
+
       <article class="video-card">
+
         <h3>Luxus &amp; Unisex</h3>
+
         <video controls playsinline preload="metadata">
+
           <source src="Luxus_Unisex_romantico.mp4" type="video/mp4">
+
           Dein Browser unterstützt dieses Video nicht.
+
         </video>
+
         <p>Besondere Duftkompositionen für alle, die das Außergewöhnliche lieben.</p>
-        <a class="btn" href="#luxus">LUXUS- UND UNISEX-KATALOG</a>
+
+        <a class="btn" href="#" data-open-modal="luxus">LUXUS- UND UNISEX-KATALOG</a>
+
       </article>
+
     </div>
+
   </div>
+
 </section>
+
 <section class="products" id="mythologik">
+
   <div class="container">
+
     <h2 class="section-title">Mythologik – 100 ml</h2>
+
     <p class="intro">Entdecke die Duftwelt der Götter. Preis pro Produkt: 299,00 €.</p>
+
     <div class="product-grid">
+
       <article class="product-card">
+
         <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Mythologik Hermes" loading="lazy">
+
         <h3>Hermes</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Mythologik Ares" loading="lazy">
+
         <h3>Ares</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Mythologik Apollo" loading="lazy">
+
         <h3>Apollo</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Mythologik Afrodita" loading="lazy">
+
         <h3>Afrodita</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Mythologik Medusa" loading="lazy">
+
         <h3>Medusa</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Mythologik Artemide" loading="lazy">
+
         <h3>Artemide</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
       <article class="product-card">
+
         <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Mythologik Zeus" loading="lazy">
+
         <h3>Zeus</h3><p class="price">100 ml · 299,00 €</p>
+
       </article>
+
     </div>
+
     <p class="intro">Du möchtest ein Produkt bestellen oder mehr erfahren? Kontaktiere mich direkt.</p>
+
     <p style="text-align:center">
+
       <a class="btn" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Mythologik." target="_blank" rel="noopener noreferrer">MYTHOLOGIK PER WHATSAPP ANFRAGEN</a>
+
     </p>
+
   </div>
+
 </section>
+
 <section class="products" id="damen">
+
   <div class="container">
+
     <h2 class="section-title">Damenparfüms – Katalog und Preise</h2>
+
     <p class="intro">Im Katalog findest du Duftinspirationen, Artikelnummern und Preise.</p>
+
     <div class="catalog-gallery">
+
       <img src="catalogo_mujer_parte_1_individual.png" alt="Damenparfüm-Katalog – Teil 1 mit Artikeln und Preisen" loading="lazy">
+
       <img src="catalogo_mujer_parte_2_individual.png" alt="Damenparfüm-Katalog – Teil 2 mit Artikeln und Preisen" loading="lazy">
+
     </div>
+
     <p style="text-align:center">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">IM OFFIZIELLEN CHOGAN-SHOP BESTELLEN</a>
+
       <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Damenparf%C3%BCms." target="_blank" rel="noopener noreferrer">DIREKT BEI MIR ANFRAGEN</a>
+
     </p>
+
   </div>
+
 </section>
+
 <section class="products" id="herren">
+
   <div class="container">
+
     <h2 class="section-title">Herrenparfüms – Katalog und Preise</h2>
+
     <p class="intro">Entdecke die Herren-Düfte und sieh dir Artikelnummern und Preise im Katalog an.</p>
+
     <div class="catalog-gallery">
+
       <img src="catalogo_hombre_parte_1.png" alt="Herrenparfüm-Katalog – Teil 1 mit Artikeln und Preisen" loading="lazy">
+
       <img src="catalogo_hombre_parte_2.png" alt="Herrenparfüm-Katalog – Teil 2 mit Artikeln und Preisen" loading="lazy">
+
     </div>
+
     <p style="text-align:center">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">IM OFFIZIELLEN CHOGAN-SHOP BESTELLEN</a>
+
       <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Herrenparf%C3%BCms." target="_blank" rel="noopener noreferrer">DIREKT BEI MIR ANFRAGEN</a>
+
     </p>
+
   </div>
+
 </section>
+
 <section class="products" id="luxus">
+
   <div class="container">
+
     <h2 class="section-title">Luxus &amp; Unisex</h2>
+
     <p class="intro">Entdecke weitere Duftkollektionen für besondere Momente.</p>
+
     <div class="gallery">
+
       <img src="01_Parfums_Femme_Luxe.png" alt="Luxus-Duftkollektion Damen" loading="lazy">
+
       <img src="02_Parfums_Homme_Luxe.png" alt="Luxus-Duftkollektion Herren" loading="lazy">
+
       <img src="03_Parfums_Mixte_Luxe.png" alt="Luxus-Duftkollektion Unisex" loading="lazy">
+
       <img src="04_Parfums_Luxury_Femme.png" alt="Luxury-Duftkollektion Damen" loading="lazy">
+
       <img src="05_Parfums_Luxury_Homme.png" alt="Luxury-Duftkollektion Herren" loading="lazy">
+
       <img src="06_Parfums_Luxury_Mixte_Teil_1.png" alt="Luxury-Duftkollektion Unisex – Teil 1" loading="lazy">
+
       <img src="07_Parfums_Luxury_Mixte_Teil_2.png" alt="Luxury-Duftkollektion Unisex – Teil 2" loading="lazy">
+
       <img src="08_Parfums_Luxury_Mixte_Teil_3.png" alt="Luxury-Duftkollektion Unisex – Teil 3" loading="lazy">
+
     </div>
+
     <p style="text-align:center">
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">IM CHOGAN-SHOP BESTELLEN</a>
+
       <a class="btn btn-outline" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Luxus-%20und%20Unisex-D%C3%BCfte." target="_blank" rel="noopener noreferrer">DIREKT BEI MIR ANFRAGEN</a>
+
     </p>
+
   </div>
+
 </section>
+
 <section class="products" id="etuis">
+
   <div class="container">
+
     <h2 class="section-title">Etuis für 15-ml-Parfüms</h2>
+
     <p class="intro">Das Etui ist separat erhältlich und nicht im Parfümpreis enthalten. Bitte frage die aktuelle Verfügbarkeit und den Preis vor deiner Bestellung an.</p>
+
     <div class="etui-photos">
+
       <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Etui für 15-ml-Parfüms – Auswahl 1" loading="lazy">
+
       <img src="499B97F2-3B79-4F9D-B6D9-FA876C80E8EF.png" alt="Etui für 15-ml-Parfüms – Auswahl 2" loading="lazy">
+
     </div>
+
     <p style="text-align:center">
+
       <a class="btn" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20m%C3%B6chte%20mich%20nach%20Etuis%20f%C3%BCr%2015-ml-Parf%C3%BCms%20und%20den%20Preisen%20erkundigen." target="_blank" rel="noopener noreferrer">ETUIS UND PREISE ANFRAGEN</a>
+
     </p>
+
   </div>
+
 </section>
+
 <section class="cosmetics" id="kosmetik">
+
   <div class="container">
+
     <h2 class="section-title">Cremas &amp; Cosméticos</h2>
+
     <p class="intro">Entdecke auch unsere Auswahl an Cremes, Kosmetik und Körperpflege.</p>
+
     <a class="btn" href="https://salvador29-del.github.io/cremas-cosmeticos-/" target="_blank" rel="noopener noreferrer">ZUR KOSMETIK-WEBSITE</a>
+
   </div>
+
 </section>
+
 <section class="contact" id="beratung">
+
   <div class="container">
+
     <div class="contact-box">
+
       <h2 class="section-title">Persönliche Duftberatung und Bestellung</h2>
+
       <p>Du möchtest einen Duft vor dem Kauf kennenlernen? Persönliche Duftberatung und Duftproben sind für Kundinnen und Kunden in Kassel und Umgebung im Umkreis von 110 km nach vorheriger Terminvereinbarung möglich.</p>
+
       <p><strong>Bitte vereinbare deinen Termin für Duftproben oder persönliche Beratung vorab per WhatsApp.</strong></p>
+
       <a class="btn" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20f%C3%BCr%20eine%20Duftprobe%20vereinbaren." target="_blank" rel="noopener noreferrer">📱 TERMIN PER WHATSAPP VEREINBAREN</a>
+
       <h3>Deine Bestellmöglichkeiten</h3>
+
       <p><strong>1. Offizieller Chogan-Shop:</strong> Du kannst deine gewünschten Produkte direkt im offiziellen Shop bestellen.</p>
+
       <p><strong>2. Direkte Bestellung bei Parfüm und Düfte Perez:</strong> Du kannst deine Bestellung direkt bei mir per WhatsApp anfragen. Verfügbarkeit, Gesamtpreis, Lieferbedingungen und Zahlungsweise werden vor Abschluss der Bestellung mitgeteilt.</p>
+
       <a class="btn" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/" target="_blank" rel="noopener noreferrer">OFFIZIELLEN CHOGAN-SHOP ÖFFNEN</a>
+
       <a class="btn btn-outline" href="https://wa.me/491745201068" target="_blank" rel="noopener noreferrer">WHATSAPP – DIREKT KONTAKTIEREN</a>
+
       <p>E-Mail: <a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a></p>
+
     </div>
+
   </div>
+
 </section>
+
 <section class="legal" id="rechtliches">
+
   <div class="container">
+
     <h2>Impressum und rechtliche Hinweise</h2>
+
     <h3>Angaben gemäß § 5 DDG</h3>
+
     <p>
+
       <strong>Parfüm und Düfte Perez</strong><br>
+
       Inhaber: Salvador Pérez<br>
+
       Steinstraße 57<br>
+
       34385 Bad Karlshafen<br>
+
       Deutschland
+
     </p>
+
     <h3>Kontakt</h3>
+
     <p>
+
       E-Mail: <a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a><br>
+
       Telefon / WhatsApp:
+
       <a href="https://wa.me/491745201068" target="_blank" rel="noopener noreferrer">+49 174 5201068</a>
+
     </p>
+
     <h3>Umsatzsteuer</h3>
+
     <p>Falls für das Unternehmen eine Umsatzsteuer-Identifikationsnummer oder weitere gesetzlich vorgeschriebene Angaben erforderlich sind, müssen diese hier ergänzt werden. Bitte prüfe, welche Angaben für dein Unternehmen tatsächlich gelten.</p>
+
     <h3>Unabhängiger Vertriebspartner von Chogan</h3>
+
     <p>Parfüm und Düfte Perez ist ein unabhängiges Angebot eines Vertriebspartners und keine offizielle Unternehmenswebsite der Chogan Group. Für Bestellungen, die direkt im offiziellen Chogan-Shop abgeschlossen werden, gelten die dort angezeigten Vertrags- und Datenschutzbedingungen.</p>
+
     <p>
+
       <a href="https://www.chogangroupspa.com/index.php/documents/4/1" target="_blank" rel="noopener noreferrer">Offizielle Dokumente von Chogan</a><br>
+
       <a href="https://www.chogangroupspa.com/index.php/chogangroup/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzhinweise von Chogan</a>
+
     </p>
+
     <h3>Marken- und Duft-Hinweis</h3>
+
     <p>Genannte Markennamen dienen der Beschreibung von Duftinspirationen. Die angebotenen Düfte sind keine Originalprodukte der genannten Marken, sofern nicht ausdrücklich anders angegeben. Markenrechte verbleiben bei den jeweiligen Rechteinhabern.</p>
+
     <h3>Datenschutz</h3>
+
     <p>Wenn du per E-Mail oder WhatsApp Kontakt aufnimmst, werden die von dir übermittelten Angaben zur Bearbeitung deiner Anfrage und gegebenenfalls deiner Bestellung verwendet. Bei der Nutzung externer Dienste gelten zusätzlich die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+
     <p>Diese Hinweise ersetzen keine vollständige Datenschutzerklärung. Die Datenschutzerklärung muss an die tatsächlich eingesetzten Website-Funktionen und Dienste angepasst werden, insbesondere bei eingebetteten Medien, Analyse- oder Marketingdiensten.</p>
+
     <h3>Direkte Bestellungen und Widerruf</h3>
+
     <p>Bei direkten Bestellungen werden Verfügbarkeit, Gesamtpreis, Lieferbedingungen und Zahlungsweise vor Abschluss mitgeteilt. Soweit gesetzlich erforderlich, müssen vor Vertragsabschluss die zutreffenden Informationen zum Widerrufsrecht und das Muster-Widerrufsformular bereitgestellt werden. Für Bestellungen im offiziellen Chogan-Shop gelten die dort angezeigten Vertragsbedingungen.</p>
+
     <h3>Externe Links</h3>
+
     <p>Diese Website enthält Links zu externen Seiten Dritter. Für deren Inhalte sind ausschließlich deren Betreiber verantwortlich.</p>
+
   </div>
+
 </section>
+
 </main>
+
 <footer>
+
   <p>© <span id="year"></span> Parfüm und Düfte Perez · Alle Rechte vorbehalten.</p>
+
   <p><a href="#rechtliches">Impressum und rechtliche Hinweise</a> · <a href="#beratung">Kontakt</a></p>
+
 </footer>
+
+<!-- Ventana emergente de productos -->
+
+<div class="modal-overlay" id="catalogModal" aria-hidden="true">
+
+  <div class="modal-window" role="dialog" aria-modal="true" aria-label="Produktkatalog">
+
+    <button class="modal-close" type="button" id="closeCatalogModal">✕ Schließen</button>
+
+    <div id="modalContent"></div>
+
+  </div>
+
+</div>
+
 <script>
+
 document.getElementById("year").textContent = new Date().getFullYear();
-/* Der Sprachwähler zeigt die verfügbaren Sprachen an.
-   Der eigentliche Inhalt dieser Version ist auf Deutsch. */
+
+/* Aviso del selector de idiomas.
+
+   Los textos de esta versión permanecen en alemán. */
+
 document.getElementById("language").addEventListener("change", function () {
+
   if (this.value !== "de") {
+
     alert("Diese Sprachversion wird noch vorbereitet. Die Website ist derzeit auf Deutsch verfügbar.");
+
     this.value = "de";
+
   }
+
 });
+
+/* Abrir los catálogos en una ventana y devolverlos a su posición al cerrar. */
+
+(function () {
+
+  const overlay = document.getElementById("catalogModal");
+
+  const content = document.getElementById("modalContent");
+
+  const closeButton = document.getElementById("closeCatalogModal");
+
+  if (!overlay || !content || !closeButton) return;
+
+  const ids = ["mythologik", "damen", "herren", "luxus", "etuis"];
+
+  const sections = {};
+
+  const placeholders = {};
+
+  let activeId = null;
+
+  let previousFocus = null;
+
+  ids.forEach(function (id) {
+
+    const section = document.getElementById(id);
+
+    if (section) {
+
+      const placeholder = document.createComment("Original position: " + id);
+
+      section.parentNode.insertBefore(placeholder, section);
+
+      sections[id] = section;
+
+      placeholders[id] = placeholder;
+
+    }
+
+  });
+
+  function closeModal() {
+
+    if (!activeId) return;
+
+    const section = sections[activeId];
+
+    const placeholder = placeholders[activeId];
+
+    if (section && placeholder && placeholder.parentNode) {
+
+      placeholder.parentNode.insertBefore(section, placeholder);
+
+    }
+
+    overlay.classList.remove("is-open");
+
+    overlay.setAttribute("aria-hidden", "true");
+
+    document.body.classList.remove("modal-active");
+
+    activeId = null;
+
+    if (previousFocus) previousFocus.focus();
+
+  }
+
+  document.querySelectorAll("[data-open-modal]").forEach(function (button) {
+
+    button.addEventListener("click", function (event) {
+
+      event.preventDefault();
+
+      const id = button.getAttribute("data-open-modal");
+
+      if (!sections[id]) return;
+
+      if (activeId) closeModal();
+
+      previousFocus = button;
+
+      activeId = id;
+
+      content.appendChild(sections[id]);
+
+      overlay.classList.add("is-open");
+
+      overlay.setAttribute("aria-hidden", "false");
+
+      document.body.classList.add("modal-active");
+
+      overlay.scrollTop = 0;
+
+      closeButton.focus();
+
+    });
+
+  });
+
+  closeButton.addEventListener("click", closeModal);
+
+  overlay.addEventListener("click", function (event) {
+
+    if (event.target === overlay) closeModal();
+
+  });
+
+  document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape" && overlay.classList.contains("is-open")) {
+
+      closeModal();
+
+    }
+
+  });
+
+})();
+
 </script>
+
 </body>
+
 </html>
