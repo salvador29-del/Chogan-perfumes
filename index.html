@@ -364,7 +364,11 @@ section { scroll-margin-top: 12px; }
 
 .cosmetics { background: #12100b; }
 
-.contact h2, .cosmetics h2, .legal h2, .legal h3 { color: var(--gold); }
+.contact h2, .cosmetics h2, .legal h2, .legal h3 {
+
+  color: var(--gold);
+
+}
 
 .contact-box {
 
@@ -410,9 +414,37 @@ footer {
 
 }
 
-/* Ventanas emergentes de los catálogos */
+/* Traductor: se mantiene fuera de la vista del cliente */
 
-body.modal-active { overflow: hidden; }
+#google_translate_element {
+
+  position: absolute;
+
+  left: -10000px;
+
+  top: 0;
+
+  width: 1px;
+
+  height: 1px;
+
+  overflow: hidden;
+
+}
+
+.goog-te-banner-frame,
+
+.goog-te-balloon-frame {
+
+  display: none !important;
+
+}
+
+body { top: 0 !important; }
+
+.skiptranslate { color: inherit; }
+
+/* Ventanas emergentes de los catálogos */
 
 .modal-overlay {
 
@@ -1024,27 +1056,133 @@ body.modal-active { overflow: hidden; }
 
 </div>
 
+<!-- Google Translate oculto -->
+
+<div id="google_translate_element"></div>
+
 <script>
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-/* Aviso del selector de idiomas.
+/* =========================================
 
-   Los textos de esta versión permanecen en alemán. */
+   SELECTOR DE IDIOMAS
 
-document.getElementById("language").addEventListener("change", function () {
+   Alemán, español, italiano, turco, ruso,
 
-  if (this.value !== "de") {
+   portugués, albanés, polaco, inglés y francés.
 
-    alert("Diese Sprachversion wird noch vorbereitet. Die Website ist derzeit auf Deutsch verfügbar.");
+   ========================================= */
 
-    this.value = "de";
+(function () {
+
+  const selector = document.getElementById("language");
+
+  const idiomasPermitidos = ["de", "es", "it", "tr", "ru", "pt", "sq", "pl", "en", "fr"];
+
+  let traductorListo = false;
+
+  let idiomaPendiente = null;
+
+  window.googleTranslateElementInit = function () {
+
+    if (!window.google || !google.translate) return;
+
+    new google.translate.TranslateElement({
+
+      pageLanguage: "de",
+
+      includedLanguages: idiomasPermitidos.join(","),
+
+      autoDisplay: false
+
+    }, "google_translate_element");
+
+    traductorListo = true;
+
+    if (idiomaPendiente) {
+
+      cambiarIdioma(idiomaPendiente);
+
+    }
+
+  };
+
+  function cambiarIdioma(idioma) {
+
+    idiomaPendiente = idioma;
+
+    if (!traductorListo) return;
+
+    const combo = document.querySelector(".goog-te-combo");
+
+    if (!combo) {
+
+      setTimeout(function () {
+
+        const nuevoCombo = document.querySelector(".goog-te-combo");
+
+        if (nuevoCombo) {
+
+          nuevoCombo.value = idioma;
+
+          nuevoCombo.dispatchEvent(new Event("change"));
+
+        }
+
+      }, 800);
+
+      return;
+
+    }
+
+    combo.value = idioma;
+
+    combo.dispatchEvent(new Event("change"));
 
   }
 
-});
+  if (selector) {
 
-/* Abrir los catálogos en una ventana y devolverlos a su posición al cerrar. */
+    selector.addEventListener("change", function () {
+
+      const idioma = this.value;
+
+      if (!idiomasPermitidos.includes(idioma)) {
+
+        this.value = "de";
+
+        return;
+
+      }
+
+      cambiarIdioma(idioma);
+
+    });
+
+  }
+
+  const scriptTraductor = document.createElement("script");
+
+  scriptTraductor.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+
+  scriptTraductor.async = true;
+
+  scriptTraductor.onerror = function () {
+
+    console.warn("No se pudo cargar el servicio de traducción.");
+
+  };
+
+  document.head.appendChild(scriptTraductor);
+
+})();
+
+/* =========================================
+
+   CATÁLOGOS EN VENTANA EMERGENTE
+
+   ========================================= */
 
 (function () {
 
