@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -414,8 +416,6 @@ footer {
 
 }
 
-/* Traductor: se mantiene fuera de la vista del cliente */
-
 #google_translate_element {
 
   position: absolute;
@@ -432,9 +432,7 @@ footer {
 
 }
 
-.goog-te-banner-frame,
-
-.goog-te-balloon-frame {
+.goog-te-banner-frame, .goog-te-balloon-frame {
 
   display: none !important;
 
@@ -443,8 +441,6 @@ footer {
 body { top: 0 !important; }
 
 .skiptranslate { color: inherit; }
-
-/* Ventanas emergentes de los catálogos */
 
 .modal-overlay {
 
@@ -962,8 +958,6 @@ body { top: 0 !important; }
 
 </section>
 
-<!-- AVISOS LEGALES ACTUALIZADOS -->
-
 <section class="legal" id="rechtliches">
 
   <div class="container">
@@ -1038,11 +1032,13 @@ body { top: 0 !important; }
 
 </main>
 
+<!-- PIE DE PÁGINA ACTUALIZADO -->
+
 <footer>
 
-  <p>© <span id="year"></span> Parfüm und Düfte Perez · Alle Rechte vorbehalten.</p>
+  <p>© 2026 Parfüm und Düfte Perez – Unabhängiger Vertriebspartner von Chogan.</p>
 
-  <p><a href="#rechtliches">Impressum und rechtliche Hinweise</a> · <a href="#beratung">Kontakt</a></p>
+  <p>Parfüm und Düfte</p>
 
 </footer>
 
@@ -1066,17 +1062,7 @@ body { top: 0 !important; }
 
 <script>
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-/* =========================================
-
-   SELECTOR DE IDIOMAS
-
-   Alemán, español, italiano, turco, ruso,
-
-   portugués, albanés, polaco, inglés y francés.
-
-   ========================================= */
+/* SELECTOR DE IDIOMAS */
 
 (function () {
 
@@ -1104,11 +1090,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
     traductorListo = true;
 
-    if (idiomaPendiente) {
-
-      cambiarIdioma(idiomaPendiente);
-
-    }
+    if (idiomaPendiente) cambiarIdioma(idiomaPendiente);
 
   };
 
@@ -1182,11 +1164,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 })();
 
-/* =========================================
-
-   CATÁLOGOS EN VENTANA EMERGENTE
-
-   ========================================= */
+/* CATÁLOGOS EN VENTANA EMERGENTE */
 
 (function () {
 
