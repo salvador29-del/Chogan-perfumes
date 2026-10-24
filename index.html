@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -18,531 +20,323 @@
 
 :root {
 
-  --gold: #d4af37;
+  --gold:#d4af37;
 
-  --light-gold: #f5df91;
+  --light-gold:#f5df91;
 
-  --black: #090909;
+  --black:#090909;
 
-  --panel: #191919;
+  --panel:#191919;
 
-  --white: #f7f5ef;
+  --white:#f7f5ef;
 
-  --grey: #dddddd;
+  --grey:#dddddd;
 
 }
 
-* { box-sizing: border-box; }
+* {box-sizing:border-box}
 
-html { scroll-behavior: smooth; }
+html {scroll-behavior:smooth}
 
 body {
 
-  margin: 0;
+  margin:0;background:var(--black);color:var(--white);
 
-  background: var(--black);
-
-  color: var(--white);
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  line-height: 1.65;
+  font-family:Arial,Helvetica,sans-serif;line-height:1.65;
 
 }
 
-body.modal-active { overflow: hidden; }
+body.modal-active {overflow:hidden}
 
-a { color: var(--light-gold); }
+a {color:var(--light-gold)}
 
 header {
 
-  text-align: center;
+  text-align:center;padding:24px 14px;background:#000;
 
-  padding: 24px 14px;
-
-  background: #000;
-
-  border-bottom: 2px solid var(--gold);
+  border-bottom:2px solid var(--gold);
 
 }
 
 header h1 {
 
-  margin: 0;
+  margin:0;color:var(--gold);font-family:Georgia,serif;
 
-  color: var(--gold);
-
-  font-family: Georgia, serif;
-
-  font-size: clamp(27px, 5vw, 43px);
+  font-size:clamp(27px,5vw,43px);
 
 }
 
-header p {
-
-  color: #ddd;
-
-  font-style: italic;
-
-  margin: 8px 0 14px;
-
-}
+header p {color:#ddd;font-style:italic;margin:8px 0 14px}
 
 .language {
 
-  display: inline-block;
+  display:inline-block;padding:9px;background:#171717;color:white;
 
-  padding: 9px;
-
-  background: #171717;
-
-  color: white;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 8px;
-
-  max-width: 100%;
+  border:1px solid var(--gold);border-radius:8px;max-width:100%;
 
 }
 
-.container { width: 92%; max-width: 1120px; margin: auto; }
+.container {width:92%;max-width:1120px;margin:auto}
 
 .hero {
 
-  padding: 48px 14px;
+  padding:48px 14px;text-align:center;
 
-  text-align: center;
-
-  background: radial-gradient(ellipse at center, #3a2b0a, #100e08 55%, #050505);
+  background:radial-gradient(ellipse at center,#3a2b0a,#100e08 55%,#050505);
 
 }
 
 .hero-box {
 
-  max-width: 850px;
+  max-width:850px;margin:auto;padding:26px 18px;
 
-  margin: auto;
-
-  padding: 26px 18px;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 16px;
+  border:1px solid var(--gold);border-radius:16px;
 
 }
 
-h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+h2,h3 {font-family:Georgia,"Times New Roman",serif}
 
 .hero h2 {
 
-  color: var(--gold);
+  color:var(--gold);font-size:clamp(32px,6vw,54px);
 
-  font-size: clamp(32px, 6vw, 54px);
-
-  line-height: 1.2;
-
-  margin: 0;
+  line-height:1.2;margin:0;
 
 }
 
-.hero-box p { color: #eee; }
+.hero-box p {color:#eee}
 
 .section-title {
 
-  color: var(--gold);
+  color:var(--gold);text-align:center;
 
-  text-align: center;
-
-  font-size: clamp(25px, 4vw, 36px);
-
-  margin: 0 0 14px;
+  font-size:clamp(25px,4vw,36px);margin:0 0 14px;
 
 }
 
-.intro {
-
-  max-width: 850px;
-
-  margin: 12px auto 25px;
-
-  text-align: center;
-
-  color: #ddd;
-
-}
+.intro {max-width:850px;margin:12px auto 25px;text-align:center;color:#ddd}
 
 .btn {
 
-  display: inline-block;
+  display:inline-block;margin:7px 4px;padding:12px 20px;
 
-  margin: 7px 4px;
+  background:linear-gradient(135deg,#f5df91,#d4af37,#b88625);
 
-  padding: 12px 20px;
+  color:#090909;border:1px solid var(--light-gold);border-radius:28px;
 
-  background: linear-gradient(135deg, #f5df91, #d4af37, #b88625);
+  text-decoration:none;font-weight:bold;text-align:center;
 
-  color: #090909;
-
-  border: 1px solid var(--light-gold);
-
-  border-radius: 28px;
-
-  text-decoration: none;
-
-  font-weight: bold;
-
-  text-align: center;
-
-  box-shadow: 0 3px 12px #0006;
-
-  cursor: pointer;
+  box-shadow:0 3px 12px #0006;cursor:pointer;
 
 }
 
-.btn:hover { filter: brightness(1.12); }
+.btn:hover {filter:brightness(1.12)}
 
-.btn-outline { background: transparent; color: var(--light-gold); }
+.btn-outline {background:transparent;color:var(--light-gold)}
 
 .notice {
 
-  padding: 22px 14px;
+  padding:22px 14px;text-align:center;background:#211906;
 
-  text-align: center;
-
-  background: #211906;
-
-  border-bottom: 1px solid var(--gold);
+  border-bottom:1px solid var(--gold);
 
 }
 
-.notice strong { color: var(--light-gold); }
+.notice strong {color:var(--light-gold)}
 
-section { scroll-margin-top: 12px; }
+section {scroll-margin-top:12px}
 
-.videos, .products {
+.videos,.products {
 
-  padding: 42px 0;
-
-  background: #101010;
-
-  border-top: 1px solid #333;
+  padding:42px 0;background:#101010;border-top:1px solid #333;
 
 }
 
-.video-grid, .product-grid {
+.video-grid,.product-grid {
 
-  display: grid;
-
-  grid-template-columns: 1fr;
-
-  gap: 20px;
+  display:grid;grid-template-columns:1fr;gap:20px;
 
 }
 
-.video-card, .product-card {
+.video-card,.product-card {
 
-  overflow: hidden;
+  overflow:hidden;background:var(--panel);
 
-  background: var(--panel);
-
-  border: 1px solid #6a5623;
-
-  border-radius: 13px;
+  border:1px solid #6a5623;border-radius:13px;
 
 }
 
-.video-card { text-align: center; }
+.video-card {text-align:center}
 
 .video-card h3 {
 
-  color: var(--gold);
-
-  font-size: 25px;
-
-  margin: 0;
-
-  padding: 15px 10px;
+  color:var(--gold);font-size:25px;margin:0;padding:15px 10px;
 
 }
 
 .video-card video {
 
-  display: block;
+  display:block;width:100%;aspect-ratio:16/9;
 
-  width: 100%;
-
-  aspect-ratio: 16 / 9;
-
-  background: #000;
-
-  object-fit: contain;
+  background:#000;object-fit:contain;
 
 }
 
-.video-card p { padding: 0 15px; color: #ddd; }
+.video-card p {padding:0 15px;color:#ddd}
 
-.product-card { padding: 14px; text-align: center; }
+.product-card {padding:14px;text-align:center}
 
 .product-card img {
 
-  width: 100%;
+  width:100%;max-height:340px;object-fit:contain;display:block;
 
-  max-height: 340px;
-
-  object-fit: contain;
-
-  display: block;
-
-  background: #080808;
-
-  border-radius: 8px;
+  background:#080808;border-radius:8px;
 
 }
 
-.product-card h3 {
+.product-card h3 {color:var(--gold);font-size:21px;margin:12px 0 5px}
 
-  color: var(--gold);
+.price {color:var(--light-gold);font-weight:bold}
 
-  font-size: 21px;
+.gallery,.catalog-gallery,.etui-photos {
 
-  margin: 12px 0 5px;
-
-}
-
-.price { color: var(--light-gold); font-weight: bold; }
-
-.gallery, .catalog-gallery, .etui-photos {
-
-  display: grid;
-
-  grid-template-columns: 1fr;
-
-  gap: 18px;
+  display:grid;grid-template-columns:1fr;gap:18px;
 
 }
 
-.gallery img, .catalog-gallery img, .etui-photos img {
+.gallery img,.catalog-gallery img,.etui-photos img {
 
-  display: block;
+  display:block;width:100%;height:auto;
 
-  width: 100%;
-
-  height: auto;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 12px;
+  border:1px solid var(--gold);border-radius:12px;
 
 }
 
-.catalog-gallery { max-width: 900px; margin: auto; }
+.catalog-gallery {max-width:900px;margin:auto}
 
-.etui-photos {
+.etui-photos {max-width:950px;margin:24px auto 32px;gap:24px}
 
-  max-width: 950px;
+.etui-photos img {box-shadow:0 8px 28px #0008}
 
-  margin: 24px auto 32px;
+.contact,.cosmetics {
 
-  gap: 24px;
-
-}
-
-.etui-photos img { box-shadow: 0 8px 28px #0008; }
-
-.contact, .cosmetics {
-
-  padding: 42px 15px;
-
-  text-align: center;
-
-  border-top: 1px solid #333;
+  padding:42px 15px;text-align:center;border-top:1px solid #333;
 
 }
 
-.contact { background: #050505; }
+.contact {background:#050505}
 
-.cosmetics { background: #12100b; }
+.cosmetics {background:#12100b}
 
-.contact h2, .cosmetics h2, .legal h2, .legal h3 {
-
-  color: var(--gold);
-
-}
+.contact h2,.cosmetics h2,.legal h2,.legal h3 {color:var(--gold)}
 
 .contact-box {
 
-  max-width: 850px;
+  max-width:850px;margin:auto;padding:22px;
 
-  margin: auto;
-
-  padding: 22px;
-
-  border: 1px solid #6a5623;
-
-  border-radius: 14px;
-
-  background: #151515;
+  border:1px solid #6a5623;border-radius:14px;background:#151515;
 
 }
 
-.legal {
+.legal {padding:32px 15px;background:#0d0d0d;border-top:1px solid var(--gold)}
 
-  padding: 32px 15px;
+.legal p {color:#ddd;overflow-wrap:anywhere}
 
-  background: #0d0d0d;
+.legal h3 {margin-top:24px}
 
-  border-top: 1px solid var(--gold);
-
-}
-
-.legal p { color: #ddd; overflow-wrap: anywhere; }
-
-.legal h3 { margin-top: 24px; }
-
-footer {
-
-  padding: 20px 12px;
-
-  text-align: center;
-
-  color: #aaa;
-
-  font-size: 13px;
-
-  background: #000;
-
-}
+footer {padding:20px 12px;text-align:center;color:#aaa;font-size:13px;background:#000}
 
 #google_translate_element {
 
-  position: absolute;
-
-  left: -10000px;
-
-  top: 0;
-
-  width: 1px;
-
-  height: 1px;
-
-  overflow: hidden;
+  position:absolute;left:-10000px;top:0;width:1px;height:1px;overflow:hidden;
 
 }
 
-.goog-te-banner-frame, .goog-te-balloon-frame {
+.goog-te-banner-frame,.goog-te-balloon-frame {display:none!important}
 
-  display: none !important;
+body {top:0!important}
 
-}
+.skiptranslate {color:inherit}
 
-body { top: 0 !important; }
-
-.skiptranslate { color: inherit; }
+/* Ventana emergente del catálogo */
 
 .modal-overlay {
 
-  display: none;
+  display:none;position:fixed;inset:0;z-index:9999;
 
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 9999;
-
-  background: rgba(0,0,0,.94);
-
-  padding: 10px;
-
-  overflow-y: auto;
+  background:rgba(0,0,0,.94);padding:10px;overflow-y:auto;
 
 }
 
-.modal-overlay.is-open { display: block; }
+.modal-overlay.is-open {display:block}
 
 .modal-window {
 
-  position: relative;
+  position:relative;width:100%;max-width:1150px;min-height:70vh;
 
-  width: 100%;
+  margin:10px auto 25px;background:#090909;
 
-  max-width: 1150px;
-
-  min-height: 70vh;
-
-  margin: 10px auto 25px;
-
-  background: #090909;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 16px;
-
-  padding: 16px;
+  border:1px solid var(--gold);border-radius:16px;padding:16px;
 
 }
 
 .modal-close {
 
-  position: sticky;
+  position:sticky;top:0;z-index:3;display:block;
 
-  top: 0;
+  margin:0 0 15px auto;background:var(--gold);color:#090909;
 
-  z-index: 3;
+  border:0;border-radius:25px;padding:11px 19px;
 
-  display: block;
-
-  margin: 0 0 15px auto;
-
-  background: var(--gold);
-
-  color: #090909;
-
-  border: 0;
-
-  border-radius: 25px;
-
-  padding: 11px 19px;
-
-  font-weight: bold;
-
-  font-size: 16px;
-
-  cursor: pointer;
+  font-weight:bold;font-size:16px;cursor:pointer;
 
 }
 
 .modal-window .products {
 
-  display: block !important;
-
-  padding: 20px 0;
-
-  border: 0;
+  display:block!important;padding:20px 0;border:0;
 
 }
 
-.modal-window .container { width: 100%; }
+.modal-window .container {width:100%}
 
-@media (min-width: 760px) {
+/* CAMBIO PRINCIPAL:
 
-  .video-grid { grid-template-columns: 1fr 1fr; }
+   los catálogos no ocupan espacio en la página principal.
 
-  .video-grid .video-card:first-child { grid-column: 1 / -1; }
+   Se muestran al moverlos a la ventana emergente. */
 
-  .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#mythologik,#damen,#herren,#luxus,#etuis {
 
-  .gallery, .catalog-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .etui-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-  .modal-window { padding: 24px; }
+  display:none;
 
 }
 
-@media (min-width: 1000px) {
+#modalContent > section {
 
-  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  display:block!important;
+
+}
+
+@media (min-width:760px) {
+
+  .video-grid {grid-template-columns:1fr 1fr}
+
+  .video-grid .video-card:first-child {grid-column:1/-1}
+
+  .product-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+
+  .gallery,.catalog-gallery {grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .etui-photos {grid-template-columns:repeat(2,minmax(0,1fr))}
+
+  .modal-window {padding:24px}
+
+}
+
+@media (min-width:1000px) {
+
+  .gallery {grid-template-columns:repeat(3,minmax(0,1fr))}
 
 }
 
@@ -706,6 +500,8 @@ body { top: 0 !important; }
 
 </section>
 
+<!-- KATALOG: MYTHOLOGIK -->
+
 <section class="products" id="mythologik">
 
   <div class="container">
@@ -786,6 +582,8 @@ body { top: 0 !important; }
 
 </section>
 
+<!-- KATALOG: DAMEN -->
+
 <section class="products" id="damen">
 
   <div class="container">
@@ -814,6 +612,8 @@ body { top: 0 !important; }
 
 </section>
 
+<!-- KATALOG: HERREN -->
+
 <section class="products" id="herren">
 
   <div class="container">
@@ -841,6 +641,8 @@ body { top: 0 !important; }
   </div>
 
 </section>
+
+<!-- KATALOG: LUXUS & UNISEX -->
 
 <section class="products" id="luxus">
 
@@ -881,6 +683,8 @@ body { top: 0 !important; }
   </div>
 
 </section>
+
+<!-- KATALOG: ETUIS -->
 
 <section class="products" id="etuis">
 
@@ -1030,8 +834,6 @@ body { top: 0 !important; }
 
 </main>
 
-<!-- PIE DE PÁGINA ACTUALIZADO -->
-
 <footer>
 
   <p>© 2026 Parfüm und Düfte Perez – Unabhängiger Vertriebspartner von Chogan.</p>
@@ -1066,7 +868,7 @@ body { top: 0 !important; }
 
   const selector = document.getElementById("language");
 
-  const idiomasPermitidos = ["de", "es", "it", "tr", "ru", "pt", "sq", "pl", "en", "fr"];
+  const idiomasPermitidos = ["de","es","it","tr","ru","pt","sq","pl","en","fr"];
 
   let traductorListo = false;
 
@@ -1078,13 +880,13 @@ body { top: 0 !important; }
 
     new google.translate.TranslateElement({
 
-      pageLanguage: "de",
+      pageLanguage:"de",
 
-      includedLanguages: idiomasPermitidos.join(","),
+      includedLanguages:idiomasPermitidos.join(","),
 
-      autoDisplay: false
+      autoDisplay:false
 
-    }, "google_translate_element");
+    },"google_translate_element");
 
     traductorListo = true;
 
@@ -1102,7 +904,7 @@ body { top: 0 !important; }
 
     if (!combo) {
 
-      setTimeout(function () {
+      window.setTimeout(function () {
 
         const nuevoCombo = document.querySelector(".goog-te-combo");
 
@@ -1114,7 +916,7 @@ body { top: 0 !important; }
 
         }
 
-      }, 800);
+      },800);
 
       return;
 
@@ -1128,7 +930,7 @@ body { top: 0 !important; }
 
   if (selector) {
 
-    selector.addEventListener("change", function () {
+    selector.addEventListener("change",function () {
 
       const idioma = this.value;
 
@@ -1174,7 +976,7 @@ body { top: 0 !important; }
 
   if (!overlay || !content || !closeButton) return;
 
-  const ids = ["mythologik", "damen", "herren", "luxus", "etuis"];
+  const ids = ["mythologik","damen","herren","luxus","etuis"];
 
   const sections = {};
 
@@ -1192,7 +994,7 @@ body { top: 0 !important; }
 
       const placeholder = document.createComment("Original position: " + id);
 
-      section.parentNode.insertBefore(placeholder, section);
+      section.parentNode.insertBefore(placeholder,section);
 
       sections[id] = section;
 
@@ -1212,13 +1014,13 @@ body { top: 0 !important; }
 
     if (section && placeholder && placeholder.parentNode) {
 
-      placeholder.parentNode.insertBefore(section, placeholder);
+      placeholder.parentNode.insertBefore(section,placeholder);
 
     }
 
     overlay.classList.remove("is-open");
 
-    overlay.setAttribute("aria-hidden", "true");
+    overlay.setAttribute("aria-hidden","true");
 
     document.body.classList.remove("modal-active");
 
@@ -1230,7 +1032,7 @@ body { top: 0 !important; }
 
   document.querySelectorAll("[data-open-modal]").forEach(function (button) {
 
-    button.addEventListener("click", function (event) {
+    button.addEventListener("click",function (event) {
 
       event.preventDefault();
 
@@ -1248,7 +1050,7 @@ body { top: 0 !important; }
 
       overlay.classList.add("is-open");
 
-      overlay.setAttribute("aria-hidden", "false");
+      overlay.setAttribute("aria-hidden","false");
 
       document.body.classList.add("modal-active");
 
@@ -1260,15 +1062,15 @@ body { top: 0 !important; }
 
   });
 
-  closeButton.addEventListener("click", closeModal);
+  closeButton.addEventListener("click",closeModal);
 
-  overlay.addEventListener("click", function (event) {
+  overlay.addEventListener("click",function (event) {
 
     if (event.target === overlay) closeModal();
 
   });
 
-  document.addEventListener("keydown", function (event) {
+  document.addEventListener("keydown",function (event) {
 
     if (event.key === "Escape" && overlay.classList.contains("is-open")) {
 
