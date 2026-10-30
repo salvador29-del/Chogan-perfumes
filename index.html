@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -38,15 +40,9 @@ html {scroll-behavior:smooth}
 
 body {
 
-  margin:0;
+  margin:0;background:var(--black);color:var(--white);
 
-  background:var(--black);
-
-  color:var(--white);
-
-  font-family:Arial,Helvetica,sans-serif;
-
-  line-height:1.65;
+  font-family:Arial,Helvetica,sans-serif;line-height:1.65;
 
 }
 
@@ -56,11 +52,7 @@ a {color:var(--light-gold)}
 
 header {
 
-  text-align:center;
-
-  padding:24px 14px;
-
-  background:#000;
+  text-align:center;padding:24px 14px;background:#000;
 
   border-bottom:2px solid var(--gold);
 
@@ -68,59 +60,27 @@ header {
 
 header h1 {
 
-  margin:0;
-
-  color:var(--gold);
-
-  font-family:Georgia,serif;
+  margin:0;color:var(--gold);font-family:Georgia,serif;
 
   font-size:clamp(27px,5vw,43px);
 
 }
 
-header p {
-
-  color:#ddd;
-
-  font-style:italic;
-
-  margin:8px 0 14px;
-
-}
+header p {color:#ddd;font-style:italic;margin:8px 0 14px}
 
 .language {
 
-  display:inline-block;
+  display:inline-block;padding:9px;background:#171717;color:white;
 
-  padding:9px;
-
-  background:#171717;
-
-  color:white;
-
-  border:1px solid var(--gold);
-
-  border-radius:8px;
-
-  max-width:100%;
+  border:1px solid var(--gold);border-radius:8px;max-width:100%;
 
 }
 
-.container {
-
-  width:92%;
-
-  max-width:1120px;
-
-  margin:auto;
-
-}
+.container {width:92%;max-width:1120px;margin:auto}
 
 .hero {
 
-  padding:48px 14px;
-
-  text-align:center;
+  padding:48px 14px;text-align:center;
 
   background:radial-gradient(ellipse at center,#3a2b0a,#100e08 55%,#050505);
 
@@ -128,15 +88,9 @@ header p {
 
 .hero-box {
 
-  max-width:850px;
+  max-width:850px;margin:auto;padding:26px 18px;
 
-  margin:auto;
-
-  padding:26px 18px;
-
-  border:1px solid var(--gold);
-
-  border-radius:16px;
+  border:1px solid var(--gold);border-radius:16px;
 
 }
 
@@ -144,13 +98,9 @@ h2,h3 {font-family:Georgia,"Times New Roman",serif}
 
 .hero h2 {
 
-  color:var(--gold);
+  color:var(--gold);font-size:clamp(32px,6vw,54px);
 
-  font-size:clamp(32px,6vw,54px);
-
-  line-height:1.2;
-
-  margin:0;
+  line-height:1.2;margin:0;
 
 }
 
@@ -158,73 +108,35 @@ h2,h3 {font-family:Georgia,"Times New Roman",serif}
 
 .section-title {
 
-  color:var(--gold);
+  color:var(--gold);text-align:center;
 
-  text-align:center;
-
-  font-size:clamp(25px,4vw,36px);
-
-  margin:0 0 14px;
+  font-size:clamp(25px,4vw,36px);margin:0 0 14px;
 
 }
 
-.intro {
-
-  max-width:850px;
-
-  margin:12px auto 25px;
-
-  text-align:center;
-
-  color:#ddd;
-
-}
+.intro {max-width:850px;margin:12px auto 25px;text-align:center;color:#ddd}
 
 .btn {
 
-  display:inline-block;
-
-  margin:7px 4px;
-
-  padding:12px 20px;
+  display:inline-block;margin:7px 4px;padding:12px 20px;
 
   background:linear-gradient(135deg,#f5df91,#d4af37,#b88625);
 
-  color:#090909;
+  color:#090909;border:1px solid var(--light-gold);border-radius:28px;
 
-  border:1px solid var(--light-gold);
+  text-decoration:none;font-weight:bold;text-align:center;
 
-  border-radius:28px;
-
-  text-decoration:none;
-
-  font-weight:bold;
-
-  text-align:center;
-
-  box-shadow:0 3px 12px #0006;
-
-  cursor:pointer;
+  box-shadow:0 3px 12px #0006;cursor:pointer;
 
 }
 
 .btn:hover {filter:brightness(1.12)}
 
-.btn-outline {
-
-  background:transparent;
-
-  color:var(--light-gold);
-
-}
+.btn-outline {background:transparent;color:var(--light-gold)}
 
 .notice {
 
-  padding:22px 14px;
-
-  text-align:center;
-
-  background:#211906;
+  padding:22px 14px;text-align:center;background:#211906;
 
   border-bottom:1px solid var(--gold);
 
@@ -236,33 +148,21 @@ section {scroll-margin-top:12px}
 
 .videos,.products {
 
-  padding:42px 0;
-
-  background:#101010;
-
-  border-top:1px solid #333;
+  padding:42px 0;background:#101010;border-top:1px solid #333;
 
 }
 
 .video-grid,.product-grid {
 
-  display:grid;
-
-  grid-template-columns:1fr;
-
-  gap:20px;
+  display:grid;grid-template-columns:1fr;gap:20px;
 
 }
 
 .video-card,.product-card {
 
-  overflow:hidden;
+  overflow:hidden;background:var(--panel);
 
-  background:var(--panel);
-
-  border:1px solid #6a5623;
-
-  border-radius:13px;
+  border:1px solid #6a5623;border-radius:13px;
 
 }
 
@@ -270,131 +170,57 @@ section {scroll-margin-top:12px}
 
 .video-card h3 {
 
-  color:var(--gold);
-
-  font-size:25px;
-
-  margin:0;
-
-  padding:15px 10px;
+  color:var(--gold);font-size:25px;margin:0;padding:15px 10px;
 
 }
 
 .video-card video {
 
-  display:block;
+  display:block;width:100%;aspect-ratio:16/9;
 
-  width:100%;
-
-  aspect-ratio:16/9;
-
-  background:#000;
-
-  object-fit:contain;
+  background:#000;object-fit:contain;
 
 }
 
-.video-card p {
+.video-card p {padding:0 15px;color:#ddd}
 
-  padding:0 15px;
-
-  color:#ddd;
-
-}
-
-.product-card {
-
-  padding:14px;
-
-  text-align:center;
-
-}
+.product-card {padding:14px;text-align:center}
 
 .product-card img {
 
-  width:100%;
+  width:100%;max-height:340px;object-fit:contain;display:block;
 
-  max-height:340px;
-
-  object-fit:contain;
-
-  display:block;
-
-  background:#080808;
-
-  border-radius:8px;
+  background:#080808;border-radius:8px;
 
 }
 
-.product-card h3 {
+.product-card h3 {color:var(--gold);font-size:21px;margin:12px 0 5px}
 
-  color:var(--gold);
-
-  font-size:21px;
-
-  margin:12px 0 5px;
-
-}
-
-.price {
-
-  color:var(--light-gold);
-
-  font-weight:bold;
-
-}
+.price {color:var(--light-gold);font-weight:bold}
 
 .gallery,.catalog-gallery,.etui-photos {
 
-  display:grid;
-
-  grid-template-columns:1fr;
-
-  gap:18px;
+  display:grid;grid-template-columns:1fr;gap:18px;
 
 }
 
 .gallery img,.catalog-gallery img,.etui-photos img {
 
-  display:block;
+  display:block;width:100%;height:auto;
 
-  width:100%;
-
-  height:auto;
-
-  border:1px solid var(--gold);
-
-  border-radius:12px;
+  border:1px solid var(--gold);border-radius:12px;
 
 }
 
-.catalog-gallery {
+.catalog-gallery {max-width:900px;margin:auto}
 
-  max-width:900px;
-
-  margin:auto;
-
-}
-
-.etui-photos {
-
-  max-width:950px;
-
-  margin:24px auto 32px;
-
-  gap:24px;
-
-}
+.etui-photos {max-width:950px;margin:24px auto 32px;gap:24px}
 
 .etui-photos img {box-shadow:0 8px 28px #0008}
 
 .contact,.cosmetics {
 
-  padding:42px 15px;
-
-  text-align:center;
-
-  border-top:1px solid #333;
+  padding:42px 15px;text-align:center;border-top:1px solid #333;
 
 }
 
@@ -402,83 +228,31 @@ section {scroll-margin-top:12px}
 
 .cosmetics {background:#12100b}
 
-.contact h2,.cosmetics h2,.legal h2,.legal h3 {
-
-  color:var(--gold);
-
-}
+.contact h2,.cosmetics h2,.legal h2,.legal h3 {color:var(--gold)}
 
 .contact-box {
 
-  max-width:850px;
+  max-width:850px;margin:auto;padding:22px;
 
-  margin:auto;
-
-  padding:22px;
-
-  border:1px solid #6a5623;
-
-  border-radius:14px;
-
-  background:#151515;
+  border:1px solid #6a5623;border-radius:14px;background:#151515;
 
 }
 
-.legal {
+.legal {padding:32px 15px;background:#0d0d0d;border-top:1px solid var(--gold)}
 
-  padding:32px 15px;
-
-  background:#0d0d0d;
-
-  border-top:1px solid var(--gold);
-
-}
-
-.legal p {
-
-  color:#ddd;
-
-  overflow-wrap:anywhere;
-
-}
+.legal p {color:#ddd;overflow-wrap:anywhere}
 
 .legal h3 {margin-top:24px}
 
-footer {
-
-  padding:20px 12px;
-
-  text-align:center;
-
-  color:#aaa;
-
-  font-size:13px;
-
-  background:#000;
-
-}
+footer {padding:20px 12px;text-align:center;color:#aaa;font-size:13px;background:#000}
 
 #google_translate_element {
 
-  position:absolute;
-
-  left:-10000px;
-
-  top:0;
-
-  width:1px;
-
-  height:1px;
-
-  overflow:hidden;
+  position:absolute;left:-10000px;top:0;width:1px;height:1px;overflow:hidden;
 
 }
 
-.goog-te-banner-frame,.goog-te-balloon-frame {
-
-  display:none!important;
-
-}
+.goog-te-banner-frame,.goog-te-balloon-frame {display:none!important}
 
 body {top:0!important}
 
@@ -486,19 +260,9 @@ body {top:0!important}
 
 .modal-overlay {
 
-  display:none;
+  display:none;position:fixed;inset:0;z-index:9999;
 
-  position:fixed;
-
-  inset:0;
-
-  z-index:9999;
-
-  background:rgba(0,0,0,.94);
-
-  padding:10px;
-
-  overflow-y:auto;
+  background:rgba(0,0,0,.94);padding:10px;overflow-y:auto;
 
 }
 
@@ -506,73 +270,35 @@ body {top:0!important}
 
 .modal-window {
 
-  position:relative;
+  position:relative;width:100%;max-width:1150px;min-height:70vh;
 
-  width:100%;
+  margin:10px auto 25px;background:#090909;
 
-  max-width:1150px;
-
-  min-height:70vh;
-
-  margin:10px auto 25px;
-
-  background:#090909;
-
-  border:1px solid var(--gold);
-
-  border-radius:16px;
-
-  padding:16px;
+  border:1px solid var(--gold);border-radius:16px;padding:16px;
 
 }
 
 .modal-close {
 
-  position:sticky;
+  position:sticky;top:0;z-index:3;display:block;
 
-  top:0;
+  margin:0 0 15px auto;background:var(--gold);color:#090909;
 
-  z-index:3;
+  border:0;border-radius:25px;padding:11px 19px;
 
-  display:block;
-
-  margin:0 0 15px auto;
-
-  background:var(--gold);
-
-  color:#090909;
-
-  border:0;
-
-  border-radius:25px;
-
-  padding:11px 19px;
-
-  font-weight:bold;
-
-  font-size:16px;
-
-  cursor:pointer;
+  font-weight:bold;font-size:16px;cursor:pointer;
 
 }
 
 .modal-window .products {
 
-  display:block!important;
-
-  padding:20px 0;
-
-  border:0;
+  display:block!important;padding:20px 0;border:0;
 
 }
 
 .modal-window .container {width:100%}
 
-#mythologik,#damen,#herren,#luxus,#etuis,#sanvalentin {
-
-  display:none;
-
-}
+#mythologik,#damen,#herren,#luxus,#etuis,#sanvalentin {display:none}
 
 #modalContent > section {display:block!important}
 
@@ -792,9 +518,7 @@ body {top:0!important}
 
         <img src="7D127897-36C4-41B5-B59F-AEE7BF05BD6C.png" alt="Mythologik Hermes" loading="lazy">
 
-        <h3>Hermes</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Hermes</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -802,9 +526,7 @@ body {top:0!important}
 
         <img src="BAE039EF-2A03-4228-9E7E-11BC42ACB7F5.png" alt="Mythologik Ares" loading="lazy">
 
-        <h3>Ares</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Ares</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -812,9 +534,7 @@ body {top:0!important}
 
         <img src="EFBB9C18-0EF0-4E66-A0F3-974D545244EB.png" alt="Mythologik Apollo" loading="lazy">
 
-        <h3>Apollo</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Apollo</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -822,9 +542,7 @@ body {top:0!important}
 
         <img src="DE72B5D8-30B5-4180-A383-8F6CA34025E0.png" alt="Mythologik Afrodita" loading="lazy">
 
-        <h3>Afrodita</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Afrodita</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -832,9 +550,7 @@ body {top:0!important}
 
         <img src="2B08B0BF-C56D-4B72-BCB0-B1E75FF11BDF.png" alt="Mythologik Medusa" loading="lazy">
 
-        <h3>Medusa</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Medusa</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -842,9 +558,7 @@ body {top:0!important}
 
         <img src="DBFA392D-C76E-4E67-81AA-25615C59D244.png" alt="Mythologik Artemide" loading="lazy">
 
-        <h3>Artemide</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Artemide</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -852,9 +566,7 @@ body {top:0!important}
 
         <img src="6FB7B81C-797F-4586-A562-BB7AA7137BFA.png" alt="Mythologik Zeus" loading="lazy">
 
-        <h3>Zeus</h3>
-
-        <p class="price">100 ml · 299,00 €</p>
+        <h3>Zeus</h3><p class="price">100 ml · 299,00 €</p>
 
       </article>
 
@@ -910,65 +622,19 @@ body {top:0!important}
 
     <h2 class="section-title">San Valentín – Scented Love</h2>
 
-    <p class="intro">
-
-      Entdecke unsere besondere Auswahl an Scented Love Extrait de Parfum for Her.
-
-    </p>
+    <p class="intro">Entdecke unsere besondere Auswahl an Scented Love Extrait de Parfum for Her.</p>
 
     <div class="product-grid">
 
-      <!-- PRODUKT 1: LOVE25 -->
+      <!-- FOTO 1: LA FOTOGRAFÍA MUESTRA LOVE22 -->
 
       <article class="product-card">
 
-        <img
+        <img src="0EA90A3B-C4CE-4D95-AF48-1DF191822D5F.png"
 
-          src="0EA90A3B-C4CE-4D95-AF48-1DF191822D5F.png"
+             alt="Scented Love LOVE22 – 25 ml"
 
-          alt="Scented Love – Artikel LOVE25 – 25 ml"
-
-          loading="lazy">
-
-        <h3>Scented Love</h3>
-
-        <p>Extrait de Parfum for Her</p>
-
-        <p class="price">25 ml · Artikel LOVE25 · 24,90 €</p>
-
-      </article>
-
-      <!-- PRODUKT 2: LOVE24 -->
-
-      <article class="product-card">
-
-        <img
-
-          src="9902EC54-07E4-4844-8942-8A06E1D12277.png"
-
-          alt="Scented Love – Artikel LOVE24 – 25 ml"
-
-          loading="lazy">
-
-        <h3>Scented Love</h3>
-
-        <p>Extrait de Parfum for Her</p>
-
-        <p class="price">25 ml · Artikel LOVE24 · 24,90 €</p>
-
-      </article>
-
-      <!-- PRODUKT 3: LOVE22 -->
-
-      <article class="product-card">
-
-        <img
-
-          src="B9C810FF-0574-46D0-BA78-B467793191EB.png"
-
-          alt="Scented Love – Artikel LOVE22 – 25 ml"
-
-          loading="lazy">
+             loading="lazy">
 
         <h3>Scented Love</h3>
 
@@ -978,13 +644,45 @@ body {top:0!important}
 
       </article>
 
+      <!-- FOTO 2: LA FOTOGRAFÍA MUESTRA LOVE25 -->
+
+      <article class="product-card">
+
+        <img src="9902EC54-07E4-4844-8942-8A06E1D12277.png"
+
+             alt="Scented Love LOVE25 – 25 ml"
+
+             loading="lazy">
+
+        <h3>Scented Love</h3>
+
+        <p>Extrait de Parfum for Her</p>
+
+        <p class="price">25 ml · Artikel LOVE25 · 24,90 €</p>
+
+      </article>
+
+      <!-- FOTO 3: LA FOTOGRAFÍA MUESTRA LOVE24 -->
+
+      <article class="product-card">
+
+        <img src="B9C810FF-0574-46D0-BA78-B467793191EB.png"
+
+             alt="Scented Love LOVE24 – 25 ml"
+
+             loading="lazy">
+
+        <h3>Scented Love</h3>
+
+        <p>Extrait de Parfum for Her</p>
+
+        <p class="price">25 ml · Artikel LOVE24 · 24,90 €</p>
+
+      </article>
+
     </div>
 
-    <p class="intro">
-
-      Wähle deine Bestellmöglichkeit für Scented Love.
-
-    </p>
+    <p class="intro">Wähle deine Bestellmöglichkeit für Scented Love.</p>
 
     <p style="text-align:center">
 
@@ -992,9 +690,7 @@ body {top:0!important}
 
          href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/"
 
-         target="_blank"
-
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
 
         PEDIDO DIRECTO EN CHOGAN
 
@@ -1004,9 +700,7 @@ body {top:0!important}
 
          href="https://wa.me/491745201068?text=Hola%2C%20quiero%20hacer%20un%20pedido%20de%20Scented%20Love%20de%20San%20Valent%C3%ADn."
 
-         target="_blank"
-
-         rel="noopener noreferrer">
+         target="_blank" rel="noopener noreferrer">
 
         PEDIR POR WHATSAPP
 
@@ -1112,7 +806,7 @@ body {top:0!important}
 
     <div class="etui-photos">
 
-      <img src="7064E10A-83E4-4DFF-9EA2-F17EE7AB08DE.png" alt="Drei Etuis Modern für 15-ml-Parfüms in Blau und Violett, Fuchsia und Rot sowie Rosa und Braun, je 13,00 Euro" loading="lazy">
+      <img src="7064E10A-83E4-4DFF-9EA2-F17EE7AB08DE.png" alt="Drei Etuis Modern für 15-ml-Parfüms in verschiedenen Farben" loading="lazy">
 
       <img src="F58EC1A8-1237-4210-9274-431B712320CA.png" alt="Etui für 15-ml-Parfüms – Auswahl 1" loading="lazy">
 
@@ -1122,7 +816,11 @@ body {top:0!important}
 
     <p style="text-align:center">
 
-      <a class="btn" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Etuis%20Modern%20f%C3%BCr%2015-ml-Parf%C3%BCms%20f%C3%BCr%2013%2C00%20%E2%82%AC%20pro%20St%C3%BCck." target="_blank" rel="noopener noreferrer">ETUIS „MODERN“ – 13,00 € PRO STÜCK</a>
+      <a class="btn" href="https://wa.me/491745201068?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20die%20Etuis%20Modern%20f%C3%BCr%2015-ml-Parf%C3%BCms%20f%C3%BCr%2013%2C00%20%E2%82%AC%20pro%20St%C3%BCck." target="_blank" rel="noopener noreferrer">
+
+        ETUIS „MODERN“ – 13,00 € PRO STÜCK
+
+      </a>
 
     </p>
 
@@ -1310,13 +1008,7 @@ body {top:0!important}
 
     <h3>Externe Links</h3>
 
-    <p>
-
-      Diese Website enthält Links zu externen Seiten Dritter.
-
-      Für deren Inhalte sind ausschließlich deren Betreiber verantwortlich.
-
-    </p>
+    <p>Diese Website enthält Links zu externen Seiten Dritter. Für deren Inhalte sind ausschließlich deren Betreiber verantwortlich.</p>
 
   </div>
 
@@ -1460,25 +1152,25 @@ body {top:0!important}
 
   const translations = {
 
-    de: "PRODUKTE ANSEHEN",
+    de:"PRODUKTE ANSEHEN",
 
-    es: "VER PRODUCTOS",
+    es:"VER PRODUCTOS",
 
-    it: "VEDI I PRODOTTI",
+    it:"VEDI I PRODOTTI",
 
-    tr: "ÜRÜNLERİ GÖR",
+    tr:"ÜRÜNLERİ GÖR",
 
-    ru: "СМОТРЕТЬ ТОВАРЫ",
+    ru:"СМОТРЕТЬ ТОВАРЫ",
 
-    pt: "VER PRODUTOS",
+    pt:"VER PRODUTOS",
 
-    sq: "SHIKO PRODUKTET",
+    sq:"SHIKO PRODUKTET",
 
-    pl: "ZOBACZ PRODUKTY",
+    pl:"ZOBACZ PRODUKTY",
 
-    en: "VIEW PRODUCTS",
+    en:"VIEW PRODUCTS",
 
-    fr: "VOIR LES PRODUITS"
+    fr:"VOIR LES PRODUITS"
 
   };
 
@@ -1514,21 +1206,7 @@ body {top:0!important}
 
   if (!overlay || !content || !closeButton) return;
 
-  const ids = [
-
-    "mythologik",
-
-    "damen",
-
-    "herren",
-
-    "luxus",
-
-    "etuis",
-
-    "sanvalentin"
-
-  ];
+  const ids = ["mythologik","damen","herren","luxus","etuis","sanvalentin"];
 
   const sections = {};
 
