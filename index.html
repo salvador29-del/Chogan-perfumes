@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -220,7 +222,9 @@ h2,h3{font-family:Georgia,"Times New Roman",serif}
 
  width:100%;height:auto;display:block;object-fit:contain;
 
- background:#080808;border:1px solid var(--gold);border-radius:10px
+ background:#080808;border:1px solid var(--gold);border-radius:10px;
+
+ cursor:zoom-in
 
 }
 
@@ -300,6 +304,76 @@ body{top:0!important}
 
 .catalog-section{display:none}
 
+/* VENTANA PARA AMPLIAR LAS FOTOGRAFIAS */
+
+.lightbox{
+
+ display:none;position:fixed;inset:0;z-index:10000;
+
+ background:rgba(0,0,0,.97);padding:18px;
+
+ overflow-y:auto;text-align:center
+
+}
+
+.lightbox.is-open{
+
+ display:flex;align-items:center;justify-content:center;
+
+ flex-direction:column
+
+}
+
+.lightbox-content{
+
+ width:100%;max-width:1000px;margin:auto;
+
+ display:flex;flex-direction:column;align-items:center;
+
+ gap:12px
+
+}
+
+.lightbox-image{
+
+ display:block;max-width:100%;max-height:72vh;
+
+ width:auto;height:auto;object-fit:contain;
+
+ border:1px solid var(--gold);border-radius:12px;
+
+ background:#080808
+
+}
+
+.lightbox-title{
+
+ color:var(--gold);font-family:Georgia,serif;
+
+ font-size:24px;margin:5px 0 0
+
+}
+
+.lightbox-description{
+
+ color:#eee;max-width:800px;margin:0 auto;
+
+ font-size:16px
+
+}
+
+.lightbox-close{
+
+ position:fixed;top:14px;right:14px;z-index:2;
+
+ background:var(--gold);color:#090909;
+
+ border:0;border-radius:25px;padding:11px 19px;
+
+ font-weight:bold;font-size:16px;cursor:pointer
+
+}
+
 @media(min-width:700px){
 
  .video-grid{grid-template-columns:1fr 1fr}
@@ -324,9 +398,9 @@ body{top:0!important}
 
 .header-banner{
 
- display:block;width:min(100%,1180px);height:auto;
+ display:block;width:100%;max-width:1500px;height:auto;
 
- max-height:340px;object-fit:contain;margin:0 auto 16px
+ max-height:none;object-fit:contain;margin:0 auto 16px
 
 }
 
@@ -359,6 +433,12 @@ body{top:0!important}
  .main-nav{gap:6px}
 
  .main-nav a{font-size:13px;padding:7px 9px}
+
+ .lightbox{padding:12px}
+
+ .lightbox-image{max-height:65vh}
+
+ .lightbox-title{font-size:21px}
 
 }
 
@@ -846,7 +926,7 @@ Das Etui ist nicht im Parfümpreis enthalten.
 
 <img src="03_San_Valentin/02_perfume_love.png" alt="Scented Love 2" loading="lazy">
 
-<img src="03_San_Valentin/03_perfume_love.png" alt="Scented Love 3" loading="lazy">
+<img src="03_San_Valentin/03_perfume_love.JPG" alt="Scented Love 3 – LOVE25, 25 ml" loading="lazy">
 
 </div>
 
@@ -991,6 +1071,10 @@ Das Etui ist nicht im Parfümpreis enthalten.
 <h3>Baby Joy</h3>
 
 <p>Perfume para bebé · 30 ml</p>
+
+<p>Artículo 059</p>
+
+<p class="price">29,00 €</p>
 
 </article>
 
@@ -1266,6 +1350,24 @@ Für deren Inhalte sind ausschließlich deren Betreiber verantwortlich.
 
 </div>
 
+<!-- VENTANA PARA AMPLIAR LAS FOTOGRAFIAS -->
+
+<div class="lightbox" id="imageLightbox" aria-hidden="true">
+
+<button class="lightbox-close" type="button" id="closeImageLightbox">✕ Schließen</button>
+
+<div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Vergrößertes Produktbild">
+
+<img class="lightbox-image" id="lightboxImage" src="" alt="">
+
+<h3 class="lightbox-title" id="lightboxTitle"></h3>
+
+<p class="lightbox-description" id="lightboxDescription"></p>
+
+</div>
+
+</div>
+
 <div id="google_translate_element"></div>
 
 <script>
@@ -1487,6 +1589,150 @@ overlay.addEventListener("click",function(event){
 document.addEventListener("keydown",function(event){
 
  if(event.key==="Escape" && active)closeModal();
+
+});
+
+})();
+
+/* AMPLIAR FOTOGRAFIAS DE PRODUCTOS Y GALERIAS */
+
+(function(){
+
+const lightbox=document.getElementById("imageLightbox");
+
+const lightboxImage=document.getElementById("lightboxImage");
+
+const lightboxTitle=document.getElementById("lightboxTitle");
+
+const lightboxDescription=document.getElementById("lightboxDescription");
+
+const closeButton=document.getElementById("closeImageLightbox");
+
+let previousFocus=null;
+
+function openImage(img){
+
+ previousFocus=img;
+
+ lightboxImage.src=img.src;
+
+ lightboxImage.alt=img.alt || "Produktbild";
+
+ lightboxTitle.textContent=img.alt || "Produkt";
+
+ let description="";
+
+ const card=img.closest(".product-card");
+
+ if(card){
+
+  const paragraphs=card.querySelectorAll("p");
+
+  const texts=[];
+
+  paragraphs.forEach(function(paragraph){
+
+   const text=paragraph.textContent.trim();
+
+   if(text && !paragraph.classList.contains("price")){
+
+    texts.push(text);
+
+   }
+
+  });
+
+  description=texts.join(" · ");
+
+  const price=card.querySelector(".price");
+
+  if(price){
+
+   description += (description ? " · " : "") + price.textContent.trim();
+
+  }
+
+ }
+
+ lightboxDescription.textContent=description;
+
+ lightbox.classList.add("is-open");
+
+ lightbox.setAttribute("aria-hidden","false");
+
+ document.body.classList.add("modal-active");
+
+ closeButton.focus();
+
+}
+
+function closeImage(){
+
+ if(!lightbox.classList.contains("is-open"))return;
+
+ lightbox.classList.remove("is-open");
+
+ lightbox.setAttribute("aria-hidden","true");
+
+ lightboxImage.src="";
+
+ lightboxTitle.textContent="";
+
+ lightboxDescription.textContent="";
+
+ document.body.classList.remove("modal-active");
+
+ if(previousFocus)previousFocus.focus();
+
+}
+
+document.querySelectorAll(".product-card img, .gallery img").forEach(function(img){
+
+ img.setAttribute("tabindex","0");
+
+ img.setAttribute("role","button");
+
+ img.setAttribute("aria-label","Bild vergrößern: " + (img.alt || "Produkt"));
+
+ img.addEventListener("click",function(){
+
+  openImage(img);
+
+ });
+
+ img.addEventListener("keydown",function(event){
+
+  if(event.key==="Enter" || event.key===" "){
+
+   event.preventDefault();
+
+   openImage(img);
+
+  }
+
+ });
+
+});
+
+closeButton.addEventListener("click",closeImage);
+
+lightbox.addEventListener("click",function(event){
+
+ if(event.target===lightbox){
+
+  closeImage();
+
+ }
+
+});
+
+document.addEventListener("keydown",function(event){
+
+ if(event.key==="Escape" && lightbox.classList.contains("is-open")){
+
+  closeImage();
+
+ }
 
 });
 
