@@ -320,13 +320,55 @@ body{top:0!important}
 
 }
 
+/* CABECERA GRAFICA Y MENU PRINCIPAL */
+
+.header-banner{
+
+ display:block;width:min(100%,1180px);height:auto;
+
+ max-height:340px;object-fit:contain;margin:0 auto 16px
+
+}
+
+.main-nav{
+
+ display:flex;flex-wrap:wrap;justify-content:center;
+
+ align-items:center;gap:8px 12px;padding:12px 10px;
+
+ background:#111;border-top:1px solid #6a5623;
+
+ border-bottom:1px solid var(--gold)
+
+}
+
+.main-nav a{
+
+ display:inline-block;padding:8px 12px;color:var(--pale);
+
+ text-decoration:none;font-weight:bold;
+
+ border:1px solid #6a5623;border-radius:22px
+
+}
+
+.main-nav a:hover{background:#2a210d;color:#fff}
+
+@media(max-width:520px){
+
+ .main-nav{gap:6px}
+
+ .main-nav a{font-size:13px;padding:7px 9px}
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
+<header id="startseite">
 
 <h1>Parfüm und Düfte Perez</h1>
 
@@ -358,7 +400,31 @@ body{top:0!important}
 
 </select>
 
+<img class="header-banner"
+
+src="Cabecera-perfume.png"
+
+alt="Parfüm und Düfte Perez – Duftwelt für Damen und Herren"
+
+loading="eager">
+
 </header>
+
+<nav class="main-nav" aria-label="Hauptnavigation">
+
+<a href="#startseite">Startseite</a>
+
+<a href="#duftwelten">Parfüms</a>
+
+<a href="https://salvador29-del.github.io/cremas-cosmeticos-/" target="_blank" rel="noopener noreferrer">Creme &amp; Kosmetik</a>
+
+<a href="https://salvador29-del.github.io/maquillaje-color/" target="_blank" rel="noopener noreferrer">Make-up &amp; Farben</a>
+
+<a href="#beratung">Über uns</a>
+
+<a href="https://wa.me/491745201068" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+</nav>
 
 <main>
 
